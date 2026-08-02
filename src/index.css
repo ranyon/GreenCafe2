@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Syne', sans-serif;
+  
+  --color-pine-950: #040D0A;
+  --color-pine-900: #071913;
+  --color-pine-800: #0F382C;
+  --color-pine-700: #164E3D;
+  --color-pine-600: #1D6B54;
+
+  --color-lime-accent: #86EFAC;
+  --color-lime-bright: #A3E635;
+  --color-gold-accent: #EAB308;
+  --color-cream-soft: #F3F7F4;
+}
+
+@layer base {
+  body {
+    background-color: #071913;
+    color: #F3F7F4;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Utilities & Animations */
+.glass-panel {
+  background: rgba(15, 56, 44, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(134, 239, 172, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card:hover {
+  background: rgba(134, 239, 172, 0.08);
+  border-color: rgba(134, 239, 172, 0.3);
+}
+
+.text-gradient-lime {
+  background: linear-gradient(135deg, #FFFFFF 0%, #86EFAC 50%, #A3E635 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FDE047 50%, #EAB308 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040D0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #164E3D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #86EFAC;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}

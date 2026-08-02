@@ -1,0 +1,36 @@
+# GreenCafe
+
+Welcome to GreenCafe! We are a modern, health-conscious cafe specializing in artisan organic wraps, gourmet sandwiches, cold-pressed green juices, and superfood bowls. 
+
+## Business Details
+- **Website:** https://greencafe.com
+- **Phone:** +1-555-555-5555
+- **Address:** 123 Green Way, San Francisco, CA 94105
+- **Cuisine:** Healthy, Organic, Juice Bar, Sandwiches, Wraps
+
+## Our Philosophy
+We believe in fresh, organic ingredients. Every item is made fresh daily using high-quality components like chargrilled organic chicken, wild-caught salmon, organic kale, and house-made dressings.
+
+## Our Menu
+
+### Artisan Wraps
+- **Green Goddess Chicken Wrap ($14.50):** Chargrilled organic chicken, avocado, baby spinach, cucumber & green herb dressing in a spinach tortilla. (High Protein, Chef Special, Organic)
+- **Spiced Avocado & Falafel Wrap ($13.00):** Crispy herb falafel, smashed avocado, pickled red onion, tahini drizzle & microgreens. (Vegan, Fiber Rich, Dairy Free)
+- **Truffle Salmon & Quinoa Wrap ($16.50):** Wild-caught grilled salmon, organic quinoa, wild arugula, lemon zest & white truffle aioli. (Omega-3, Gourmet, Gluten-Free Option)
+
+### Gourmet Sandwiches
+- **Sourdough Pesto Caprese ($13.50):** Fresh heirloom tomatoes, buffalo mozzarella, house basil cashew pesto on toasted sourdough. (Vegetarian, Artisanal Sourdough)
+- **Smoked Turkey & Cranberry Brie ($15.00):** Slow-roasted turkey breast, creamy brie cheese, wild cranberry chutney & arugula on sourdough. (High Protein, Customer Favorite)
+- **Grilled Halloumi & Roasted Veggie ($14.00):** Warm Cypriot halloumi, roasted zucchini, charred red pepper & sun-dried tomato spread. (Vegetarian, Mediterranean)
+
+### Cold-Pressed Juices
+- **GreenCafe Green Machine ($9.50):** Green apple, organic kale, English cucumber, celery, fresh ginger & key lime. (Signature, Detox, Raw Cold-Pressed)
+- **Citrus Glow & Turmeric ($9.00):** Blood orange, carrot, fresh ginger root, turmeric & pinch of cayenne pepper. (Immunity Booster, Vitamin C)
+- **Celery Mint Radiance ($8.50):** 100% pure cold-pressed celery juice with a twist of garden mint & crisp lemon. (Hydration, Zero Added Sugar)
+
+### Superfood Bowls
+- **Matcha Berry Acai Power Bowl ($14.50):** Pure organic acai blend topped with Ceremonial Matcha, chia seeds, fresh blueberries & house almond granola. (Antioxidant, Superfood)
+- **Mediterranean Quinoa & Avocado Bowl ($15.00):** Warm lemon quinoa, wild arugula, roasted chickpeas, cherry tomatoes, kalamata olives & house hummus. (Vegan, Heart Healthy)
+
+## Contact and Ordering
+To place an order or for catering inquiries, please visit our website at https://greencafe.com.
