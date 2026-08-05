@@ -82,7 +82,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#86EFAC] shrink-0" />
-                <span>+1 (800) 555-SHAKO</span>
+                <span>+1 (800) 555</span>
               </div>
               <div className="pt-2 text-[11px] text-gray-400">
                 <p><strong className="text-white">Mon — Fri:</strong> 7:00 AM — 9:00 PM</p>
