@@ -63,7 +63,7 @@ export default function HeroSection({ onExplore, onOpenLab }) {
       {/* Dark Space Background */}
       <div className="absolute inset-0 z-0 pointer-events-none bg-gray-950">
         <img 
-          src="/assets/space_sunlit_916.png" 
+          src="/assets/space_sunlit_916.jpg" 
           alt="Cafe Background" 
           className="w-full h-full object-cover opacity-100"
         />
