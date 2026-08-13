@@ -67,7 +67,7 @@ export default function HeroSection({ onExplore, onOpenLab }) {
           alt="Cafe Background" 
           className="w-full h-full object-cover opacity-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10"></div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col items-center mt-4">
