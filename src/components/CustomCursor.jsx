@@ -34,8 +34,8 @@ export default function CustomCursor({ activePreviewItem }) {
           transform: `translate3d(${position.x}px, ${position.y}px, 0) translate(-50%, -50%)`,
         }}
       >
-        <div className={`w-8 h-8 rounded-full border border-[#86EFAC]/40 transition-all duration-300 ${
-          activePreviewItem ? 'scale-150 border-[#86EFAC]' : 'scale-100'
+        <div className={`w-8 h-8 rounded-full border border-gray-900/40 transition-all duration-300 ${
+          activePreviewItem ? 'scale-150 border-gray-900' : 'scale-100'
         }`} />
       </div>
 
@@ -47,24 +47,24 @@ export default function CustomCursor({ activePreviewItem }) {
             transform: `translate3d(${position.x + 20}px, ${position.y + 20}px, 0)`,
           }}
         >
-          <div className="w-56 p-3 rounded-2xl bg-[#0F382C]/95 border border-[#86EFAC]/30 shadow-2xl backdrop-blur-xl animate-float">
+          <div className="w-56 p-3 rounded-2xl bg-gray-50 border border-gray-900/30 shadow-2xl backdrop-blur-xl animate-float">
             <img
               src={activePreviewItem.image}
               alt={activePreviewItem.name}
               className="w-full h-32 object-cover rounded-xl mb-2"
             />
             <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#86EFAC] uppercase tracking-wider">
+              <span className="text-xs font-semibold text-black uppercase tracking-wider">
                 {activePreviewItem.category}
               </span>
-              <span className="text-xs font-bold text-yellow-400">
+              <span className="text-xs font-bold text-gray-900">
                 GH₵{activePreviewItem.price.toFixed(2)}
               </span>
             </div>
-            <h4 className="text-sm font-bold text-white truncate mt-0.5">
+            <h4 className="text-sm font-bold text-gray-900 truncate mt-0.5">
               {activePreviewItem.name}
             </h4>
-            <p className="text-[10px] text-gray-300 line-clamp-1 mt-0.5">
+            <p className="text-[10px] text-gray-600 line-clamp-1 mt-0.5">
               {activePreviewItem.tagline}
             </p>
           </div>

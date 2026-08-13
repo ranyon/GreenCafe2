@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroSection from './HeroSection';
 import StorySection from './StorySection';
+import SpaceScrollSection from './SpaceScrollSection';
 import MetricsSection from './MetricsSection';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,7 +15,9 @@ export default function HomePage() {
         onOpenLab={() => navigate('/lab')}
       />
       <StorySection />
+      <SpaceScrollSection />
       <MetricsSection />
     </main>
   );
 }
+

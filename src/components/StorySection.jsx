@@ -67,17 +67,17 @@ export default function StorySection() {
   ];
 
   return (
-    <section ref={storyRef} id="story-section" className="py-16 lg:py-24 bg-[#040D0A] relative z-10 overflow-hidden">
+    <section ref={storyRef} id="story-section" className="py-16 lg:py-24 bg-gray-50 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#86EFAC]">
+          <span className="text-xs font-bold uppercase tracking-widest text-black">
             Uncompromising Standards
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white mt-2 tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-gray-900 mt-2 tracking-tight">
             THE CRAFT BEHIND <span className="text-gradient-lime italic font-serif">EVERY BITE</span>
           </h2>
-          <p className="text-gray-300 text-sm sm:text-base mt-3">
+          <p className="text-gray-600 text-sm sm:text-base mt-3">
             From farm soil to your final wrap, discover our 3-step obsession with pure taste & vibrant vitality.
           </p>
         </div>
@@ -89,26 +89,26 @@ export default function StorySection() {
             return (
               <div
                 key={idx}
-                className="story-card glass-panel rounded-3xl p-8 border border-white/10 relative overflow-hidden flex flex-col justify-between hover:border-[#86EFAC]/40 transition-all duration-300 group"
+                className="story-card glass-panel rounded-3xl p-8 border border-gray-200 relative overflow-hidden flex flex-col justify-between hover:border-gray-900/40 transition-all duration-300 group"
               >
                 {/* Background Glow Gradient */}
-                <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-[#86EFAC]/5 blur-2xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-black/5 blur-2xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
 
                 <div>
                   {/* Step Badge */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-4xl font-display font-extrabold text-white/20 group-hover:text-[#86EFAC] transition-colors">
+                    <span className="text-4xl font-display font-extrabold text-gray-900/20 group-hover:text-black transition-colors">
                       {item.step}
                     </span>
                     <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${item.color} p-0.5 shadow-lg`}>
-                      <div className="w-full h-full bg-[#071913] rounded-[14px] flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-[#86EFAC]" />
+                      <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
+                        <IconComponent className="w-6 h-6 text-black" />
                       </div>
                     </div>
                   </div>
 
                   {/* Card Image */}
-                  <div className="h-44 rounded-2xl overflow-hidden mb-6 border border-white/10">
+                  <div className="h-44 rounded-2xl overflow-hidden mb-6 border border-gray-200">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -116,19 +116,19 @@ export default function StorySection() {
                     />
                   </div>
 
-                  <h3 className="font-display font-bold text-2xl text-white mb-2">
+                  <h3 className="font-display font-bold text-2xl text-gray-900 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-gray-300 leading-relaxed mb-6">
+                  <p className="text-xs text-gray-600 leading-relaxed mb-6">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Checklist */}
-                <div className="space-y-2 pt-4 border-t border-white/10">
+                <div className="space-y-2 pt-4 border-t border-gray-200">
                   {item.highlights.map((h, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs font-semibold text-gray-200">
-                      <CheckCircle2 className="w-4 h-4 text-[#86EFAC] shrink-0" />
+                    <div key={i} className="flex items-center gap-2 text-xs font-semibold text-gray-600">
+                      <CheckCircle2 className="w-4 h-4 text-black shrink-0" />
                       <span>{h}</span>
                     </div>
                   ))}

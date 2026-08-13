@@ -44,7 +44,7 @@ export default function PublicLayout() {
   const cartCount = cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
 
   return (
-    <div className="relative min-h-screen bg-[#071913] text-[#F3F7F4] overflow-x-hidden selection:bg-[#86EFAC] selection:text-[#071913]">
+    <div className="relative min-h-screen bg-white text-gray-900 overflow-x-clip selection:bg-black selection:text-black">
       <CustomCursor activePreviewItem={activePreviewItem} />
       
       <Navbar

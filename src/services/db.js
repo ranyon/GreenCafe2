@@ -14,7 +14,12 @@ const initialData = {
     { id: 'f3', user: "Emma Watson", action: "ordered 2x Artisan Sandwiches.", time: "3 hours ago" },
     { id: 'f4', user: "David O'Connor", action: "dined in (Table 12).", time: "Yesterday" }
   ],
-  orders: [],
+  orders: [
+    { id: 'o1', customerName: 'Emma Watson', items: ['2x Artisan Sandwiches'], total: 45.50, status: 'Pending', time: '10:30 AM' },
+    { id: 'o2', customerName: "David O'Connor", items: ['1x Spicy Kale Wrap', '1x Green Detox Juice'], total: 32.00, status: 'Preparing', time: '10:15 AM' },
+    { id: 'o3', customerName: 'Sarah Jenkins', items: ['1x Quinoa Bowl'], total: 28.50, status: 'Out for Delivery', time: '09:45 AM' },
+    { id: 'o4', customerName: 'Michael Chen', items: ['1x Cold-Pressed Juice'], total: 15.00, status: 'Delivered', time: '09:00 AM' }
+  ],
   stats: {
     remaining_credits: 850,
     total_orders: 124,
@@ -114,3 +119,6 @@ export const db = {
     };
   }
 };
+
+export default db;
+

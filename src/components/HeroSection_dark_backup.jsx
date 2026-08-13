@@ -96,16 +96,25 @@ export default function HeroSection({ onExplore, onOpenLab }) {
       className="relative min-h-[100dvh] pt-28 lg:pt-32 pb-20 flex flex-col justify-center overflow-hidden"
     >
       {/* Test Background Image */}
-            {/* Dynamic Background Glow Orbs */}
+      <div className="absolute inset-0 z-0 pointer-events-none bg-gray-950">
+        <img 
+          src="/assets/space_sunlit_916.png" 
+          alt="Cafe Background" 
+          className="w-full h-full object-cover opacity-100"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/25 to-black/30"></div>
+      </div>
+
+      {/* Dynamic Background Glow Orbs */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full pointer-events-none animate-pulse-glow z-0" style={{ background: 'radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 70%)' }} />
       <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full pointer-events-none z-0" style={{ background: 'radial-gradient(circle, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0) 70%)' }} />
 
       {/* Floating Botanical Leaf Accents */}
       <div className="hidden lg:block absolute top-28 left-[10%] opacity-20 pointer-events-none animate-float-accent">
-        <Leaf className="w-16 h-16 text-gray-600" />
+        <Leaf className="w-16 h-16 text-gray-300" />
       </div>
       <div className="hidden lg:block absolute bottom-32 left-[5%] opacity-15 pointer-events-none animate-float-accent" style={{ animationDelay: '2s' }}>
-        <Sparkles className="w-12 h-12 text-gray-600" />
+        <Sparkles className="w-12 h-12 text-gray-300" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 flex-1">
@@ -121,15 +130,15 @@ export default function HeroSection({ onExplore, onOpenLab }) {
               transition={{ duration: 0.5 }}
               className="space-y-4 mb-8"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 border border-gray-200 text-gray-900 backdrop-blur-md text-xs font-bold uppercase tracking-wide">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white backdrop-blur-md text-xs font-bold uppercase tracking-wide">
                 <span className="text-base">{currentSlide.badgeIcon}</span> {currentSlide.badge}
               </div>
               
-              <h1 className="font-display font-black text-4xl sm:text-5xl xl:text-6xl leading-[1.1] tracking-tight text-gray-900">
+              <h1 className="font-display font-black text-4xl sm:text-5xl xl:text-6xl leading-[1.1] tracking-tight text-white drop-shadow-lg">
                 {currentSlide.title}
               </h1>
               
-              <p className="text-sm sm:text-lg text-gray-600 max-w-lg mx-auto lg:mx-0 font-normal leading-relaxed drop-shadow-md">
+              <p className="text-sm sm:text-lg text-gray-200 max-w-lg mx-auto lg:mx-0 font-normal leading-relaxed drop-shadow-md">
                 {currentSlide.description}
               </p>
             </motion.div>
@@ -147,9 +156,9 @@ export default function HeroSection({ onExplore, onOpenLab }) {
             </button>
             <button
               onClick={onOpenLab}
-              className="w-full lg:w-auto px-4 py-3 lg:px-8 lg:py-4 text-[12px] lg:text-sm font-semibold text-gray-900 bg-gray-100 hover:bg-gray-200 backdrop-blur-md rounded-xl lg:rounded-full border border-gray-300 shadow-sm transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
+              className="w-full lg:w-auto px-4 py-3 lg:px-8 lg:py-4 text-[12px] lg:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-xl lg:rounded-full border border-white/30 shadow-sm transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
             >
-              <Sparkles className="w-4 h-4 shrink-0 text-gray-900" />
+              <Sparkles className="w-4 h-4 shrink-0 text-white" />
               <span className="truncate">Custom Juice</span>
             </button>
           </div>
@@ -229,15 +238,15 @@ export default function HeroSection({ onExplore, onOpenLab }) {
               <div 
                 className={`cursor-pointer transition-all duration-300 rounded-2xl p-2 pr-4 flex items-center gap-3 border backdrop-blur-md
                   ${activeIndex === index 
-                    ? 'bg-white border-gray-300 shadow-[0_4px_15px_rgba(0,0,0,0.2)]' 
-                    : 'bg-gray-100 border-transparent hover:bg-gray-200 opacity-70 hover:opacity-100'}`}
+                    ? 'bg-white/20 border-white/40 shadow-[0_4px_15px_rgba(0,0,0,0.2)]' 
+                    : 'bg-black/40 border-transparent hover:bg-black/60 opacity-70 hover:opacity-100'}`}
               >
                 <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-xl flex items-center justify-center p-1.5">
                   <img src={slide.image} alt={slide.title} className="w-full h-full object-contain drop-shadow-md" />
                 </div>
                 <div className="block">
-                  <p className="text-xs font-bold text-gray-900 leading-tight">{slide.title}</p>
-                  <p className="text-[10px] text-gray-600">{slide.badge}</p>
+                  <p className="text-xs font-bold text-white leading-tight">{slide.title}</p>
+                  <p className="text-[10px] text-gray-300">{slide.badge}</p>
                 </div>
               </div>
             </SwiperSlide>
