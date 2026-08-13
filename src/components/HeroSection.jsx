@@ -66,7 +66,7 @@ export default function HeroSection({ onExplore, onOpenLab }) {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[100dvh] pt-32 lg:pt-32 pb-16 lg:pb-10 flex flex-col justify-end lg:justify-center gap-2 lg:gap-6 overflow-hidden"
+      className="relative h-[100dvh] lg:min-h-[100dvh] pt-24 lg:pt-32 pb-8 lg:pb-10 flex flex-col justify-end lg:justify-center gap-2 lg:gap-6 overflow-hidden"
     >
       {/* Dark Space Background */}
       <div className="absolute inset-0 z-0 pointer-events-none bg-gray-950">
