@@ -47,16 +47,8 @@ export default function HeroSection({ onExplore, onOpenLab }) {
       let mm = gsap.matchMedia();
 
       mm.add("all", () => {
-        const tl = gsap.timeline();
-        if(headlineRef.current) {
-           tl.from(headlineRef.current.children, {
-             y: 30,
-             opacity: 0,
-             duration: 1,
-             stagger: 0.1,
-             ease: 'power4.out',
-           });
-        }
+        // Removed redundant GSAP entrance animation on text to speed up initial load
+        // Framer Motion handles the text entrance
       });
     }, heroRef);
 
