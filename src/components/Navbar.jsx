@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ShoppingBag, Menu as MenuIcon, X, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 export default function Navbar({ cartCount, onOpenCart }) {
+  const { currentUser, loginWithGoogle, logout } = useAuth();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -62,6 +64,27 @@ export default function Navbar({ cartCount, onOpenCart }) {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-4">
+          {!currentUser ? (
+            <button
+              onClick={loginWithGoogle}
+              className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white hover:text-[#86EFAC] transition-colors"
+            >
+              Sign In
+            </button>
+          ) : (
+            <div className="flex items-center gap-3">
+              <Link to="/profile" className="w-8 h-8 rounded-full overflow-hidden border border-[#86EFAC]/30 hover:border-[#86EFAC] transition-all">
+                <img src={currentUser.photoURL || `https://ui-avatars.com/api/?name=${currentUser.displayName}`} alt="Profile" className="w-full h-full object-cover" />
+              </Link>
+              <button
+                onClick={logout}
+                className="hidden sm:inline-flex text-xs font-medium text-gray-400 hover:text-white"
+              >
+                Logout
+              </button>
+            </div>
+          )}
+
           <button
             onClick={onOpenCart}
             className="relative min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-[#164E3D]/60 hover:bg-[#164E3D] text-[#86EFAC] border border-[#86EFAC]/30 transition-all hover:scale-105"
