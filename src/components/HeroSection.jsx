@@ -64,8 +64,13 @@ export default function HeroSection({ onExplore, onOpenLab }) {
       <div className="absolute inset-0 z-0 pointer-events-none bg-gray-950">
         <img 
           src="/assets/space_sunlit_916.jpg" 
-          alt="Cafe Background" 
-          className="w-full h-full object-cover opacity-100"
+          alt="Cafe Background Desktop" 
+          className="hidden md:block w-full h-full object-cover opacity-100"
+        />
+        <img 
+          src="/assets/mobile_hero.jpg" 
+          alt="Cafe Background Mobile" 
+          className="block md:hidden w-full h-full object-cover opacity-100"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10"></div>
       </div>
