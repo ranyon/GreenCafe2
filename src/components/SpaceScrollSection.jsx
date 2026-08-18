@@ -19,7 +19,7 @@ export default function SpaceScrollSection() {
       title: 'NATURAL SUNLIGHT & FOLIAGE',
       subtitle: 'Golden rays beaming onto lush monstera foliage and hand-carved wooden interiors.',
       icon: Leaf,
-      image: '/assets/space_sunlit_916.png'
+      image: '/assets/space_sunlit_916.jpg'
     },
     {
       step: '02',
@@ -27,7 +27,7 @@ export default function SpaceScrollSection() {
       title: 'HANDCRAFTED WOODEN BAR',
       subtitle: 'Frontal perspective of our warm timber counter, fresh juices, and organic pastry display.',
       icon: Sparkles,
-      image: '/assets/space_bar_916.png'
+      image: '/assets/space_bar_916.jpg'
     },
     {
       step: '03',
@@ -35,7 +35,7 @@ export default function SpaceScrollSection() {
       title: 'LA MARZOCCO & SEATING',
       subtitle: 'Precision espresso brewing surrounded by woven pendant lighting and cozy dining tables.',
       icon: Coffee,
-      image: '/assets/space_coffee_916.png'
+      image: '/assets/space_coffee_916.jpg'
     }
   ];
 
