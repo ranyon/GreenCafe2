@@ -119,6 +119,39 @@ export default function Navbar({ cartCount, onOpenCart }) {
       {/* Mobile Drawer */}
       {mobileOpen && (
         <div className="md:hidden bg-[#071913]/98 border-b border-[#86EFAC]/20 px-6 pt-6 pb-12 space-y-4 backdrop-blur-2xl">
+          {!currentUser ? (
+            <button
+              onClick={() => {
+                loginWithGoogle();
+                setMobileOpen(false);
+              }}
+              className="block w-full text-left py-2 text-lg font-bold text-[#86EFAC]"
+            >
+              Sign In
+            </button>
+          ) : (
+            <div className="flex items-center justify-between py-2 mb-4 border-b border-white/10 pb-4">
+              <div className="flex items-center gap-3">
+                <Link to="/profile" onClick={() => setMobileOpen(false)} className="w-10 h-10 rounded-full overflow-hidden border border-[#86EFAC]/30">
+                  <img src={currentUser.photoURL || `https://ui-avatars.com/api/?name=${currentUser.displayName}`} alt="Profile" className="w-full h-full object-cover" />
+                </Link>
+                <div className="flex flex-col">
+                  <span className="text-white font-bold text-sm">{currentUser.displayName}</span>
+                  <Link to="/profile" onClick={() => setMobileOpen(false)} className="text-[#86EFAC] text-xs">View Profile</Link>
+                </div>
+              </div>
+              <button
+                onClick={() => {
+                  logout();
+                  setMobileOpen(false);
+                }}
+                className="text-sm font-medium text-gray-400 hover:text-white"
+              >
+                Logout
+              </button>
+            </div>
+          )}
+
           <Link
             to="/"
             onClick={() => setMobileOpen(false)}
