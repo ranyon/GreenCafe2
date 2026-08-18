@@ -14,7 +14,6 @@ export default function HomePage() {
         onExplore={() => navigate('/menu')}
         onOpenLab={() => navigate('/lab')}
       />
-      <StorySection />
       <SpaceScrollSection />
       <MetricsSection />
     </main>
