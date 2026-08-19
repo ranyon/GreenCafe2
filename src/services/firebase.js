@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "dummy-api-key",
@@ -10,13 +11,14 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID || "dummy-app-id"
 };
 
-let app, auth;
+let app, auth, db;
 try {
   app = initializeApp(firebaseConfig);
   auth = getAuth(app);
+  db = getFirestore(app);
 } catch (error) {
   console.error("Firebase initialization error (Check your .env keys):", error);
 }
 
-export { auth };
+export { auth, db };
 export const googleProvider = new GoogleAuthProvider();

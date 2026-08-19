@@ -6,6 +6,7 @@ import HomePage from './components/HomePage';
 import MenuPage from './components/MenuPage';
 import LabPage from './components/LabPage';
 import UserProfile from './components/UserProfile';
+import TrackOrderPage from './components/TrackOrderPage';
 import { AuthProvider } from './context/AuthContext';
 
 export default function App() {
@@ -17,6 +18,8 @@ export default function App() {
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/lab" element={<LabPage />} />
           <Route path="/profile" element={<UserProfile />} />
+          <Route path="/track" element={<TrackOrderPage />} />
+          <Route path="/track/:orderId" element={<TrackOrderPage />} />
         </Route>
         <Route path="/admin" element={<AdminDashboard />} />
       </Routes>

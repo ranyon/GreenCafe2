@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from './HeroSection';
+import DiscoverMenuSection from './DiscoverMenuSection';
 import StorySection from './StorySection';
 import SpaceScrollSection from './SpaceScrollSection';
 import MetricsSection from './MetricsSection';
@@ -14,6 +15,7 @@ export default function HomePage() {
         onExplore={() => navigate('/menu')}
         onOpenLab={() => navigate('/lab')}
       />
+      <DiscoverMenuSection />
       <SpaceScrollSection />
       <MetricsSection />
     </main>

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { ShoppingBag, Menu as MenuIcon, X, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 export default function Navbar({ cartCount, onOpenCart }) {
   const { currentUser, loginWithGoogle, logout } = useAuth();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,8 +21,8 @@ export default function Navbar({ cartCount, onOpenCart }) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
-          ? 'bg-[#071913]/90 backdrop-blur-xl py-3 border-b border-[#86EFAC]/15 shadow-2xl'
+        scrolled || !isHomePage
+          ? 'bg-black/90 backdrop-blur-xl py-3 border-b border-white/10 shadow-2xl'
           : 'bg-transparent py-5'
       }`}
     >
@@ -48,6 +50,13 @@ export default function Navbar({ cartCount, onOpenCart }) {
             Home
           </Link>
           <Link
+            to="/menu"
+            className="text-sm font-medium text-gray-200 hover:text-[#86EFAC] transition-colors"
+          >
+            Menu
+          </Link>
+          {/*
+          <Link
             to="/lab"
             className="text-sm font-medium text-gray-200 hover:text-[#86EFAC] transition-colors flex items-center gap-1.5"
           >
@@ -60,6 +69,7 @@ export default function Navbar({ cartCount, onOpenCart }) {
           >
             Nutrition
           </Link>
+          */}
         </nav>
 
         {/* Action Buttons */}
@@ -118,7 +128,7 @@ export default function Navbar({ cartCount, onOpenCart }) {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#071913]/98 border-b border-[#86EFAC]/20 px-6 pt-6 pb-12 space-y-4 backdrop-blur-2xl">
+        <div className="md:hidden bg-black/98 border-b border-white/10 px-6 pt-6 pb-12 space-y-4 backdrop-blur-2xl">
           {!currentUser ? (
             <button
               onClick={() => {
@@ -160,6 +170,14 @@ export default function Navbar({ cartCount, onOpenCart }) {
             Home
           </Link>
           <Link
+            to="/menu"
+            onClick={() => setMobileOpen(false)}
+            className="block w-full text-left py-2 text-lg font-medium text-white hover:text-[#86EFAC]"
+          >
+            Menu
+          </Link>
+          {/*
+          <Link
             to="/lab"
             onClick={() => setMobileOpen(false)}
             className="block w-full text-left py-2 text-lg font-medium text-white hover:text-[#86EFAC]"
@@ -173,6 +191,7 @@ export default function Navbar({ cartCount, onOpenCart }) {
           >
             Nutrition
           </Link>
+          */}
         </div>
       )}
     </header>

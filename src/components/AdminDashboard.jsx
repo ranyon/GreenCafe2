@@ -22,6 +22,9 @@ export default function AdminDashboard() {
   const [aiStats, setAiStats] = useState({ remaining_credits: 0, total_orders: 0, total_revenue: 0 });
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
+  // Track previous orders length to know when a NEW order arrives
+  const previousOrdersLength = useRef(null);
 
   // --- WHATSAPP AI STATE ---
   const [chats, setChats] = useState({});
@@ -61,6 +64,15 @@ export default function AdminDashboard() {
       chatScrollRef.current.scrollTop = chatScrollRef.current.scrollHeight;
     }
   }, [chats, selectedChatPhone]);
+
+  // Play notification sound when a new order arrives
+  useEffect(() => {
+    if (previousOrdersLength.current !== null && orders.length > previousOrdersLength.current) {
+      const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3');
+      audio.play().catch(e => console.error("Audio play blocked by browser:", e));
+    }
+    previousOrdersLength.current = orders.length;
+  }, [orders]);
 
   const handleGift = (name) => {
     alert(`Gift logged for ${name}!`);
@@ -377,9 +389,10 @@ export default function AdminDashboard() {
                             <span className="text-[10px] text-gray-400 font-medium bg-gray-50 px-2 py-1 rounded-md">{order.time}</span>
                           </div>
                           <div className="text-xs text-gray-500 mb-4 space-y-1">
-                            {order.items.map((item, idx) => (
-                              <div key={idx} className="truncate">• {item}</div>
-                            ))}
+                            {order.items?.map((item, idx) => {
+                              const itemText = typeof item === 'string' ? item : `${item.quantity}x ${item.name}`;
+                              return <div key={idx} className="truncate">• {itemText}</div>;
+                            })}
                           </div>
                           
                           <div className="flex justify-between items-center border-t border-gray-50 pt-3">

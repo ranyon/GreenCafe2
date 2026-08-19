@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { X, Trash2, Plus, Minus, ShoppingBag, CheckCircle, ArrowRight } from 'lucide-react';
 import { db } from '../services/db';
 import { payment } from '../services/payment';
 
 export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem, onClearCart }) {
   const [isCheckingOut, setIsCheckingOut] = useState(false);
-  const [orderComplete, setOrderComplete] = useState(false);
+  const [completedOrderId, setCompletedOrderId] = useState(null);
+  const navigate = useNavigate();
 
   if (!isOpen) return null;
 
@@ -16,12 +18,13 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
   const handleCheckout = async () => {
     setIsCheckingOut(true);
     try {
-      const orderId = `ORD-${Date.now()}`;
+      const shortId = Math.random().toString(36).substring(2, 7).toUpperCase();
+      const orderId = `ORD-${shortId}`;
       const orderData = { 
         id: orderId, 
         items: cartItems, 
         total, 
-        status: 'pending', 
+        status: 'Pending', 
         timestamp: new Date().toISOString() 
       };
       
@@ -35,24 +38,18 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
         time: "Just now"
       });
 
-      // Generate Moolre Payment Link
+      // Initiate Paystack Payment
       const paymentRes = await payment.generatePaymentLink(total, orderId);
       
       if (paymentRes.success) {
         if (paymentRes.isMock) {
-          // Silent fallback to local completion
-        } else if (paymentRes.link) {
-          // Redirect to payment link (avoiding popup blockers)
-          window.location.href = paymentRes.link;
+          // Silent fallback to local completion if no key is found
         }
+        // If it reaches here, either mock was successful or Paystack popup was completed
         
         setIsCheckingOut(false);
-        setOrderComplete(true);
-        setTimeout(() => {
-          onClearCart();
-          setOrderComplete(false);
-          onClose();
-        }, 3000);
+        setCompletedOrderId(orderId);
+        onClearCart();
       } else {
         alert("Payment failed: " + paymentRes.error);
         setIsCheckingOut(false);
@@ -91,13 +88,27 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
           </div>
 
           {/* Cart Content */}
-          {orderComplete ? (
+          {completedOrderId ? (
             <div className="my-auto text-center py-12 space-y-4">
               <CheckCircle className="w-16 h-16 text-black mx-auto animate-bounce" />
               <h4 className="font-display font-bold text-2xl text-gray-900">Order Confirmed!</h4>
               <p className="text-xs text-gray-600 max-w-xs mx-auto">
                 Thank you for choosing GreenCafe. Your organic wraps and cold-pressed juices are being prepared fresh right now.
               </p>
+              <div className="mt-6 bg-gray-50 p-4 rounded-2xl border border-gray-200">
+                <p className="text-xs text-gray-500 uppercase tracking-wider font-bold mb-1">Your Tracking Code</p>
+                <p className="font-display font-bold text-2xl tracking-widest text-black">{completedOrderId}</p>
+              </div>
+              <button
+                onClick={() => {
+                  onClose();
+                  navigate(`/track/${completedOrderId}`);
+                  setCompletedOrderId(null);
+                }}
+                className="w-full mt-4 py-4 text-xs font-bold text-white bg-black hover:bg-gray-800 rounded-full shadow-lg transition-all"
+              >
+                Track My Order
+              </button>
             </div>
           ) : cartItems.length === 0 ? (
             <div className="my-auto text-center py-12 space-y-4">
@@ -156,7 +167,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
           )}
 
           {/* Footer Checkout Summary */}
-          {!orderComplete && cartItems.length > 0 && (
+          {!completedOrderId && cartItems.length > 0 && (
             <div className="pt-6 border-t border-gray-200 space-y-4">
               <div className="space-y-1.5 text-xs text-gray-600">
                 <div className="flex justify-between">
