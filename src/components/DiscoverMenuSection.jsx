@@ -1,27 +1,31 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import smoothiesImage from '../assets/smoothies_juices_banner.png';
+import chickenSaladImg from '../assets/chicken_salad.png';
+import breakfastImg from '../assets/green_special_breakfast.png';
+import sandwichImg from '../assets/gourmet_sandwich.png';
+import tunaSaladImg from '../assets/tuna_salad.png';
 
 const categories = [
   {
     id: 'salads',
     title: 'Salads',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80',
+    image: chickenSaladImg,
   },
   {
     id: 'wraps',
     title: 'Wraps',
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=1200&q=80',
+    image: tunaSaladImg, // Using tuna salad for now since we couldn't gen the wrap
   },
   {
     id: 'sandwiches',
     title: 'Sandwiches',
-    image: 'https://images.unsplash.com/photo-1619096252214-ef06c45683e3?auto=format&fit=crop&w=1200&q=80',
+    image: sandwichImg,
   },
   {
     id: 'breakfast',
     title: 'Breakfast',
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1200&q=80',
+    image: breakfastImg,
   },
   {
     id: 'smoothies-juices',

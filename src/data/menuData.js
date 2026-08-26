@@ -4,6 +4,43 @@ import {
   Flame, Box, Circle
 } from 'lucide-react';
 
+import img_0 from '../assets/green_special_wrap.jpeg';
+import img_1 from '../assets/green_smoothie_3.jpeg';
+import img_2 from '../assets/orange_carrot_juice.jpeg';
+import img_3 from '../assets/waffle.jpeg';
+import img_4 from '../assets/tuna_salad.jpeg';
+import img_5 from '../assets/yellow_smoothie.jpeg';
+import img_6 from '../assets/chicken_club.jpeg';
+import img_7 from '../assets/green_smoothie_2.jpeg';
+import img_8 from '../assets/pink_smoothie.jpeg';
+import img_9 from '../assets/chicken_wrap.jpeg';
+import img_10 from '../assets/pillow_willow.jpeg';
+import img_11 from '../assets/beetroot_pineapple_ginger.jpeg';
+import img_12 from '../assets/tuna_wrap.jpeg';
+import img_13 from '../assets/salad_bowl.jpeg';
+import img_14 from '../assets/protein_bowl.jpeg';
+import img_15 from '../assets/chicken_salad_2.jpeg';
+import img_16 from '../assets/burrito_bowl.jpeg';
+import img_17 from '../assets/greek_salad.jpeg';
+import img_18 from '../assets/green_special_breakfast.jpeg';
+import img_19 from '../assets/burrito_bowl.jpeg';
+import img_20 from '../assets/pineapple_ginger_juice.jpeg';
+import img_21 from '../assets/english_breakfast.jpeg';
+import img_22 from '../assets/pasta_salad.jpeg';
+import img_23 from '../assets/chicken_salad.jpeg';
+import img_24 from '../assets/tuna_sandwich.jpeg';
+import img_25 from '../assets/mini_pancakes_berries.jpeg';
+import img_26 from '../assets/egg_bun_sandwich.jpeg';
+import img_27 from '../assets/mango_ginger_juice.jpeg';
+import img_28 from '../assets/mini_pancakes.jpeg';
+import img_29 from '../assets/chicken_salad_potatoes.jpeg';
+import img_30 from '../assets/pineapple_mint_ginger.jpeg';
+import img_31 from '../assets/egg_salad.jpeg';
+import img_32 from '../assets/green_smoothie.jpeg';
+import img_33 from '../assets/club_sandwich.jpeg';
+import img_34 from '../assets/chefs_special_breakfast.jpeg';
+import img_35 from '../assets/goodstart_combo.jpeg';
+
 export const MENU_CATEGORIES = [
   { id: 'salads', label: 'Salads', icon: Leaf },
   { id: 'breakfast', label: 'Breakfast', icon: Coffee },
@@ -27,7 +64,7 @@ export const MENU_ITEMS = [
     protein: '25g',
     carbs: '15g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    image: img_23,
     tags: ['Customer Favorite', 'High Protein'],
     ingredients: ['Chicken', 'Mixed Greens', 'Cherry Tomatoes']
   },
@@ -41,7 +78,7 @@ export const MENU_ITEMS = [
     protein: '28g',
     carbs: '12g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+    image: img_4,
     tags: ['Omega-3'],
     ingredients: ['Tuna', 'Mixed Greens', 'Red Onion']
   },
@@ -55,7 +92,7 @@ export const MENU_ITEMS = [
     protein: '18g',
     carbs: '10g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    image: img_31,
     tags: ['Vegetarian'],
     ingredients: ['Boiled Egg', 'Mixed Greens', 'Cucumber']
   },
@@ -69,7 +106,7 @@ export const MENU_ITEMS = [
     protein: '8g',
     carbs: '50g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    image: img_29,
     tags: ['Comfort Food'],
     ingredients: ['Potatoes', 'Herbs', 'House Dressing']
   },
@@ -83,7 +120,7 @@ export const MENU_ITEMS = [
     protein: '12g',
     carbs: '48g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    image: img_22,
     tags: ['Hearty'],
     ingredients: ['Pasta', 'Veggies', 'Vinaigrette']
   },
@@ -97,7 +134,7 @@ export const MENU_ITEMS = [
     protein: '10g',
     carbs: '14g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    image: img_10,
     tags: ['Vegetarian', 'Earthy'],
     ingredients: ['Sautéed Mushrooms', 'Mixed Greens', 'Herbs']
   },
@@ -111,7 +148,7 @@ export const MENU_ITEMS = [
     protein: '15g',
     carbs: '18g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    image: img_15,
     tags: ['Classic'],
     ingredients: ['Romaine', 'Croutons', 'Parmesan', 'Caesar Dressing']
   },
@@ -125,7 +162,7 @@ export const MENU_ITEMS = [
     protein: '10g',
     carbs: '15g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    image: img_17,
     tags: ['Vegetarian', 'Mediterranean'],
     ingredients: ['Feta', 'Olives', 'Tomatoes', 'Cucumber', 'Red Onion']
   },
@@ -139,7 +176,7 @@ export const MENU_ITEMS = [
     protein: '12g',
     carbs: '18g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    image: img_13,
     tags: ['Nutrient Dense'],
     ingredients: ['Broccoli Florets', 'Almonds', 'Cranberries']
   },
@@ -183,7 +220,7 @@ export const MENU_ITEMS = [
     protein: '25g',
     carbs: '55g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80',
+    image: img_35,
     tags: ['Classic Breakfast'],
     ingredients: ['Toast', 'Omelette', 'Sausages', 'Baked Beans', 'Juice']
   },
@@ -197,7 +234,7 @@ export const MENU_ITEMS = [
     protein: '28g',
     carbs: '65g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80',
+    image: img_19,
     tags: ['Customer Favorite'],
     ingredients: ['Toast', 'Omelette', 'Sausages', 'Sautéed Veggies', 'Baked Beans', 'Juice']
   },
@@ -211,7 +248,7 @@ export const MENU_ITEMS = [
     protein: '38g',
     carbs: '65g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80',
+    image: img_21,
     tags: ['Hearty Meal'],
     ingredients: ['Toast', 'Omelette', 'Sausages', 'Bacon', 'Sautéed Veggies', 'Baked Beans', 'Juice']
   },
@@ -225,7 +262,7 @@ export const MENU_ITEMS = [
     protein: '45g',
     carbs: '75g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80',
+    image: img_18,
     tags: ['Signature'],
     ingredients: ['Chicken Bun', 'Scrambled Eggs', 'Diced Sausages', 'Baked Beans']
   },
@@ -239,7 +276,7 @@ export const MENU_ITEMS = [
     protein: '42g',
     carbs: '60g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80',
+    image: img_34,
     tags: ['Chef Special', 'Gourmet'],
     ingredients: ['Wheat Tortilla', 'Spinach Omelette', 'Sauté Veggies', 'Mushroom', 'Avocado', 'Chicken Chunks']
   },
@@ -253,7 +290,7 @@ export const MENU_ITEMS = [
     protein: '55g',
     carbs: '100g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80',
+    image: img_21,
     tags: ['Big Portion', 'Classic'],
     ingredients: ['Waffle', 'Toast', 'Eggs', 'Sausage', 'Bacon', 'Mushrooms', 'Grilled Tomatoes']
   },
@@ -267,7 +304,7 @@ export const MENU_ITEMS = [
     protein: '48g',
     carbs: '140g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80',
+    image: img_3,
     tags: ['Big Portion', 'Sweet & Savory'],
     ingredients: ['Sunny Side Eggs', 'Bacon', 'Hash Browns', 'Sausage', 'Toast', 'Pancakes']
   },
@@ -283,7 +320,7 @@ export const MENU_ITEMS = [
     protein: '32g',
     carbs: '45g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
+    image: img_9,
     tags: ['High Protein', 'Spicy Option'],
     ingredients: ['Veggies', 'Spicy Diced Chicken', 'Eggs']
   },
@@ -297,7 +334,7 @@ export const MENU_ITEMS = [
     protein: '28g',
     carbs: '42g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
+    image: img_12,
     tags: ['Omega-3'],
     ingredients: ['Veggies', 'Eggs', 'Tuna']
   },
@@ -311,7 +348,7 @@ export const MENU_ITEMS = [
     protein: '30g',
     carbs: '42g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
+    image: img_0,
     tags: ['Savory', 'Customer Favorite'],
     ingredients: ['Veggies', 'Bacon', 'Ham', 'Eggs']
   },
@@ -325,7 +362,7 @@ export const MENU_ITEMS = [
     protein: '25g',
     carbs: '40g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
+    image: img_0,
     tags: ['Signature'],
     ingredients: ['Green Bell Pepper', 'Spring Onion', 'Scrambled Eggs', 'Sausages', 'Avocado']
   },
@@ -353,7 +390,7 @@ export const MENU_ITEMS = [
     protein: '15g',
     carbs: '35g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
+    image: img_14,
     tags: ['Healthy', 'Vegetarian'],
     ingredients: ['Lettuce', 'Cauliflower', 'Onion', 'Tomatoes', 'Carrots', 'Mozzarella']
   },
@@ -367,7 +404,7 @@ export const MENU_ITEMS = [
     protein: '35g',
     carbs: '50g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
+    image: img_10,
     tags: ['Chef Special', 'High Protein'],
     ingredients: ['Spinach', 'Spring Onions', 'Green Pepper', 'Sweet Potato', 'Chicken', 'Eggs']
   },
@@ -383,7 +420,7 @@ export const MENU_ITEMS = [
     protein: '22g',
     carbs: '45g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    image: img_26,
     tags: ['Bun Sandwich'],
     ingredients: ['Chicken', 'Bun', 'Lettuce', 'Mayo']
   },
@@ -397,7 +434,7 @@ export const MENU_ITEMS = [
     protein: '20g',
     carbs: '42g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    image: img_26,
     tags: ['Bun Sandwich'],
     ingredients: ['Tuna', 'Bun', 'Lettuce']
   },
@@ -411,7 +448,7 @@ export const MENU_ITEMS = [
     protein: '14g',
     carbs: '40g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    image: img_26,
     tags: ['Bun Sandwich', 'Vegetarian'],
     ingredients: ['Egg', 'Bun']
   },
@@ -425,7 +462,7 @@ export const MENU_ITEMS = [
     protein: '25g',
     carbs: '42g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    image: img_26,
     tags: ['Bun Sandwich', 'Savory'],
     ingredients: ['Bacon', 'Ham', 'Egg', 'Bun']
   },
@@ -439,7 +476,7 @@ export const MENU_ITEMS = [
     protein: '26g',
     carbs: '42g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    image: img_26,
     tags: ['Bun Sandwich'],
     ingredients: ['Turkey', 'Bun', 'Lettuce']
   },
@@ -453,7 +490,7 @@ export const MENU_ITEMS = [
     protein: '10g',
     carbs: '44g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    image: img_26,
     tags: ['Bun Sandwich', 'Vegetarian'],
     ingredients: ['Mushrooms', 'Bun']
   },
@@ -467,7 +504,7 @@ export const MENU_ITEMS = [
     protein: '30g',
     carbs: '55g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
+    image: img_6,
     tags: ['Club Sandwich'],
     ingredients: ['Chicken', 'Toast', 'Lettuce', 'Tomato', 'Mayo']
   },
@@ -481,7 +518,7 @@ export const MENU_ITEMS = [
     protein: '26g',
     carbs: '54g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
+    image: img_33,
     tags: ['Club Sandwich'],
     ingredients: ['Tuna', 'Toast', 'Lettuce', 'Tomato']
   },
@@ -495,7 +532,7 @@ export const MENU_ITEMS = [
     protein: '18g',
     carbs: '52g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
+    image: img_33,
     tags: ['Club Sandwich', 'Vegetarian'],
     ingredients: ['Egg', 'Toast', 'Lettuce', 'Tomato']
   },
@@ -509,7 +546,7 @@ export const MENU_ITEMS = [
     protein: '32g',
     carbs: '56g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
+    image: img_33,
     tags: ['Club Sandwich', 'Customer Favorite'],
     ingredients: ['Bacon', 'Ham', 'Egg', 'Toast', 'Lettuce', 'Tomato']
   },
@@ -523,7 +560,7 @@ export const MENU_ITEMS = [
     protein: '28g',
     carbs: '55g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
+    image: img_33,
     tags: ['Club Sandwich'],
     ingredients: ['Turkey', 'Toast', 'Lettuce', 'Tomato', 'Bacon']
   },
@@ -537,7 +574,7 @@ export const MENU_ITEMS = [
     protein: '14g',
     carbs: '58g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
+    image: img_33,
     tags: ['Club Sandwich', 'Vegetarian'],
     ingredients: ['Mushrooms', 'Toast', 'Lettuce', 'Tomato']
   },
@@ -551,7 +588,7 @@ export const MENU_ITEMS = [
     protein: '38g',
     carbs: '65g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80',
+    image: img_24,
     tags: ['Sub Sandwich'],
     ingredients: ['Chicken', 'Sub Roll', 'Veggies']
   },
@@ -565,7 +602,7 @@ export const MENU_ITEMS = [
     protein: '32g',
     carbs: '62g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80',
+    image: img_24,
     tags: ['Sub Sandwich'],
     ingredients: ['Tuna', 'Sub Roll', 'Veggies']
   },
@@ -579,7 +616,7 @@ export const MENU_ITEMS = [
     protein: '22g',
     carbs: '60g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80',
+    image: img_24,
     tags: ['Sub Sandwich', 'Vegetarian'],
     ingredients: ['Egg', 'Sub Roll', 'Veggies']
   },
@@ -593,7 +630,7 @@ export const MENU_ITEMS = [
     protein: '42g',
     carbs: '68g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80',
+    image: img_24,
     tags: ['Sub Sandwich', 'Hunger Crusher'],
     ingredients: ['Bacon', 'Ham', 'Egg', 'Sub Roll', 'Veggies']
   },
@@ -607,7 +644,7 @@ export const MENU_ITEMS = [
     protein: '36g',
     carbs: '66g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80',
+    image: img_24,
     tags: ['Sub Sandwich'],
     ingredients: ['Turkey', 'Sub Roll', 'Veggies']
   },
@@ -621,7 +658,7 @@ export const MENU_ITEMS = [
     protein: '18g',
     carbs: '70g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80',
+    image: img_24,
     tags: ['Sub Sandwich', 'Vegetarian'],
     ingredients: ['Mushrooms', 'Sub Roll', 'Veggies']
   },
@@ -749,7 +786,7 @@ export const MENU_ITEMS = [
     protein: '1g',
     carbs: '32g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80',
+    image: img_20,
     tags: ['Juice', 'Sweet'],
     ingredients: ['Pineapple']
   },
@@ -763,7 +800,7 @@ export const MENU_ITEMS = [
     protein: '1g',
     carbs: '34g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80',
+    image: img_20,
     tags: ['Juice', 'Zesty'],
     ingredients: ['Pineapple', 'Ginger']
   },
@@ -777,7 +814,7 @@ export const MENU_ITEMS = [
     protein: '1g',
     carbs: '34g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80',
+    image: img_30,
     tags: ['Juice', 'Refreshing'],
     ingredients: ['Pineapple', 'Mint', 'Ginger']
   },
@@ -791,7 +828,7 @@ export const MENU_ITEMS = [
     protein: '2g',
     carbs: '26g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=800&q=80',
+    image: img_2,
     tags: ['Juice', 'Vitamin C'],
     ingredients: ['Orange', 'Carrot']
   },
@@ -805,7 +842,7 @@ export const MENU_ITEMS = [
     protein: '2g',
     carbs: '28g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=800&q=80',
+    image: img_11,
     tags: ['Juice', 'Detox'],
     ingredients: ['Beetroot', 'Pineapple', 'Ginger']
   },
@@ -819,7 +856,7 @@ export const MENU_ITEMS = [
     protein: '1g',
     carbs: '38g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80',
+    image: img_27,
     tags: ['Juice', 'Tropical'],
     ingredients: ['Mango', 'Ginger']
   },
@@ -833,7 +870,7 @@ export const MENU_ITEMS = [
     protein: '2g',
     carbs: '20g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=800&q=80',
+    image: img_32,
     tags: ['Juice', 'Detox', 'Green'],
     ingredients: ['Green Apple', 'Celery', 'Cucumber', 'Lemon']
   },
@@ -847,7 +884,7 @@ export const MENU_ITEMS = [
     protein: '1g',
     carbs: '20g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80',
+    image: img_8,
     tags: ['Juice', 'Hydration'],
     ingredients: ['Watermelon']
   },
@@ -1033,7 +1070,7 @@ export const MENU_ITEMS = [
     protein: '10g',
     carbs: '30g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80',
+    image: img_7,
     tags: ['Detox', 'Green'],
     ingredients: ['Apple', 'Spinach', 'Banana', 'Greek Yoghurt']
   },
@@ -1047,7 +1084,7 @@ export const MENU_ITEMS = [
     protein: '8g',
     carbs: '25g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80',
+    image: img_1,
     tags: ['Detox', 'Tropical'],
     ingredients: ['Cucumber', 'Kiwi', 'Coconut Milk', 'Greek Yogurt']
   },
@@ -1061,7 +1098,7 @@ export const MENU_ITEMS = [
     protein: '4g',
     carbs: '35g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80',
+    image: img_8,
     tags: ['Detox', 'Earthy'],
     ingredients: ['Apple', 'Beetroot', 'Carrot', 'Lemon']
   },
@@ -1075,7 +1112,7 @@ export const MENU_ITEMS = [
     protein: '7g',
     carbs: '40g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80',
+    image: img_5,
     tags: ['Detox', 'Fiber Rich'],
     ingredients: ['Mango', 'Banana', 'Kale', 'Spinach', 'Flaxseed']
   },
@@ -1089,7 +1126,7 @@ export const MENU_ITEMS = [
     protein: '3g',
     carbs: '42g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80',
+    image: img_32,
     tags: ['Detox', 'Zesty'],
     ingredients: ['Pineapple', 'Cucumber', 'Apple', 'Celery', 'Ginger']
   },
@@ -1103,7 +1140,7 @@ export const MENU_ITEMS = [
     protein: '12g',
     carbs: '35g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80',
+    image: img_5,
     tags: ['Detox', 'Creamy'],
     ingredients: ['Mango', 'Banana', 'Avocado', 'Greek Yoghurt']
   },
@@ -1117,7 +1154,7 @@ export const MENU_ITEMS = [
     protein: '6g',
     carbs: '38g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80',
+    image: img_7,
     tags: ['Detox', 'Superfood'],
     ingredients: ['Spinach', 'Kale', 'Lemon', 'Pineapple', 'Cucumber', 'Chia Seeds']
   },
@@ -1357,7 +1394,7 @@ export const MENU_ITEMS = [
     protein: '8g',
     carbs: '55g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1562376552-0d160a2f148c?auto=format&fit=crop&w=800&q=80',
+    image: img_3,
     tags: ['Snack', 'Breakfast Vibe'],
     ingredients: ['Batter', 'Syrup', 'Butter']
   },
@@ -1371,7 +1408,7 @@ export const MENU_ITEMS = [
     protein: '10g',
     carbs: '60g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1528207776546-3825a0bb9139?auto=format&fit=crop&w=800&q=80',
+    image: img_25,
     tags: ['Snack', 'Sweet'],
     ingredients: ['Pancake Batter', 'Syrup']
   },
@@ -1385,7 +1422,7 @@ export const MENU_ITEMS = [
     protein: '12g',
     carbs: '48g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1519671282429-b44660ead0a7?auto=format&fit=crop&w=800&q=80',
+    image: img_28,
     tags: ['Snack', 'Gourmet'],
     ingredients: ['Crepe Batter', 'Fillings']
   },
@@ -1399,7 +1436,7 @@ export const MENU_ITEMS = [
     protein: '65g',
     carbs: '25g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+    image: img_14,
     tags: ['Lunch Pack', 'High Protein'],
     ingredients: ['Broccoli', 'Cauliflower', 'Veggies', 'Chicken Breast', 'Beef Strips', 'Boiled Eggs', 'Avocado', 'Hot Sauce']
   },
@@ -1413,7 +1450,7 @@ export const MENU_ITEMS = [
     protein: '45g',
     carbs: '95g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+    image: img_16,
     tags: ['Lunch Pack', 'Hearty'],
     ingredients: ['Jollof', 'Greek Salad', 'Salsa', 'Avocado', 'Kidney Beans', 'Sweet Corn', 'Protein', 'Hot Sauce']
   }

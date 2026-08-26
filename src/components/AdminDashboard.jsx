@@ -8,7 +8,6 @@ const navItems = [
   { name: 'WhatsApp AI', icon: MessageSquare }, // NEW TAB
   { name: 'Live Operations', icon: Activity },
   { name: 'Customers', icon: Users },
-  { name: 'Loyalty & Gifting', icon: Gift },
   { name: 'Feedback', icon: Star }
 ];
 
@@ -73,10 +72,6 @@ export default function AdminDashboard() {
     }
     previousOrdersLength.current = orders.length;
   }, [orders]);
-
-  const handleGift = (name) => {
-    alert(`Gift logged for ${name}!`);
-  };
 
   const handleManualReply = async (e) => {
     e.preventDefault();
@@ -217,7 +212,7 @@ export default function AdminDashboard() {
                 {/* CUSTOMERS TABLE */}
                 <div className="lg:col-span-2 bg-gray-50 border border-gray-200 rounded-2xl backdrop-blur-sm overflow-hidden flex flex-col">
                   <div className="p-6 border-b border-gray-200 flex justify-between items-center">
-                    <h2 className="text-lg font-semibold tracking-wide">Top Customers (Gifting Target)</h2>
+                    <h2 className="text-lg font-semibold tracking-wide">Top Customers</h2>
                     <button className="text-xs font-medium text-black hover:text-gray-900 transition-colors bg-black/10 px-3 py-1.5 rounded-lg">View All</button>
                   </div>
                   <div className="overflow-x-auto">
@@ -227,7 +222,6 @@ export default function AdminDashboard() {
                           <th className="p-4 font-medium">Customer</th>
                           <th className="p-4 font-medium">Total Visits</th>
                           <th className="p-4 font-medium">Last Visit</th>
-                          <th className="p-4 font-medium text-right">Action</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-white/5">
@@ -240,14 +234,6 @@ export default function AdminDashboard() {
                               </span>
                             </td>
                             <td className="p-4 text-gray-900/50 text-sm">{c.lastVisit}</td>
-                            <td className="p-4 text-right">
-                              <button 
-                                onClick={() => handleGift(c.name)}
-                                className="bg-gray-50 hover:bg-black hover:text-white text-gray-900 text-xs font-semibold px-4 py-2 rounded-lg transition-all"
-                              >
-                                Send Gift
-                              </button>
-                            </td>
                           </tr>
                         ))}
                       </tbody>
@@ -467,51 +453,6 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {activeTab === 'Loyalty & Gifting' && (
-            <div className="max-w-7xl mx-auto h-full animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="bg-gray-50 border border-gray-200 rounded-2xl backdrop-blur-sm flex flex-col h-full min-h-[600px]">
-                 <div className="p-6 border-b border-gray-200 flex justify-between items-center">
-                  <h2 className="text-lg font-semibold tracking-wide">Loyalty Programs & Rewards</h2>
-                  <button className="text-xs font-medium text-black hover:text-gray-900 transition-colors bg-black/10 px-3 py-1.5 rounded-lg flex items-center gap-2">
-                    <Gift size={14} /> New Campaign
-                  </button>
-                </div>
-                <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {loyalty.map((l, i) => {
-                    const cust = customers.find(c => c.id === l.customerId);
-                    return (
-                      <div key={i} className="bg-gray-50 border border-gray-200 rounded-xl p-5 relative overflow-hidden group hover:bg-gray-50 transition-colors">
-                        <div className={`absolute -right-10 -top-10 w-32 h-32 rounded-full blur-2xl transition-all ${l.tier === 'Gold' ? 'bg-yellow-400/10 group-hover:bg-yellow-400/20' : l.tier === 'Silver' ? 'bg-gray-300/10 group-hover:bg-gray-300/20' : 'bg-black/5 group-hover:bg-black/10'}`}></div>
-                        <div className="flex justify-between items-start mb-4 relative z-10">
-                          <div>
-                            <div className="text-lg font-semibold text-gray-900">{cust?.name || 'Unknown'}</div>
-                            <div className="text-xs text-gray-900/50">{l.tier} Member</div>
-                          </div>
-                          <div className="bg-gray-100 text-black px-3 py-1 rounded-lg text-sm font-bold border border-gray-900/30">
-                            {l.points} pts
-                          </div>
-                        </div>
-                        <div className="mb-4 relative z-10">
-                          <div className="text-xs text-gray-900/50 mb-1">Next Reward</div>
-                          <div className="text-sm text-gray-900 font-medium">{l.nextReward}</div>
-                          <div className="w-full bg-gray-50 rounded-full h-1.5 mt-3 overflow-hidden">
-                            <div className="bg-black h-1.5 rounded-full" style={{ width: `${(l.points % 500) / 5}%` }}></div>
-                          </div>
-                        </div>
-                        <button 
-                          onClick={() => handleGift(cust?.name)}
-                          className="w-full relative z-10 bg-gray-50 hover:bg-black hover:text-white text-gray-900 text-xs font-semibold px-4 py-2.5 rounded-lg transition-all flex justify-center items-center gap-2"
-                        >
-                          <Gift size={14} /> Send Custom Gift
-                        </button>
-                      </div>
-                    )
-                  })}
-                </div>
-              </div>
-            </div>
-          )}
-
           {activeTab === 'Feedback' && (
             <div className="max-w-7xl mx-auto h-full animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className="bg-gray-50 border border-gray-200 rounded-2xl backdrop-blur-sm flex flex-col h-full min-h-[600px]">
@@ -547,7 +488,7 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {activeTab !== 'Overview' && activeTab !== 'Live Operations' && activeTab !== 'WhatsApp AI' && activeTab !== 'Customers' && activeTab !== 'Loyalty & Gifting' && activeTab !== 'Feedback' && (
+          {activeTab !== 'Overview' && activeTab !== 'Live Operations' && activeTab !== 'WhatsApp AI' && activeTab !== 'Customers' && activeTab !== 'Feedback' && (
             <div className="flex flex-col items-center justify-center h-full text-center space-y-4 text-gray-900/40 animate-in fade-in">
               <Activity size={48} className="opacity-50" />
               <p className="text-lg">Module <strong className="text-gray-900/70">{activeTab}</strong> is currently under development.</p>

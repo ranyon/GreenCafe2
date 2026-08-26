@@ -7,15 +7,27 @@ import { payment } from '../services/payment';
 export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem, onClearCart }) {
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [completedOrderId, setCompletedOrderId] = useState(null);
+  const [customerInfo, setCustomerInfo] = useState({ name: '', phone: '', location: '' });
+  const [checkoutStep, setCheckoutStep] = useState('cart'); // 'cart' or 'details'
   const navigate = useNavigate();
 
   if (!isOpen) return null;
+
+  // Reset step if cart is emptied
+  if (cartItems.length === 0 && checkoutStep !== 'cart' && !completedOrderId) {
+    setCheckoutStep('cart');
+  }
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const tax = subtotal * 0.08;
   const total = subtotal + tax;
 
   const handleCheckout = async () => {
+    if (!customerInfo.name.trim() || !customerInfo.phone.trim() || !customerInfo.location.trim()) {
+      alert("Please fill in your name, phone, and delivery location to continue.");
+      return;
+    }
+
     setIsCheckingOut(true);
     try {
       const shortId = Math.random().toString(36).substring(2, 7).toUpperCase();
@@ -25,6 +37,9 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
         items: cartItems, 
         total, 
         status: 'Pending', 
+        customerName: customerInfo.name,
+        customerPhone: customerInfo.phone,
+        customerLocation: customerInfo.location,
         timestamp: new Date().toISOString() 
       };
       
@@ -33,7 +48,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
       
       // Update Live Feed for admin
       await db.addDocument('feed', {
-        user: "Guest Customer",
+        user: customerInfo.name,
         action: `initiated checkout for GHS ${total.toFixed(2)}.`,
         time: "Just now"
       });
@@ -120,6 +135,45 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                 Explore our signature menu of wraps, sandwiches & cold-pressed green juices to get started.
               </p>
             </div>
+          ) : checkoutStep === 'details' ? (
+            <div className="flex-1 overflow-y-auto py-6 space-y-6">
+              <div className="flex items-center gap-2 mb-2">
+                <button 
+                  onClick={() => setCheckoutStep('cart')}
+                  className="text-gray-400 hover:text-black transition-colors"
+                >
+                  &larr; Back to Cart
+                </button>
+              </div>
+              
+              <div className="space-y-4">
+                <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Delivery Details</h4>
+                <p className="text-xs text-gray-500">Please provide your information so we can deliver your fresh order.</p>
+                <div className="space-y-3">
+                  <input 
+                    type="text" 
+                    placeholder="Full Name" 
+                    value={customerInfo.name}
+                    onChange={(e) => setCustomerInfo({...customerInfo, name: e.target.value})}
+                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-black/5 transition-all"
+                  />
+                  <input 
+                    type="tel" 
+                    placeholder="Phone Number" 
+                    value={customerInfo.phone}
+                    onChange={(e) => setCustomerInfo({...customerInfo, phone: e.target.value})}
+                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-black/5 transition-all"
+                  />
+                  <input 
+                    type="text" 
+                    placeholder="Delivery Location" 
+                    value={customerInfo.location}
+                    onChange={(e) => setCustomerInfo({...customerInfo, location: e.target.value})}
+                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-black/5 transition-all"
+                  />
+                </div>
+              </div>
+            </div>
           ) : (
             <div className="flex-1 overflow-y-auto py-6 space-y-4">
               {cartItems.map((item) => (
@@ -166,9 +220,10 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
             </div>
           )}
 
-          {/* Footer Checkout Summary */}
+          {/* Footer Checkout Summary & Form */}
           {!completedOrderId && cartItems.length > 0 && (
             <div className="pt-6 border-t border-gray-200 space-y-4">
+              
               <div className="space-y-1.5 text-xs text-gray-600">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
@@ -184,20 +239,30 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                 </div>
               </div>
 
-              <button
-                disabled={isCheckingOut}
-                onClick={handleCheckout}
-                className="w-full py-4 text-xs font-bold text-white bg-gradient-to-r from-gray-800 to-black hover:opacity-90 rounded-full shadow-lg shadow-black/10 transition-all flex items-center justify-center gap-2"
-              >
-                {isCheckingOut ? (
-                  <span>Processing Fresh Order...</span>
-                ) : (
-                  <>
-                    <span>Proceed to Express Checkout</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </>
-                )}
-              </button>
+              {checkoutStep === 'cart' ? (
+                <button
+                  onClick={() => setCheckoutStep('details')}
+                  className="w-full py-4 text-xs font-bold text-white bg-gradient-to-r from-gray-800 to-black hover:opacity-90 rounded-full shadow-lg shadow-black/10 transition-all flex items-center justify-center gap-2"
+                >
+                  <span>Proceed to Checkout</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              ) : (
+                <button
+                  disabled={isCheckingOut}
+                  onClick={handleCheckout}
+                  className="w-full py-4 text-xs font-bold text-white bg-gradient-to-r from-green-700 to-green-900 hover:opacity-90 rounded-full shadow-lg shadow-green-900/20 transition-all flex items-center justify-center gap-2"
+                >
+                  {isCheckingOut ? (
+                    <span>Processing Securely...</span>
+                  ) : (
+                    <>
+                      <span>Confirm & Pay GH₵{total.toFixed(2)}</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
+                </button>
+              )}
             </div>
           )}
         </div>
