@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import smoothiesImage from '../assets/smoothies_juices_banner.png';
-import chickenSaladImg from '../assets/chicken_salad.png';
-import breakfastImg from '../assets/green_special_breakfast.png';
-import sandwichImg from '../assets/gourmet_sandwich.png';
-import tunaSaladImg from '../assets/tuna_salad.png';
+import smoothiesImage from '../assets/smoothies_juices_banner.webp';
+import chickenSaladImg from '../assets/chicken_salad.webp';
+import categoryBreakfastImg from '../assets/category_breakfast.png';
+import sandwichImg from '../assets/gourmet_sandwich.webp';
+import categoryWrapsImg from '../assets/category_wraps.png';
 
 const categories = [
   {
@@ -15,7 +15,7 @@ const categories = [
   {
     id: 'wraps',
     title: 'Wraps',
-    image: tunaSaladImg, // Using tuna salad for now since we couldn't gen the wrap
+    image: categoryWrapsImg,
   },
   {
     id: 'sandwiches',
@@ -25,7 +25,7 @@ const categories = [
   {
     id: 'breakfast',
     title: 'Breakfast',
-    image: breakfastImg,
+    image: categoryBreakfastImg,
   },
   {
     id: 'smoothies-juices',

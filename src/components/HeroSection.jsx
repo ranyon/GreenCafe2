@@ -3,7 +3,9 @@ import { ArrowRight, Sparkles, Leaf, Zap, ShieldCheck } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import heroVeganWrap from '../assets/hero_vegan_wrap.png';
+import heroGoddessBowl from '../assets/hero_goddess_bowl.png';
+import heroGoldenLatte from '../assets/hero_golden_latte.png';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroSection({ onExplore, onOpenLab }) {
@@ -17,18 +19,21 @@ export default function HeroSection({ onExplore, onOpenLab }) {
       description: 'Packed with fiery plant-based protein, fresh crunch, and our signature Green Cafe spicy aioli. Wrapped to perfection.',
       badge: 'Bestseller',
       badgeIcon: '🔥',
+      image: heroVeganWrap,
     },
     {
       title: 'Green Goddess Bowl',
       description: 'A nutrient-dense powerhouse of quinoa, roasted sweet potatoes, avocado, and our house-made herb tahini dressing.',
       badge: 'Nutrient Dense',
       badgeIcon: '🥑',
+      image: heroGoddessBowl,
     },
     {
       title: 'Golden Milk Iced Latte',
       description: 'Anti-inflammatory turmeric, ginger, and oat milk shaken over ice. A refreshing, healing elixir.',
       badge: 'Immunity Boost',
       badgeIcon: '✨',
+      image: heroGoldenLatte,
     }
   ];
 
@@ -62,17 +67,19 @@ export default function HeroSection({ onExplore, onOpenLab }) {
     >
       {/* Dark Space Background */}
       <div className="absolute inset-0 z-0 pointer-events-none bg-gray-950">
-        <img 
-          src="/assets/space_sunlit_916.jpg" 
-          alt="Cafe Background Desktop" 
-          className="hidden md:block w-full h-full object-cover opacity-100"
-        />
-        <img 
-          src="/assets/mobile_hero.jpg" 
-          alt="Cafe Background Mobile" 
-          className="block md:hidden w-full h-full object-cover opacity-100"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10"></div>
+        <AnimatePresence mode="wait">
+          <motion.img 
+            key={activeIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            src={currentSlide.image} 
+            alt={currentSlide.title} 
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30"></div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col items-center mt-4">
