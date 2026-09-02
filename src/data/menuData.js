@@ -100,6 +100,33 @@ import img_tuna_club_new from '../assets/tuna_club_new.png';
 import img_crepe_new from '../assets/crepe_new.png';
 import img_caesar_salad_new from '../assets/caesar_salad_new.png';
 
+
+import img_caesarsalad_new from '../assets/new_caesarsalad.jpeg';
+import img_broccolisalad_new from '../assets/new_broccolisalad.jpeg';
+import img_exotic_fruit_salad_new from '../assets/new_exotic_fruit_salad.jpeg';
+import img_pasta_salad_new from '../assets/new_pasta_salad.jpeg';
+import img_eggsalad_new from '../assets/new_eggsalad.jpeg';
+import img_potatosalad_new from '../assets/new_potatosalad.jpeg';
+import img_greeksalad_new from '../assets/new_greeksalad.jpeg';
+import img_mushroomsalad_new from '../assets/new_mushroomsalad.jpeg';
+import img_chickensalad_new from '../assets/new_chickensalad.jpeg';
+import img_tunasalad_new from '../assets/new_tunasalad.jpeg';
+import img_localfruitsalad_new from '../assets/new_localfruitsalad.jpeg';
+
+
+import img_croutons from '../assets/croutons_new.png';
+import img_toast from '../assets/toast_new.png';
+import img_sweet_corn from '../assets/sweet_corn_new.png';
+import img_extra_egg from '../assets/extra_egg_new.png';
+import img_extra_bacon from '../assets/extra_bacon_new.png';
+import img_extra_avocado from '../assets/extra_avocado_new.png';
+import img_extra_pasta from '../assets/extra_pasta_new.png';
+import img_extra_potato from '../assets/extra_potato_new.png';
+import img_extra_olives from '../assets/extra_olives_new.png';
+import img_diced_chicken from '../assets/diced_chicken_new.png';
+import img_extra_tuna from '../assets/extra_tuna_new.png';
+import img_extra_dressing from '../assets/extra_dressing_new.png';
+
 export const MENU_CATEGORIES = [
   { id: 'salads', label: 'Salads', icon: Leaf },
   { id: 'breakfast', label: 'Breakfast', icon: Coffee },
@@ -123,7 +150,7 @@ export const MENU_ITEMS = [
     protein: '25g',
     carbs: '15g',
     rating: 4.8,
-    image: img_23,
+    image: img_chickensalad_new,
     tags: ['Customer Favorite', 'High Protein'],
     ingredients: ['Chicken', 'Mixed Greens', 'Cherry Tomatoes']
   },
@@ -137,7 +164,7 @@ export const MENU_ITEMS = [
     protein: '28g',
     carbs: '12g',
     rating: 4.7,
-    image: img_4,
+    image: img_tunasalad_new,
     tags: ['Omega-3'],
     ingredients: ['Tuna', 'Mixed Greens', 'Red Onion']
   },
@@ -151,7 +178,7 @@ export const MENU_ITEMS = [
     protein: '18g',
     carbs: '10g',
     rating: 4.5,
-    image: img_31,
+    image: img_eggsalad_new,
     tags: ['Vegetarian'],
     ingredients: ['Boiled Egg', 'Mixed Greens', 'Cucumber']
   },
@@ -165,7 +192,7 @@ export const MENU_ITEMS = [
     protein: '8g',
     carbs: '50g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1525992923985-06b53dbd982b?auto=format&fit=crop&w=800&q=80',
+    image: img_potatosalad_new,
     tags: ['Comfort Food'],
     ingredients: ['Potatoes', 'Herbs', 'House Dressing']
   },
@@ -179,7 +206,7 @@ export const MENU_ITEMS = [
     protein: '12g',
     carbs: '48g',
     rating: 4.6,
-    image: img_22,
+    image: img_pasta_salad_new,
     tags: ['Hearty'],
     ingredients: ['Pasta', 'Veggies', 'Vinaigrette']
   },
@@ -193,7 +220,7 @@ export const MENU_ITEMS = [
     protein: '10g',
     carbs: '14g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    image: img_mushroomsalad_new,
     tags: ['Vegetarian', 'Earthy'],
     ingredients: ['Sautéed Mushrooms', 'Mixed Greens', 'Herbs']
   },
@@ -207,7 +234,7 @@ export const MENU_ITEMS = [
     protein: '15g',
     carbs: '18g',
     rating: 4.9,
-    image: img_caesar_salad_new,
+    image: img_caesarsalad_new,
     tags: ['Classic'],
     ingredients: ['Romaine', 'Croutons', 'Parmesan', 'Caesar Dressing']
   },
@@ -221,7 +248,7 @@ export const MENU_ITEMS = [
     protein: '10g',
     carbs: '15g',
     rating: 4.8,
-    image: img_17,
+    image: img_greeksalad_new,
     tags: ['Vegetarian', 'Mediterranean'],
     ingredients: ['Feta', 'Olives', 'Tomatoes', 'Cucumber', 'Red Onion']
   },
@@ -235,7 +262,7 @@ export const MENU_ITEMS = [
     protein: '12g',
     carbs: '18g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_broccolisalad_new,
     tags: ['Nutrient Dense'],
     ingredients: ['Broccoli Florets', 'Almonds', 'Cranberries']
   },
@@ -249,7 +276,7 @@ export const MENU_ITEMS = [
     protein: '2g',
     carbs: '35g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=800&q=80',
+    image: img_localfruitsalad_new,
     tags: ['Fresh', 'Vegan'],
     ingredients: ['Watermelon', 'Pineapple', 'Pawpaw', 'Banana', 'Orange', 'Mango']
   },
@@ -263,7 +290,7 @@ export const MENU_ITEMS = [
     protein: '2g',
     carbs: '38g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=800&q=80',
+    image: img_exotic_fruit_salad_new,
     tags: ['Premium', 'Vegan'],
     ingredients: ['Apple', 'Grapes', 'Mandarin', 'Kiwi', 'Plums']
   },
@@ -973,7 +1000,7 @@ export const MENU_ITEMS = [
     protein: '1g',
     carbs: '10g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_croutons,
     tags: ['Crunchy'],
     ingredients: ['Toasted Bread']
   },
@@ -987,7 +1014,7 @@ export const MENU_ITEMS = [
     protein: '3g',
     carbs: '15g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_toast,
     tags: ['Side'],
     ingredients: ['Bread']
   },
@@ -1001,7 +1028,7 @@ export const MENU_ITEMS = [
     protein: '1g',
     carbs: '9g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_sweet_corn,
     tags: ['Sweet'],
     ingredients: ['Corn']
   },
@@ -1015,7 +1042,7 @@ export const MENU_ITEMS = [
     protein: '6g',
     carbs: '1g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_extra_egg,
     tags: ['Protein'],
     ingredients: ['Egg']
   },
@@ -1029,7 +1056,7 @@ export const MENU_ITEMS = [
     protein: '9g',
     carbs: '0g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_extra_bacon,
     tags: ['Savory'],
     ingredients: ['Bacon']
   },
@@ -1043,7 +1070,7 @@ export const MENU_ITEMS = [
     protein: '1g',
     carbs: '6g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_extra_avocado,
     tags: ['Healthy Fats'],
     ingredients: ['Avocado']
   },
@@ -1057,7 +1084,7 @@ export const MENU_ITEMS = [
     protein: '4g',
     carbs: '22g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_extra_pasta,
     tags: ['Carbs'],
     ingredients: ['Pasta']
   },
@@ -1071,7 +1098,7 @@ export const MENU_ITEMS = [
     protein: '2g',
     carbs: '20g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_extra_potato,
     tags: ['Carbs'],
     ingredients: ['Potato']
   },
@@ -1085,7 +1112,7 @@ export const MENU_ITEMS = [
     protein: '0g',
     carbs: '2g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_extra_olives,
     tags: ['Salty'],
     ingredients: ['Olives']
   },
@@ -1099,7 +1126,7 @@ export const MENU_ITEMS = [
     protein: '20g',
     carbs: '0g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_diced_chicken,
     tags: ['Protein'],
     ingredients: ['Chicken']
   },
@@ -1113,7 +1140,7 @@ export const MENU_ITEMS = [
     protein: '22g',
     carbs: '0g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_extra_tuna,
     tags: ['Protein', 'Omega-3'],
     ingredients: ['Tuna']
   },
@@ -1127,7 +1154,7 @@ export const MENU_ITEMS = [
     protein: '0g',
     carbs: '2g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: img_extra_dressing,
     tags: ['Flavor'],
     ingredients: ['Dressing']
   },
