@@ -67,19 +67,17 @@ export default function HeroSection({ onExplore, onOpenLab }) {
     >
       {/* Dark Space Background */}
       <div className="absolute inset-0 z-0 pointer-events-none bg-gray-950">
-        <AnimatePresence mode="wait">
-          <motion.img 
-            key={activeIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            src={currentSlide.image} 
-            alt={currentSlide.title} 
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30"></div>
+        <img 
+          src="/assets/space_sunlit_916.jpg" 
+          alt="Cafe Background Desktop" 
+          className="hidden md:block w-full h-full object-cover opacity-100"
+        />
+        <img 
+          src="/assets/mobile_hero.jpg" 
+          alt="Cafe Background Mobile" 
+          className="block md:hidden w-full h-full object-cover opacity-100"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10"></div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col items-center mt-4">

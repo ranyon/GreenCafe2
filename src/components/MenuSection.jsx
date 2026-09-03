@@ -102,17 +102,18 @@ export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
           {filteredItems.map((item) => (
             <div
               key={item.id}
+              id={`menu-card-${item.id}`}
               onClick={() => onItemClick(item)}
               className="group glass-card rounded-2xl overflow-hidden border border-gray-200 hover:border-gray-900/40 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between"
             >
               {/* Image Header */}
-              <div className="relative h-32 sm:h-56 overflow-hidden">
+              <div className="relative h-32 sm:h-56 overflow-hidden bg-gray-50">
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+                <div id={`menu-card-overlay-${item.id}`} className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
 
                 {/* Rating Badge */}
                 <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-gray-50 backdrop-blur-md border border-gray-200 flex items-center gap-1 text-xs font-semibold text-gray-900">
@@ -127,7 +128,7 @@ export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
               </div>
 
               {/* Content Body */}
-              <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between">
+              <div id={`menu-card-content-${item.id}`} className="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                 <div>
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-1.5 sm:mb-2.5">

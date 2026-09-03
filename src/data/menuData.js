@@ -127,6 +127,25 @@ import img_diced_chicken from '../assets/diced_chicken_new.png';
 import img_extra_tuna from '../assets/extra_tuna_new.png';
 import img_extra_dressing from '../assets/extra_dressing_new.png';
 
+
+import img_great_start_combo from '../assets/great_start_combo_new.png';
+import img_wholeday_combo from '../assets/wholeday_combo_new.png';
+import img_american_breakfast from '../assets/american_breakfast_new.png';
+import img_bacon_ham_egg_wrap from '../assets/bacon_ham_egg_wrap_new.png';
+import img_mushroom_wrap from '../assets/mushroom_wrap_new.png';
+
+
+import img_hibiscus_tea from '../assets/hibiscus_tea_new.png';
+import img_lemon_grass_tea from '../assets/lemon_grass_tea_new.png';
+import img_lipton_tea from '../assets/lipton_tea_new.png';
+import img_ginger_lemon_mint_tea from '../assets/ginger_lemon_mint_tea_new.png';
+import img_green_tea from '../assets/green_tea_new.png';
+
+
+import img_juice_pineapple_ginger from '../assets/juice_pineapple_ginger_new.png';
+import img_juice_pineapple_mint_ginger from '../assets/juice_pineapple_mint_ginger_new.png';
+import img_juice_orange_carrot from '../assets/juice_orange_carrot_new.png';
+
 export const MENU_CATEGORIES = [
   { id: 'salads', label: 'Salads', icon: Leaf },
   { id: 'breakfast', label: 'Breakfast', icon: Coffee },
@@ -320,7 +339,7 @@ export const MENU_ITEMS = [
     protein: '28g',
     carbs: '65g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80',
+    image: img_great_start_combo,
     tags: ['Customer Favorite'],
     ingredients: ['Toast', 'Omelette', 'Sausages', 'Sautéed Veggies', 'Baked Beans', 'Juice']
   },
@@ -334,7 +353,7 @@ export const MENU_ITEMS = [
     protein: '38g',
     carbs: '65g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80',
+    image: img_wholeday_combo,
     tags: ['Hearty Meal'],
     ingredients: ['Toast', 'Omelette', 'Sausages', 'Bacon', 'Sautéed Veggies', 'Baked Beans', 'Juice']
   },
@@ -390,7 +409,7 @@ export const MENU_ITEMS = [
     protein: '48g',
     carbs: '140g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=800&q=80',
+    image: img_american_breakfast,
     tags: ['Big Portion', 'Sweet & Savory'],
     ingredients: ['Sunny Side Eggs', 'Bacon', 'Hash Browns', 'Sausage', 'Toast', 'Pancakes']
   },
@@ -434,7 +453,7 @@ export const MENU_ITEMS = [
     protein: '30g',
     carbs: '42g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
+    image: img_bacon_ham_egg_wrap,
     tags: ['Savory', 'Customer Favorite'],
     ingredients: ['Veggies', 'Bacon', 'Ham', 'Eggs']
   },
@@ -462,7 +481,7 @@ export const MENU_ITEMS = [
     protein: '12g',
     carbs: '45g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
+    image: img_mushroom_wrap,
     tags: ['Vegetarian'],
     ingredients: ['Veggies', 'Mushrooms', 'Olives']
   },
@@ -802,7 +821,7 @@ export const MENU_ITEMS = [
     protein: '0g',
     carbs: '0g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1596766736294-825597793d5f?auto=format&fit=crop&w=800&q=80',
+    image: img_hibiscus_tea,
     tags: ['Tea', 'Refreshing'],
     ingredients: ['Hibiscus', 'Hot Water']
   },
@@ -816,7 +835,7 @@ export const MENU_ITEMS = [
     protein: '0g',
     carbs: '0g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1596766736294-825597793d5f?auto=format&fit=crop&w=800&q=80',
+    image: img_lemon_grass_tea,
     tags: ['Tea', 'Calming'],
     ingredients: ['Lemon Grass', 'Hot Water']
   },
@@ -830,7 +849,7 @@ export const MENU_ITEMS = [
     protein: '0g',
     carbs: '0g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1596766736294-825597793d5f?auto=format&fit=crop&w=800&q=80',
+    image: img_lipton_tea,
     tags: ['Tea', 'Classic'],
     ingredients: ['Black Tea', 'Hot Water']
   },
@@ -844,7 +863,7 @@ export const MENU_ITEMS = [
     protein: '0g',
     carbs: '0g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1596766736294-825597793d5f?auto=format&fit=crop&w=800&q=80',
+    image: img_green_tea,
     tags: ['Tea', 'Antioxidant'],
     ingredients: ['Green Tea Leaves', 'Hot Water']
   },
@@ -858,7 +877,7 @@ export const MENU_ITEMS = [
     protein: '0g',
     carbs: '2g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1596766736294-825597793d5f?auto=format&fit=crop&w=800&q=80',
+    image: img_ginger_lemon_mint_tea,
     tags: ['Tea', 'Immunity'],
     ingredients: ['Ginger', 'Lemon', 'Mint', 'Hot Water']
   },
