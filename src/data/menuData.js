@@ -146,6 +146,18 @@ import img_juice_pineapple_ginger from '../assets/juice_pineapple_ginger_new.png
 import img_juice_pineapple_mint_ginger from '../assets/juice_pineapple_mint_ginger_new.png';
 import img_juice_orange_carrot from '../assets/juice_orange_carrot_new.png';
 
+import img_goodStart from '../assets/goodStart.jpeg';
+import img_greatStart from '../assets/greatStart.jpeg';
+import img_wholeDay from '../assets/wholeDay.jpeg';
+import img_GreenSpecialBreakfast from '../assets/GreenSpecialBreakfast.jpeg';
+import img_chefsSpecial from '../assets/chefsSpecial.jpeg';
+import img_englishBreakfast from '../assets/englishBreakfast.jpeg';
+import img_americanBreakfast from '../assets/americanBreakfast.jpeg';
+
+
+import img_chicken_wrap_new from '../assets/chicken_wrap_new.png';
+import img_pillow_willow_new from '../assets/pillow_willow_new.png';
+
 export const MENU_CATEGORIES = [
   { id: 'salads', label: 'Salads', icon: Leaf },
   { id: 'breakfast', label: 'Breakfast', icon: Coffee },
@@ -325,7 +337,7 @@ export const MENU_ITEMS = [
     protein: '25g',
     carbs: '55g',
     rating: 4.7,
-    image: img_35,
+    image: img_goodStart,
     tags: ['Classic Breakfast'],
     ingredients: ['Toast', 'Omelette', 'Sausages', 'Baked Beans', 'Juice']
   },
@@ -339,7 +351,7 @@ export const MENU_ITEMS = [
     protein: '28g',
     carbs: '65g',
     rating: 4.8,
-    image: img_great_start_combo,
+    image: img_greatStart,
     tags: ['Customer Favorite'],
     ingredients: ['Toast', 'Omelette', 'Sausages', 'Sautéed Veggies', 'Baked Beans', 'Juice']
   },
@@ -353,7 +365,7 @@ export const MENU_ITEMS = [
     protein: '38g',
     carbs: '65g',
     rating: 4.9,
-    image: img_wholeday_combo,
+    image: img_wholeDay,
     tags: ['Hearty Meal'],
     ingredients: ['Toast', 'Omelette', 'Sausages', 'Bacon', 'Sautéed Veggies', 'Baked Beans', 'Juice']
   },
@@ -367,7 +379,7 @@ export const MENU_ITEMS = [
     protein: '45g',
     carbs: '75g',
     rating: 4.9,
-    image: img_18,
+    image: img_GreenSpecialBreakfast,
     tags: ['Signature'],
     ingredients: ['Chicken Bun', 'Scrambled Eggs', 'Diced Sausages', 'Baked Beans']
   },
@@ -395,7 +407,7 @@ export const MENU_ITEMS = [
     protein: '55g',
     carbs: '100g',
     rating: 5.0,
-    image: img_21,
+    image: img_englishBreakfast,
     tags: ['Big Portion', 'Classic'],
     ingredients: ['Waffle', 'Toast', 'Eggs', 'Sausage', 'Bacon', 'Mushrooms', 'Grilled Tomatoes']
   },
@@ -409,7 +421,7 @@ export const MENU_ITEMS = [
     protein: '48g',
     carbs: '140g',
     rating: 5.0,
-    image: img_american_breakfast,
+    image: img_americanBreakfast,
     tags: ['Big Portion', 'Sweet & Savory'],
     ingredients: ['Sunny Side Eggs', 'Bacon', 'Hash Browns', 'Sausage', 'Toast', 'Pancakes']
   },
@@ -425,7 +437,7 @@ export const MENU_ITEMS = [
     protein: '32g',
     carbs: '45g',
     rating: 4.8,
-    image: img_9,
+    image: img_chicken_wrap_new,
     tags: ['High Protein', 'Spicy Option'],
     ingredients: ['Veggies', 'Spicy Diced Chicken', 'Eggs']
   },
@@ -509,7 +521,7 @@ export const MENU_ITEMS = [
     protein: '35g',
     carbs: '50g',
     rating: 5.0,
-    image: img_10,
+    image: img_pillow_willow_new,
     tags: ['Chef Special', 'High Protein'],
     ingredients: ['Spinach', 'Spring Onions', 'Green Pepper', 'Sweet Potato', 'Chicken', 'Eggs']
   },
