@@ -190,6 +190,18 @@ import img_veggie_spring_rolls_photo from '../assets/veggie_spring_rolls.jpeg';
 import img_waffle_photo from '../assets/waffle.jpeg';
 import img_yoghurt_parfait_photo from '../assets/yoghurt_parfait.jpeg';
 import img_chicken_club_sandwich_photo from '../assets/chicken_club_sandwich.jpeg';
+
+import img_bacon_ham_egg_wrap_photo from '../assets/bacon_ham_egg_wrap.jpeg';
+import img_burrito_bowl_photo from '../assets/burrito_bowl.jpeg';
+import img_chicken_club_combo_photo from '../assets/chicken_club_combo.jpeg';
+import img_chicken_wrap_photo from '../assets/chicken_wrap.jpeg';
+import img_doctors_favorite_photo from '../assets/doctors_favorite.jpeg';
+import img_green_special_wrap_photo from '../assets/green_special_wrap.jpeg';
+import img_mushroom_wrap_photo from '../assets/mushroom_wrap.jpeg';
+import img_pillow_willow_photo from '../assets/pillow_willow.jpeg';
+import img_protein_bowl_photo from '../assets/protein_bowl.jpeg';
+import img_tuna_wrap_photo from '../assets/tuna_wrap.jpeg';
+import img_wrap_combo_photo from '../assets/wrap_combo.jpeg';
 export const MENU_CATEGORIES = [
   { id: 'salads', label: 'Salads', icon: Leaf },
   { id: 'breakfast', label: 'Breakfast', icon: Coffee },
@@ -470,7 +482,7 @@ export const MENU_ITEMS = [
     protein: '35g',
     carbs: '80g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80',
+    image: img_chicken_club_combo_photo,
     tags: ['Combo', 'Hearty'],
     ingredients: ['Chicken Club', 'Side Salad', 'Juice']
   },
@@ -484,7 +496,7 @@ export const MENU_ITEMS = [
     protein: '30g',
     carbs: '70g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80',
+    image: img_wrap_combo_photo,
     tags: ['Combo'],
     ingredients: ['Wrap', 'Side Salad', 'Juice']
   },
@@ -514,7 +526,7 @@ export const MENU_ITEMS = [
     protein: '32g',
     carbs: '45g',
     rating: 4.8,
-    image: img_chicken_wrap_new,
+    image: img_chicken_wrap_photo,
     tags: ['High Protein', 'Spicy Option'],
     ingredients: ['Veggies', 'Spicy Diced Chicken', 'Eggs']
   },
@@ -528,7 +540,7 @@ export const MENU_ITEMS = [
     protein: '28g',
     carbs: '42g',
     rating: 4.7,
-    image: img_tuna_wrap_new,
+    image: img_tuna_wrap_photo,
     tags: ['Omega-3'],
     ingredients: ['Veggies', 'Eggs', 'Tuna']
   },
@@ -542,7 +554,7 @@ export const MENU_ITEMS = [
     protein: '30g',
     carbs: '42g',
     rating: 4.9,
-    image: img_bacon_ham_egg_wrap,
+    image: img_bacon_ham_egg_wrap_photo,
     tags: ['Savory', 'Customer Favorite'],
     ingredients: ['Veggies', 'Bacon', 'Ham', 'Eggs']
   },
@@ -556,7 +568,7 @@ export const MENU_ITEMS = [
     protein: '25g',
     carbs: '40g',
     rating: 5.0,
-    image: img_green_special_wrap_new,
+    image: img_green_special_wrap_photo,
     tags: ['Signature'],
     ingredients: ['Green Bell Pepper', 'Spring Onion', 'Scrambled Eggs', 'Sausages', 'Avocado']
   },
@@ -570,7 +582,7 @@ export const MENU_ITEMS = [
     protein: '12g',
     carbs: '45g',
     rating: 4.8,
-    image: img_mushroom_wrap,
+    image: img_mushroom_wrap_photo,
     tags: ['Vegetarian'],
     ingredients: ['Veggies', 'Mushrooms', 'Olives']
   },
@@ -584,7 +596,7 @@ export const MENU_ITEMS = [
     protein: '15g',
     carbs: '35g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
+    image: img_doctors_favorite_photo,
     tags: ['Healthy', 'Vegetarian'],
     ingredients: ['Lettuce', 'Cauliflower', 'Onion', 'Tomatoes', 'Carrots', 'Mozzarella']
   },
@@ -598,7 +610,7 @@ export const MENU_ITEMS = [
     protein: '35g',
     carbs: '50g',
     rating: 5.0,
-    image: img_pillow_willow_new,
+    image: img_pillow_willow_photo,
     tags: ['Chef Special', 'High Protein'],
     ingredients: ['Spinach', 'Spring Onions', 'Green Pepper', 'Sweet Potato', 'Chicken', 'Eggs']
   },
@@ -1659,7 +1671,7 @@ export const MENU_ITEMS = [
     protein: '65g',
     carbs: '25g',
     rating: 5.0,
-    image: img_protein_bowl_new,
+    image: img_protein_bowl_photo,
     tags: ['Lunch Pack', 'High Protein'],
     ingredients: ['Broccoli', 'Cauliflower', 'Veggies', 'Chicken Breast', 'Beef Strips', 'Boiled Eggs', 'Avocado', 'Hot Sauce']
   },
@@ -1673,7 +1685,7 @@ export const MENU_ITEMS = [
     protein: '45g',
     carbs: '95g',
     rating: 5.0,
-    image: img_burrito_bowl_new,
+    image: img_burrito_bowl_photo,
     tags: ['Lunch Pack', 'Hearty'],
     ingredients: ['Jollof', 'Greek Salad', 'Salsa', 'Avocado', 'Kidney Beans', 'Sweet Corn', 'Protein', 'Hot Sauce']
   }
