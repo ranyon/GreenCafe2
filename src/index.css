@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-display: 'Syne', sans-serif;
+  --font-sans: 'Lora', 'Georgia', serif;
+  --font-serif: 'Lora', 'Georgia', serif;
+  --font-display: 'Space Grotesk', sans-serif;
   
   --color-pine-950: #040D0A;
   --color-pine-900: #071913;

@@ -158,6 +158,38 @@ import img_americanBreakfast from '../assets/americanBreakfast.jpeg';
 import img_chicken_wrap_new from '../assets/chicken_wrap_new.png';
 import img_pillow_willow_new from '../assets/pillow_willow_new.png';
 
+import img_protein_bowl_new from '../assets/protein_bowl_new.png';
+import img_donut_new from '../assets/donut_new.png';
+import img_mini_pancakes_new from '../assets/mini_pancakes_new.png';
+import img_burrito_bowl_new from '../assets/burrito_bowl_new.png';
+import img_spring_rolls_new from '../assets/spring_rolls_new.png';
+import img_parfait_new from '../assets/parfait_new.png';
+
+import img_bacon_ham_egg_club_photo from '../assets/bacon_ham_egg_club.jpeg';
+import img_bacon_ham_egg_sub_photo from '../assets/bacon_ham_egg_sub.jpeg';
+import img_bacon_ham_egg_bun_photo from '../assets/bacon_ham_egg_bun.jpeg';
+import img_chicken_bun_sandwich_photo from '../assets/chicken_bun_sandwich.jpeg';
+import img_chicken_sub_photo from '../assets/chicken_sub.jpeg';
+import img_crepe_photo from '../assets/crepe.jpeg';
+import img_donut_photo from '../assets/donut.jpeg';
+import img_egg_bun_sandwich_photo from '../assets/egg_bun_sandwich.jpeg';
+import img_egg_club_sandwich_photo from '../assets/egg_club_sandwich.jpeg';
+import img_egg_sub_photo from '../assets/egg_sub.jpeg';
+import img_meat_samosa_photo from '../assets/meat_samosa.jpeg';
+import img_mini_pancakes_photo from '../assets/mini_pancakes.jpeg';
+import img_mushroom_bun_sandwich_photo from '../assets/mushroom_bun_sandwich.jpeg';
+import img_mushroom_club_sandwich_photo from '../assets/mushroom_club_sandwich.jpeg';
+import img_mushroom_sub_photo from '../assets/mushroom_sub.jpeg';
+import img_tuna_bun_sandwich_photo from '../assets/tuna_bun_sandwich.jpeg';
+import img_tuna_club_sandwich_photo from '../assets/tuna_club_sandwich.jpeg';
+import img_tuna_sub_photo from '../assets/tuna_sub.jpeg';
+import img_turkey_bun_sandwich_photo from '../assets/turkey_bun_sandwich.jpeg';
+import img_turkey_club_sandwich_photo from '../assets/turkey_club_sandwich.jpeg';
+import img_turkey_sub_photo from '../assets/turkey_sub.jpeg';
+import img_veggie_spring_rolls_photo from '../assets/veggie_spring_rolls.jpeg';
+import img_waffle_photo from '../assets/waffle.jpeg';
+import img_yoghurt_parfait_photo from '../assets/yoghurt_parfait.jpeg';
+import img_chicken_club_sandwich_photo from '../assets/chicken_club_sandwich.jpeg';
 export const MENU_CATEGORIES = [
   { id: 'salads', label: 'Salads', icon: Leaf },
   { id: 'breakfast', label: 'Breakfast', icon: Coffee },
@@ -166,7 +198,9 @@ export const MENU_CATEGORIES = [
   { id: 'drinks', label: 'Drinks & Juices', icon: CupSoda },
   { id: 'extras', label: 'Extras', icon: PlusCircle },
   { id: 'smoothies', label: 'Smoothies', icon: Droplets },
-  { id: 'meals', label: 'Snacks & Lunch', icon: UtensilsCrossed },
+  { id: 'snacks', label: 'Snack Packs', icon: UtensilsCrossed },
+  { id: 'fruit_salad', label: 'Fruit Salad', icon: Leaf },
+  { id: 'lunch_packs', label: 'Lunch Packs', icon: UtensilsCrossed },
 ];
 
 export const MENU_ITEMS = [
@@ -299,7 +333,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'sal10',
-    category: 'salads',
+    category: 'fruit_salad',
     name: 'Local Fruit Salad',
     tagline: 'Choose up to 3 fruits',
     price: 50.00,
@@ -313,7 +347,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'sal11',
-    category: 'salads',
+    category: 'fruit_salad',
     name: 'Exotic Fruit Salad',
     tagline: 'Choose up to 3 fruits',
     price: 80.00,
@@ -379,7 +413,7 @@ export const MENU_ITEMS = [
     protein: '45g',
     carbs: '75g',
     rating: 4.9,
-    image: img_GreenSpecialBreakfast,
+    image: img_34,
     tags: ['Signature'],
     ingredients: ['Chicken Bun', 'Scrambled Eggs', 'Diced Sausages', 'Baked Beans']
   },
@@ -393,7 +427,7 @@ export const MENU_ITEMS = [
     protein: '42g',
     carbs: '60g',
     rating: 5.0,
-    image: img_34,
+    image: img_GreenSpecialBreakfast,
     tags: ['Chef Special', 'Gourmet'],
     ingredients: ['Wheat Tortilla', 'Spinach Omelette', 'Sauté Veggies', 'Mushroom', 'Avocado', 'Chicken Chunks']
   },
@@ -424,6 +458,49 @@ export const MENU_ITEMS = [
     image: img_americanBreakfast,
     tags: ['Big Portion', 'Sweet & Savory'],
     ingredients: ['Sunny Side Eggs', 'Bacon', 'Hash Browns', 'Sausage', 'Toast', 'Pancakes']
+  },
+
+    {
+    id: 'bf9',
+    category: 'breakfast',
+    name: 'Chicken Club Combo',
+    tagline: 'Chicken Club Sandwich with a fresh side',
+    price: 95.00,
+    calories: 780,
+    protein: '35g',
+    carbs: '80g',
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80',
+    tags: ['Combo', 'Hearty'],
+    ingredients: ['Chicken Club', 'Side Salad', 'Juice']
+  },
+  {
+    id: 'bf10',
+    category: 'breakfast',
+    name: 'Wrap Combo',
+    tagline: 'Your choice of wrap with a fresh side',
+    price: 90.00,
+    calories: 680,
+    protein: '30g',
+    carbs: '70g',
+    rating: 4.7,
+    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80',
+    tags: ['Combo'],
+    ingredients: ['Wrap', 'Side Salad', 'Juice']
+  },
+  {
+    id: 'bf11',
+    category: 'breakfast',
+    name: 'Green Special Combo',
+    tagline: 'Green Special Breakfast with extra sides',
+    price: 135.00,
+    calories: 1050,
+    protein: '50g',
+    carbs: '90g',
+    rating: 4.9,
+    image: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=800&q=80',
+    tags: ['Combo', 'Signature'],
+    ingredients: ['Green Special', 'Extra Bacon', 'Juice']
   },
 
   // --- WRAPS ---
@@ -537,7 +614,7 @@ export const MENU_ITEMS = [
     protein: '22g',
     carbs: '45g',
     rating: 4.6,
-    image: img_chicken_bun_sandwich_new,
+    image: img_chicken_bun_sandwich_photo,
     tags: ['Bun Sandwich'],
     ingredients: ['Chicken', 'Bun', 'Lettuce', 'Mayo']
   },
@@ -551,7 +628,7 @@ export const MENU_ITEMS = [
     protein: '20g',
     carbs: '42g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=800&q=80',
+    image: img_tuna_bun_sandwich_photo,
     tags: ['Bun Sandwich'],
     ingredients: ['Tuna', 'Bun', 'Lettuce']
   },
@@ -565,7 +642,7 @@ export const MENU_ITEMS = [
     protein: '14g',
     carbs: '40g',
     rating: 4.5,
-    image: img_26,
+    image: img_egg_bun_sandwich_photo,
     tags: ['Bun Sandwich', 'Vegetarian'],
     ingredients: ['Egg', 'Bun']
   },
@@ -579,7 +656,7 @@ export const MENU_ITEMS = [
     protein: '25g',
     carbs: '42g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=800&q=80',
+    image: img_bacon_ham_egg_bun_photo,
     tags: ['Bun Sandwich', 'Savory'],
     ingredients: ['Bacon', 'Ham', 'Egg', 'Bun']
   },
@@ -593,7 +670,7 @@ export const MENU_ITEMS = [
     protein: '26g',
     carbs: '42g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=800&q=80',
+    image: img_turkey_bun_sandwich_photo,
     tags: ['Bun Sandwich'],
     ingredients: ['Turkey', 'Bun', 'Lettuce']
   },
@@ -607,7 +684,7 @@ export const MENU_ITEMS = [
     protein: '10g',
     carbs: '44g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=800&q=80',
+    image: img_mushroom_bun_sandwich_photo,
     tags: ['Bun Sandwich', 'Vegetarian'],
     ingredients: ['Mushrooms', 'Bun']
   },
@@ -621,7 +698,7 @@ export const MENU_ITEMS = [
     protein: '30g',
     carbs: '55g',
     rating: 4.8,
-    image: img_6,
+    image: img_chicken_club_sandwich_photo,
     tags: ['Club Sandwich'],
     ingredients: ['Chicken', 'Toast', 'Lettuce', 'Tomato', 'Mayo']
   },
@@ -635,7 +712,7 @@ export const MENU_ITEMS = [
     protein: '26g',
     carbs: '54g',
     rating: 4.7,
-    image: img_tuna_club_new,
+    image: img_tuna_club_sandwich_photo,
     tags: ['Club Sandwich'],
     ingredients: ['Tuna', 'Toast', 'Lettuce', 'Tomato']
   },
@@ -649,7 +726,7 @@ export const MENU_ITEMS = [
     protein: '18g',
     carbs: '52g',
     rating: 4.6,
-    image: img_egg_club_new,
+    image: img_egg_club_sandwich_photo,
     tags: ['Club Sandwich', 'Vegetarian'],
     ingredients: ['Egg', 'Toast', 'Lettuce', 'Tomato']
   },
@@ -663,7 +740,7 @@ export const MENU_ITEMS = [
     protein: '32g',
     carbs: '56g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    image: img_bacon_ham_egg_club_photo,
     tags: ['Club Sandwich', 'Customer Favorite'],
     ingredients: ['Bacon', 'Ham', 'Egg', 'Toast', 'Lettuce', 'Tomato']
   },
@@ -677,7 +754,7 @@ export const MENU_ITEMS = [
     protein: '28g',
     carbs: '55g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    image: img_turkey_club_sandwich_photo,
     tags: ['Club Sandwich'],
     ingredients: ['Turkey', 'Toast', 'Lettuce', 'Tomato', 'Bacon']
   },
@@ -691,7 +768,7 @@ export const MENU_ITEMS = [
     protein: '14g',
     carbs: '58g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    image: img_mushroom_club_sandwich_photo,
     tags: ['Club Sandwich', 'Vegetarian'],
     ingredients: ['Mushrooms', 'Toast', 'Lettuce', 'Tomato']
   },
@@ -705,7 +782,7 @@ export const MENU_ITEMS = [
     protein: '38g',
     carbs: '65g',
     rating: 4.8,
-    image: img_chicken_sub_new,
+    image: img_chicken_sub_photo,
     tags: ['Sub Sandwich'],
     ingredients: ['Chicken', 'Sub Roll', 'Veggies']
   },
@@ -719,7 +796,7 @@ export const MENU_ITEMS = [
     protein: '32g',
     carbs: '62g',
     rating: 4.7,
-    image: img_24,
+    image: img_tuna_sub_photo,
     tags: ['Sub Sandwich'],
     ingredients: ['Tuna', 'Sub Roll', 'Veggies']
   },
@@ -733,7 +810,7 @@ export const MENU_ITEMS = [
     protein: '22g',
     carbs: '60g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1619881589316-56c7f9e6b587?auto=format&fit=crop&w=800&q=80',
+    image: img_egg_sub_photo,
     tags: ['Sub Sandwich', 'Vegetarian'],
     ingredients: ['Egg', 'Sub Roll', 'Veggies']
   },
@@ -747,7 +824,7 @@ export const MENU_ITEMS = [
     protein: '42g',
     carbs: '68g',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1619881589316-56c7f9e6b587?auto=format&fit=crop&w=800&q=80',
+    image: img_bacon_ham_egg_sub_photo,
     tags: ['Sub Sandwich', 'Hunger Crusher'],
     ingredients: ['Bacon', 'Ham', 'Egg', 'Sub Roll', 'Veggies']
   },
@@ -761,7 +838,7 @@ export const MENU_ITEMS = [
     protein: '36g',
     carbs: '66g',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1619881589316-56c7f9e6b587?auto=format&fit=crop&w=800&q=80',
+    image: img_turkey_sub_photo,
     tags: ['Sub Sandwich'],
     ingredients: ['Turkey', 'Sub Roll', 'Veggies']
   },
@@ -775,7 +852,7 @@ export const MENU_ITEMS = [
     protein: '18g',
     carbs: '70g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1619881589316-56c7f9e6b587?auto=format&fit=crop&w=800&q=80',
+    image: img_mushroom_sub_photo,
     tags: ['Sub Sandwich', 'Vegetarian'],
     ingredients: ['Mushrooms', 'Sub Roll', 'Veggies']
   },
@@ -964,9 +1041,9 @@ export const MENU_ITEMS = [
     ingredients: ['Beetroot', 'Pineapple', 'Ginger']
   },
   {
-    id: 'j6',
+    id: 'j6_1',
     category: 'drinks',
-    name: 'Mango/Mango Ginger',
+    name: 'Mango Juice',
     tagline: 'Tropical refreshment',
     price: 40.00,
     calories: 150,
@@ -974,6 +1051,20 @@ export const MENU_ITEMS = [
     carbs: '38g',
     rating: 4.9,
     image: img_j6,
+    tags: ['Juice', 'Tropical'],
+    ingredients: ['Mango']
+  },
+  {
+    id: 'j6_2',
+    category: 'drinks',
+    name: 'Mango Ginger Juice',
+    tagline: 'Tropical refreshment with a kick',
+    price: 40.00,
+    calories: 150,
+    protein: '1g',
+    carbs: '38g',
+    rating: 4.9,
+    image: img_27,
     tags: ['Juice', 'Tropical'],
     ingredients: ['Mango', 'Ginger']
   },
@@ -1462,7 +1553,7 @@ export const MENU_ITEMS = [
   // --- LUNCH & SNACKS ---
   {
     id: 'meal1',
-    category: 'meals',
+    category: 'snacks',
     name: 'Parfait',
     tagline: 'Greek Yogurt with Layers of Fruit and Granola',
     price: 65.00,
@@ -1470,13 +1561,13 @@ export const MENU_ITEMS = [
     protein: '18g',
     carbs: '65g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80',
+    image: img_yoghurt_parfait_photo,
     tags: ['Snack', 'Healthy Dessert'],
     ingredients: ['Greek Yogurt', 'Berries', 'Granola', 'Honey']
   },
   {
     id: 'meal2',
-    category: 'meals',
+    category: 'snacks',
     name: 'Meat Samosa',
     tagline: 'Crispy pastry filled with spiced meat',
     price: 20.00,
@@ -1484,13 +1575,13 @@ export const MENU_ITEMS = [
     protein: '8g',
     carbs: '22g',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80',
+    image: img_meat_samosa_photo,
     tags: ['Snack', 'Savory'],
     ingredients: ['Pastry', 'Minced Meat', 'Spices']
   },
   {
     id: 'meal3',
-    category: 'meals',
+    category: 'snacks',
     name: 'Veggie Spring Rolls',
     tagline: 'Crispy rolls with fresh vegetables',
     price: 20.00,
@@ -1498,13 +1589,13 @@ export const MENU_ITEMS = [
     protein: '4g',
     carbs: '28g',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&w=800&q=80',
+    image: img_veggie_spring_rolls_photo,
     tags: ['Snack', 'Vegetarian'],
     ingredients: ['Spring Roll Wrapper', 'Cabbage', 'Carrots', 'Spices']
   },
   {
     id: 'meal4',
-    category: 'meals',
+    category: 'snacks',
     name: 'Donut',
     tagline: 'Sweet glazed donut',
     price: 10.00,
@@ -1512,13 +1603,13 @@ export const MENU_ITEMS = [
     protein: '3g',
     carbs: '35g',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80',
+    image: img_donut_photo,
     tags: ['Snack', 'Sweet'],
     ingredients: ['Dough', 'Glaze']
   },
   {
     id: 'meal5',
-    category: 'meals',
+    category: 'snacks',
     name: 'Waffle',
     tagline: 'Freshly baked golden waffle',
     price: 50.00,
@@ -1526,13 +1617,13 @@ export const MENU_ITEMS = [
     protein: '8g',
     carbs: '55g',
     rating: 4.8,
-    image: img_3,
+    image: img_waffle_photo,
     tags: ['Snack', 'Breakfast Vibe'],
     ingredients: ['Batter', 'Syrup', 'Butter']
   },
   {
     id: 'meal6',
-    category: 'meals',
+    category: 'snacks',
     name: 'Mini Pancakes',
     tagline: 'Fluffy bite-sized pancakes',
     price: 50.00,
@@ -1540,13 +1631,13 @@ export const MENU_ITEMS = [
     protein: '10g',
     carbs: '60g',
     rating: 4.9,
-    image: img_25,
+    image: img_mini_pancakes_photo,
     tags: ['Snack', 'Sweet'],
     ingredients: ['Pancake Batter', 'Syrup']
   },
   {
     id: 'meal7',
-    category: 'meals',
+    category: 'snacks',
     name: 'Crepe',
     tagline: 'Thin and delicate French crepe',
     price: 50.00,
@@ -1554,13 +1645,13 @@ export const MENU_ITEMS = [
     protein: '12g',
     carbs: '48g',
     rating: 4.8,
-    image: img_crepe_new,
+    image: img_crepe_photo,
     tags: ['Snack', 'Gourmet'],
     ingredients: ['Crepe Batter', 'Fillings']
   },
   {
     id: 'meal8',
-    category: 'meals',
+    category: 'snacks',
     name: 'Protein Bowl',
     tagline: 'Steamed Broccoli & Cauliflower, Sautéed Veggies, Pan Seared Chicken Breast, Beef Strips, Boiled Eggs, Avocado & Hot Sauce',
     price: 150.00,
@@ -1568,13 +1659,13 @@ export const MENU_ITEMS = [
     protein: '65g',
     carbs: '25g',
     rating: 5.0,
-    image: img_14,
+    image: img_protein_bowl_new,
     tags: ['Lunch Pack', 'High Protein'],
     ingredients: ['Broccoli', 'Cauliflower', 'Veggies', 'Chicken Breast', 'Beef Strips', 'Boiled Eggs', 'Avocado', 'Hot Sauce']
   },
   {
     id: 'meal9',
-    category: 'meals',
+    category: 'lunch_packs',
     name: 'Burrito Bowl',
     tagline: 'Jollof, Greek Salad, Salsa, Avocado, Kidney Beans, Sweet Corn, Choice of Protein & Hot Sauce',
     price: 150.00,
@@ -1582,7 +1673,7 @@ export const MENU_ITEMS = [
     protein: '45g',
     carbs: '95g',
     rating: 5.0,
-    image: img_16,
+    image: img_burrito_bowl_new,
     tags: ['Lunch Pack', 'Hearty'],
     ingredients: ['Jollof', 'Greek Salad', 'Salsa', 'Avocado', 'Kidney Beans', 'Sweet Corn', 'Protein', 'Hot Sauce']
   }
