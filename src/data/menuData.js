@@ -207,7 +207,8 @@ export const MENU_CATEGORIES = [
   { id: 'breakfast', label: 'Breakfast', icon: Coffee },
   { id: 'wraps', label: 'Wraps', icon: ScrollText },
   { id: 'sandwiches', label: 'Sandwiches', icon: Utensils },
-  { id: 'drinks', label: 'Drinks & Juices', icon: CupSoda },
+  { id: 'drinks', label: 'Beverages', icon: CupSoda },
+  { id: 'juices', label: 'Juices', icon: CupSoda },
   { id: 'extras', label: 'Extras', icon: PlusCircle },
   { id: 'smoothies', label: 'Smoothies', icon: Droplets },
   { id: 'snacks', label: 'Snack Packs', icon: UtensilsCrossed },
@@ -425,7 +426,7 @@ export const MENU_ITEMS = [
     protein: '45g',
     carbs: '75g',
     rating: 4.9,
-    image: img_34,
+    image: img_GreenSpecialBreakfast,
     tags: ['Signature'],
     ingredients: ['Chicken Bun', 'Scrambled Eggs', 'Diced Sausages', 'Baked Beans']
   },
@@ -439,7 +440,7 @@ export const MENU_ITEMS = [
     protein: '42g',
     carbs: '60g',
     rating: 5.0,
-    image: img_GreenSpecialBreakfast,
+    image: img_34,
     tags: ['Chef Special', 'Gourmet'],
     ingredients: ['Wheat Tortilla', 'Spinach Omelette', 'Sauté Veggies', 'Mushroom', 'Avocado', 'Chicken Chunks']
   },
@@ -984,7 +985,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'j1',
-    category: 'drinks',
+    category: 'juices',
     name: 'Pineapple Juice',
     tagline: 'Freshly squeezed',
     price: 35.00,
@@ -998,7 +999,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'j2',
-    category: 'drinks',
+    category: 'juices',
     name: 'Pineapple Ginger Juice',
     tagline: 'Freshly squeezed with a kick',
     price: 35.00,
@@ -1012,7 +1013,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'j3',
-    category: 'drinks',
+    category: 'juices',
     name: 'Pineapple, Mint & Ginger',
     tagline: 'Refreshing blend',
     price: 35.00,
@@ -1026,7 +1027,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'j4',
-    category: 'drinks',
+    category: 'juices',
     name: 'Orange & Carrot Juice',
     tagline: 'Vitamin C Boost',
     price: 35.00,
@@ -1040,7 +1041,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'j5',
-    category: 'drinks',
+    category: 'juices',
     name: 'Beetroot, Pineapple & Ginger',
     tagline: 'Earthy and sweet',
     price: 35.00,
@@ -1054,7 +1055,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'j6_1',
-    category: 'drinks',
+    category: 'juices',
     name: 'Mango Juice',
     tagline: 'Tropical refreshment',
     price: 40.00,
@@ -1068,7 +1069,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'j6_2',
-    category: 'drinks',
+    category: 'juices',
     name: 'Mango Ginger Juice',
     tagline: 'Tropical refreshment with a kick',
     price: 40.00,
@@ -1082,7 +1083,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'j7',
-    category: 'drinks',
+    category: 'juices',
     name: 'Detox Juice',
     tagline: 'Cleanse your body',
     price: 40.00,
@@ -1096,7 +1097,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'j8',
-    category: 'drinks',
+    category: 'juices',
     name: 'Watermelon Juice',
     tagline: 'Hydrating and sweet',
     price: 35.00,
@@ -1110,7 +1111,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'j9',
-    category: 'drinks',
+    category: 'juices',
     name: 'Orange Juice',
     tagline: 'Freshly squeezed',
     price: 35.00,
@@ -1663,7 +1664,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'meal8',
-    category: 'snacks',
+    category: 'lunch_packs',
     name: 'Protein Bowl',
     tagline: 'Steamed Broccoli & Cauliflower, Sautéed Veggies, Pan Seared Chicken Breast, Beef Strips, Boiled Eggs, Avocado & Hot Sauce',
     price: 150.00,
