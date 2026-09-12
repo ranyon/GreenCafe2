@@ -54,7 +54,10 @@ export default function DiscoverMenuSection() {
           {categories.map((category) => (
             <div
               key={category.id}
-              onClick={() => navigate('/menu')} // In a full implementation, you could pass state to auto-select this tab
+              onClick={() => {
+                const targetId = category.id === 'smoothies-juices' ? 'smoothies' : category.id;
+                navigate(`/menu?category=${targetId}`);
+              }}
               className="relative h-64 md:h-80 rounded-3xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <img

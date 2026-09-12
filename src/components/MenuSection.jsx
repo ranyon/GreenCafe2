@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { MENU_CATEGORIES, MENU_ITEMS } from '../data/menuData';
 import { Plus, Star, Info, Check } from 'lucide-react';
 import gsap from 'gsap';
@@ -7,7 +8,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
-  const [activeTab, setActiveTab] = useState('wraps');
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const initialCategory = searchParams.get('category') || 'wraps';
+  
+  const [activeTab, setActiveTab] = useState(initialCategory);
+
+  useEffect(() => {
+    const category = new URLSearchParams(location.search).get('category');
+    if (category) {
+      setActiveTab(category);
+    }
+  }, [location.search]);
+
   const [addedIds, setAddedIds] = useState({});
   const sectionRef = useRef(null);
   const gridRef = useRef(null);
