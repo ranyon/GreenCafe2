@@ -511,7 +511,7 @@ export const MENU_ITEMS = [
     protein: '50g',
     carbs: '90g',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=800&q=80',
+    image: img_GreenSpecialBreakfast,
     tags: ['Combo', 'Signature'],
     ingredients: ['Green Special', 'Extra Bacon', 'Juice']
   },
