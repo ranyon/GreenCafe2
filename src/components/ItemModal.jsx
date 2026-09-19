@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Star, Box, Activity, Plus, Check } from 'lucide-react';
+import { X, Star, Box, Sparkles, Plus, Check } from 'lucide-react';
 
 export default function ItemModal({ item, onClose, onAddToCart }) {
   if (!item) return null;
@@ -74,7 +74,7 @@ export default function ItemModal({ item, onClose, onAddToCart }) {
             </div>
           )}
 
-          {/* Portion Size & Macro Breakdown (No Calories) */}
+          {/* Item Metrics */}
           <div className="grid grid-cols-2 gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-200">
             {item.size ? (
               <div className="flex items-center gap-3">
@@ -86,19 +86,19 @@ export default function ItemModal({ item, onClose, onAddToCart }) {
               </div>
             ) : (
               <div className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
+                <Sparkles className="w-5 h-5 text-amber-500" />
                 <div>
-                  <p className="text-[10px] uppercase font-bold text-gray-400">Rating</p>
-                  <p className="text-base font-extrabold text-gray-900">{item.rating} / 5</p>
+                  <p className="text-[10px] uppercase font-bold text-gray-400">Quality</p>
+                  <p className="text-base font-extrabold text-gray-900">Made Fresh</p>
                 </div>
               </div>
             )}
 
             <div className="flex items-center gap-3">
-              <Activity className="w-5 h-5 text-black" />
+              <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
               <div>
-                <p className="text-[10px] uppercase font-bold text-gray-400">Protein</p>
-                <p className="text-base font-extrabold text-black">{item.protein || '18g'}</p>
+                <p className="text-[10px] uppercase font-bold text-gray-400">Rating</p>
+                <p className="text-base font-extrabold text-gray-900">{item.rating} / 5.0</p>
               </div>
             </div>
           </div>

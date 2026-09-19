@@ -28,7 +28,6 @@ export default function RecipeBuilder({ onAddCustomToCart }) {
     }
   };
 
-  const totalProtein = selectedIngredients.reduce((acc, curr) => acc + (curr.protein || 0), 0);
   const totalPrice = 50.00 + selectedIngredients.length * 5.00;
 
   const handleAddCustom = () => {
@@ -39,7 +38,6 @@ export default function RecipeBuilder({ onAddCustomToCart }) {
       tagline: `Handcrafted 1000 cc bowl with ${selectedIngredients.map((i) => i.name).join(', ')}`,
       price: totalPrice,
       size: '1000 cc',
-      protein: `${totalProtein}g`,
       image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
       tags: ['Custom Bowl', '1000 cc', 'Made Fresh'],
     };
@@ -119,9 +117,6 @@ export default function RecipeBuilder({ onAddCustomToCart }) {
                         {ing.category}
                       </span>
                       <p className="text-xs font-bold text-gray-900 truncate">{ing.name}</p>
-                      <p className="text-[10px] font-semibold text-black">
-                        +{ing.protein}g protein
-                      </p>
                     </div>
                   </button>
                 );
@@ -170,7 +165,7 @@ export default function RecipeBuilder({ onAddCustomToCart }) {
               </div>
             </div>
 
-            {/* Live Macro & Portion Metrics Card */}
+            {/* Portion Size & Layer Metrics Card */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-5 rounded-2xl bg-white border border-gray-200 mb-6 relative overflow-hidden shadow-sm">
               <div className="flex flex-col gap-3 relative z-10">
                 <div className="flex justify-between items-end">
@@ -188,15 +183,15 @@ export default function RecipeBuilder({ onAddCustomToCart }) {
               <div className="flex flex-col gap-3 relative z-10">
                 <div className="flex justify-between items-end">
                   <div className="flex items-center gap-2">
-                    <Activity className="w-4 h-4 text-black" />
-                    <span className="text-xs uppercase font-bold text-gray-400 tracking-wider">Protein</span>
+                    <Sparkles className="w-4 h-4 text-emerald-500" />
+                    <span className="text-xs uppercase font-bold text-gray-400 tracking-wider">Layers</span>
                   </div>
-                  <span className="text-xl font-black text-black">{totalProtein}g</span>
+                  <span className="text-xl font-black text-gray-900">{selectedIngredients.length} / 8</span>
                 </div>
                 <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden shadow-inner">
                   <div
-                    className="bg-gray-900 h-full rounded-full transition-all duration-700 ease-out"
-                    style={{ width: `${Math.min((totalProtein / 60) * 100, 100)}%` }}
+                    className="bg-emerald-500 h-full rounded-full transition-all duration-500 ease-out"
+                    style={{ width: `${(selectedIngredients.length / 8) * 100}%` }}
                   />
                 </div>
               </div>
