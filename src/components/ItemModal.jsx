@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Star, Flame, Activity, Plus, Check } from 'lucide-react';
+import { X, Star, Box, Activity, Plus, Check } from 'lucide-react';
 
 export default function ItemModal({ item, onClose, onAddToCart }) {
   if (!item) return null;
@@ -74,15 +74,25 @@ export default function ItemModal({ item, onClose, onAddToCart }) {
             </div>
           )}
 
-          {/* Macro Breakdown */}
+          {/* Portion Size & Macro Breakdown (No Calories) */}
           <div className="grid grid-cols-2 gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-200">
-            <div className="flex items-center gap-3">
-              <Flame className="w-5 h-5 text-amber-400" />
-              <div>
-                <p className="text-[10px] uppercase font-bold text-gray-400">Calories</p>
-                <p className="text-base font-extrabold text-gray-900">{item.calories} kcal</p>
+            {item.size ? (
+              <div className="flex items-center gap-3">
+                <Box className="w-5 h-5 text-amber-500" />
+                <div>
+                  <p className="text-[10px] uppercase font-bold text-gray-400">Portion Size</p>
+                  <p className="text-base font-extrabold text-gray-900">{item.size}</p>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
+                <div>
+                  <p className="text-[10px] uppercase font-bold text-gray-400">Rating</p>
+                  <p className="text-base font-extrabold text-gray-900">{item.rating} / 5</p>
+                </div>
+              </div>
+            )}
 
             <div className="flex items-center gap-3">
               <Activity className="w-5 h-5 text-black" />

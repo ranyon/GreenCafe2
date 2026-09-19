@@ -148,7 +148,11 @@ export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
                     {item.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="text-[8px] sm:text-[10px] uppercase font-bold tracking-wider px-1.5 sm:px-2.5 py-0.5 rounded-md bg-gray-100/80 text-black border border-gray-900/20"
+                        className={`text-[8px] sm:text-[10px] uppercase font-bold tracking-wider px-1.5 sm:px-2.5 py-0.5 rounded-md border ${
+                          tag === 'Most Sold'
+                            ? 'bg-amber-400 text-gray-950 font-black border-amber-500 shadow-sm'
+                            : 'bg-gray-100/80 text-black border-gray-900/20'
+                        }`}
                       >
                         {tag}
                       </span>
@@ -163,16 +167,22 @@ export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
                   </p>
                 </div>
 
-                {/* Nutrition Footprint */}
+                {/* Footprint: Portion Size & Protein (No Calories) */}
                 <div className="mt-3 pt-3 sm:mt-5 sm:pt-4 border-t border-gray-200 flex items-center justify-between">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-3 text-[10px] sm:text-xs text-gray-600">
-                    <div>
-                      <span className="font-bold text-gray-900">{item.calories}</span> <span className="text-[10px] text-gray-400">kcal</span>
-                    </div>
-                    <div className="hidden sm:block w-1 h-1 rounded-full bg-gray-600" />
-                    <div>
-                      <span className="font-bold text-black">{item.protein}</span> <span className="text-[10px] text-gray-400">protein</span>
-                    </div>
+                    {item.size ? (
+                      <div>
+                        <span className="font-bold text-gray-900">{item.size}</span>
+                      </div>
+                    ) : null}
+                    {item.size && item.protein ? (
+                      <div className="hidden sm:block w-1 h-1 rounded-full bg-gray-600" />
+                    ) : null}
+                    {item.protein ? (
+                      <div>
+                        <span className="font-bold text-black">{item.protein}</span> <span className="text-[10px] text-gray-400">protein</span>
+                      </div>
+                    ) : null}
                   </div>
 
                   {/* Add to Cart Button */}
