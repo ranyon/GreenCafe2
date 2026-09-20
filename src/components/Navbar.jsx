@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ShoppingBag, Menu as MenuIcon, X, Sparkles } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 
 export default function Navbar({ cartCount, onOpenCart }) {
-  const { currentUser, loginWithGoogle, logout } = useAuth();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
@@ -18,12 +16,18 @@ export default function Navbar({ cartCount, onOpenCart }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Menu', path: '/menu' },
+    { name: 'Create Your Bowl', path: '/lab', icon: Sparkles },
+  ];
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled || !isHomePage
           ? 'bg-black/90 backdrop-blur-xl py-3 border-b border-white/10 shadow-2xl'
-          : 'bg-transparent py-5'
+          : 'bg-black/40 backdrop-blur-md py-4 border-b border-white/5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -32,9 +36,8 @@ export default function Navbar({ cartCount, onOpenCart }) {
           to="/"
           className="flex items-center gap-2.5 group focus:outline-none"
         >
-
           <div className="flex flex-col">
-            <span className="font-display font-extrabold text-xl tracking-tight text-white flex items-center gap-1">
+            <span className="font-display font-extrabold text-xl tracking-tight text-white flex items-center gap-1.5">
               GREENCAFE
               <span className="w-2 h-2 rounded-full bg-[#86EFAC] animate-ping" />
             </span>
@@ -42,62 +45,32 @@ export default function Navbar({ cartCount, onOpenCart }) {
         </Link>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-8 glass-panel px-6 py-2 rounded-full">
-          <Link
-            to="/"
-            className="text-sm font-medium text-gray-200 hover:text-[#86EFAC] transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            to="/menu"
-            className="text-sm font-medium text-gray-200 hover:text-[#86EFAC] transition-colors"
-          >
-            Menu
-          </Link>
-          {/*
-          <Link
-            to="/lab"
-            className="text-sm font-medium text-gray-200 hover:text-[#86EFAC] transition-colors flex items-center gap-1.5"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-[#86EFAC]" />
-            Juice & Wrap Lab
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium text-gray-200 hover:text-[#86EFAC] transition-colors"
-          >
-            Nutrition
-          </Link>
-          */}
+        <nav className="hidden md:flex items-center gap-1 bg-white/10 backdrop-blur-xl border border-white/15 p-1.5 rounded-full shadow-lg">
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.path;
+            const Icon = link.icon;
+            return (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
+                  isActive
+                    ? 'bg-[#86EFAC] text-[#071913] font-semibold shadow-md'
+                    : 'text-gray-200 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {Icon && <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#071913]' : 'text-[#86EFAC]'}`} />}
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Action Buttons */}
-        <div className="flex items-center gap-4">
-          {!currentUser ? (
-            <button
-              onClick={loginWithGoogle}
-              className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white hover:text-[#86EFAC] transition-colors"
-            >
-              Sign In
-            </button>
-          ) : (
-            <div className="flex items-center gap-3">
-              <Link to="/profile" className="w-8 h-8 rounded-full overflow-hidden border border-[#86EFAC]/30 hover:border-[#86EFAC] transition-all">
-                <img src={currentUser.photoURL || `https://ui-avatars.com/api/?name=${currentUser.displayName}`} alt="Profile" className="w-full h-full object-cover" />
-              </Link>
-              <button
-                onClick={logout}
-                className="hidden sm:inline-flex text-xs font-medium text-gray-400 hover:text-white"
-              >
-                Logout
-              </button>
-            </div>
-          )}
-
+        <div className="flex items-center gap-3">
           <button
             onClick={onOpenCart}
-            className="relative min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-[#164E3D]/60 hover:bg-[#164E3D] text-[#86EFAC] border border-[#86EFAC]/30 transition-all hover:scale-105"
+            className="relative min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-[#164E3D]/60 hover:bg-[#164E3D] text-[#86EFAC] border border-[#86EFAC]/30 transition-all hover:scale-105 active:scale-95"
             aria-label="View Cart"
           >
             <ShoppingBag className="w-5 h-5" />
@@ -128,72 +101,36 @@ export default function Navbar({ cartCount, onOpenCart }) {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-black/98 border-b border-white/10 px-6 pt-6 pb-12 space-y-4 backdrop-blur-2xl">
-          {!currentUser ? (
-            <button
-              onClick={() => {
-                loginWithGoogle();
-                setMobileOpen(false);
-              }}
-              className="block w-full text-left py-2 text-lg font-bold text-[#86EFAC]"
-            >
-              Sign In
-            </button>
-          ) : (
-            <div className="flex items-center justify-between py-2 mb-4 border-b border-white/10 pb-4">
-              <div className="flex items-center gap-3">
-                <Link to="/profile" onClick={() => setMobileOpen(false)} className="w-10 h-10 rounded-full overflow-hidden border border-[#86EFAC]/30">
-                  <img src={currentUser.photoURL || `https://ui-avatars.com/api/?name=${currentUser.displayName}`} alt="Profile" className="w-full h-full object-cover" />
-                </Link>
-                <div className="flex flex-col">
-                  <span className="text-white font-bold text-sm">{currentUser.displayName}</span>
-                  <Link to="/profile" onClick={() => setMobileOpen(false)} className="text-[#86EFAC] text-xs">View Profile</Link>
-                </div>
-              </div>
-              <button
-                onClick={() => {
-                  logout();
-                  setMobileOpen(false);
-                }}
-                className="text-sm font-medium text-gray-400 hover:text-white"
+        <div className="md:hidden bg-black/98 border-b border-white/10 px-6 pt-4 pb-8 space-y-3 backdrop-blur-2xl">
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.path;
+            const Icon = link.icon;
+            return (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setMobileOpen(false)}
+                className={`flex items-center gap-2 w-full text-left py-2.5 px-4 rounded-xl text-base font-medium transition-all ${
+                  isActive
+                    ? 'bg-[#86EFAC] text-[#071913] font-bold'
+                    : 'text-gray-200 hover:bg-white/10 hover:text-white'
+                }`}
               >
-                Logout
-              </button>
-            </div>
-          )}
-
-          <Link
-            to="/"
-            onClick={() => setMobileOpen(false)}
-            className="block w-full text-left py-2 text-lg font-medium text-white hover:text-[#86EFAC]"
-          >
-            Home
-          </Link>
+                {Icon && <Icon className={`w-4 h-4 ${isActive ? 'text-[#071913]' : 'text-[#86EFAC]'}`} />}
+                {link.name}
+              </Link>
+            );
+          })}
           <Link
             to="/menu"
             onClick={() => setMobileOpen(false)}
-            className="block w-full text-left py-2 text-lg font-medium text-white hover:text-[#86EFAC]"
+            className="block w-full text-center py-3 text-sm font-bold text-[#071913] bg-gradient-to-r from-[#86EFAC] to-[#A3E635] rounded-full shadow-md mt-4"
           >
-            Menu
+            Order Fresh
           </Link>
-          {/*
-          <Link
-            to="/lab"
-            onClick={() => setMobileOpen(false)}
-            className="block w-full text-left py-2 text-lg font-medium text-white hover:text-[#86EFAC]"
-          >
-            Juice & Wrap Lab
-          </Link>
-          <Link
-            to="/"
-            onClick={() => setMobileOpen(false)}
-            className="block w-full text-left py-2 text-lg font-medium text-white hover:text-[#86EFAC]"
-          >
-            Nutrition
-          </Link>
-          */}
         </div>
       )}
     </header>
   );
 }
+
