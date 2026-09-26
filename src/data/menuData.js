@@ -38,7 +38,7 @@ import img_30 from '../assets/pineapple_mint_ginger_juice.webp';
 import img_31 from '../assets/egg_salad.webp';
 import img_32 from '../assets/chittagong_detox.webp';
 import img_33 from '../assets/club_sandwich.webp';
-import img_34 from '../assets/chefs_special_breakfast.webp';
+import img_34 from '../assets/chefs_special_breakfast_new.jpg';
 import img_35 from '../assets/goodstart_combo.webp';
 import img_36 from '../assets/faro_detox.webp';
 import img_37 from '../assets/fagatogo_smoothie.webp';
@@ -73,7 +73,7 @@ import img_sm10 from '../assets/sm10_iron_booster.jpeg';
 import img_sm11 from '../assets/sm11_healthy_heart.jpeg';
 import img_sm12 from '../assets/sm12_eye_master.jpeg';
 import img_sm13 from '../assets/sm13_detox_mixer.jpeg';
-import img_sm14 from '../assets/sm14_himera.jpeg';
+import img_sm14 from '../assets/himera_new.jpg';
 import img_sm15 from '../assets/sm14_himera.jpeg'; // Reusing sm14 for Innsbruck
 import img_sm16 from '../assets/sm16_jakarta.jpeg';
 import img_sm17 from '../assets/sm17_kathmandu.jpeg';
@@ -106,7 +106,7 @@ import img_broccolisalad_new from '../assets/new_broccolisalad.jpeg';
 import img_exotic_fruit_salad_new from '../assets/new_exotic_fruit_salad.jpeg';
 import img_pasta_salad_new from '../assets/new_pasta_salad.jpeg';
 import img_eggsalad_new from '../assets/new_eggsalad.jpeg';
-import img_potatosalad_new from '../assets/new_potatosalad.jpeg';
+import img_potatosalad_new from '../assets/sweet_potato_salad_new.jpeg';
 import img_greeksalad_new from '../assets/new_greeksalad.jpeg';
 import img_mushroomsalad_new from '../assets/new_mushroomsalad.jpeg';
 import img_chickensalad_new from '../assets/new_chickensalad.jpeg';
@@ -260,15 +260,15 @@ export const MENU_ITEMS = [
   {
     id: 'sal4',
     category: 'salads',
-    name: 'Potato Salad',
-    tagline: 'Irish Potato, Carrot, Onion, Green Pepper, Spring Onion, Egg, Diced Chicken & Dressing',
+    name: 'Sweet Potato Salad',
+    tagline: 'Sweet Potato, Carrot, Onion, Green Pepper, Spring Onion, Egg, Diced Chicken & Dressing',
     price: 70.00,
     carbs: '50g',
     rating: 4.6,
     size: '1000 cc',
     image: img_potatosalad_new,
     tags: ['Comfort Food'],
-    ingredients: ['Irish Potato', 'Carrot', 'Onion', 'Green Pepper', 'Spring Onion', 'Egg', 'Diced Chicken', 'Dressing']
+    ingredients: ['Sweet Potato', 'Carrot', 'Onion', 'Green Pepper', 'Spring Onion', 'Egg', 'Diced Chicken', 'Dressing']
   },
   {
     id: 'sal5',
@@ -326,14 +326,14 @@ export const MENU_ITEMS = [
     id: 'sal9',
     category: 'salads',
     name: 'Broccoli Salad',
-    tagline: 'In-House Salad',
+    tagline: 'Broccoli, Cauliflower, Parsley, Carrot, Green Bell Pepper, Onion, Chicken Breast, Avocado & Vinaigrette Dressing',
     price: 110.00,
     carbs: '18g',
     rating: 4.7,
     size: '1000 cc',
     image: img_broccolisalad_new,
     tags: ['Nutrient Dense', 'Most Sold'],
-    ingredients: ['Broccoli Florets', 'Almonds', 'Cranberries']
+    ingredients: ['Broccoli', 'Cauliflower', 'Parsley', 'Carrot', 'Green Bell Pepper', 'Onion', 'Chicken Breast', 'Avocado', 'Vinaigrette Dressing']
   },
   {
     id: 'sal10',
@@ -762,7 +762,7 @@ export const MENU_ITEMS = [
     rating: 4.8,
     image: img_turkey_sub_photo,
     tags: ['Sub Sandwich'],
-    ingredients: ['Turkey', 'Sub Roll', 'Veggies']
+    ingredients: ['Sub Roll', 'Turkey', 'Sunny Side Egg', 'Cheddar Cheese', 'Lettuce', 'Tomato', 'Signature Dressing']
   },
   {
     id: 'sand18',
@@ -818,25 +818,25 @@ export const MENU_ITEMS = [
     id: 'd4',
     category: 'drinks',
     name: 'Hibiscus Tea',
-    tagline: 'Beverages',
+    tagline: 'Hibiscus Leaves, Cloves, Ginger & Lemon',
     price: 35.00,
     carbs: '0g',
     rating: 4.7,
     image: img_hibiscus_tea,
     tags: ['Tea', 'Refreshing'],
-    ingredients: ['Hibiscus', 'Hot Water']
+    ingredients: ['Hibiscus Leaves', 'Cloves', 'Ginger', 'Lemon']
   },
   {
     id: 'd5',
     category: 'drinks',
     name: 'Lemon Grass Tea',
-    tagline: 'Beverages',
+    tagline: 'Lemon Grass, Cloves, Ginger & Lemon',
     price: 35.00,
     carbs: '0g',
     rating: 4.6,
     image: img_lemon_grass_tea,
     tags: ['Tea', 'Calming'],
-    ingredients: ['Lemon Grass', 'Hot Water']
+    ingredients: ['Lemon Grass', 'Cloves', 'Ginger', 'Lemon']
   },
   {
     id: 'd6',
@@ -1430,25 +1430,25 @@ export const MENU_ITEMS = [
     id: 'meal2',
     category: 'snacks',
     name: 'Meat Samosa',
-    tagline: 'Crispy pastry filled with spiced meat',
+    tagline: 'Dough & Minced Meat',
     price: 20.00,
     carbs: '22g',
     rating: 4.7,
     image: img_meat_samosa_photo,
     tags: ['Snack', 'Savory'],
-    ingredients: ['Pastry', 'Minced Meat', 'Spices']
+    ingredients: ['Dough', 'Minced Meat']
   },
   {
     id: 'meal3',
     category: 'snacks',
     name: 'Veggie Spring Rolls',
-    tagline: 'Crispy rolls with fresh vegetables',
+    tagline: 'Dough & Veggies',
     price: 20.00,
     carbs: '28g',
     rating: 4.6,
     image: img_veggie_spring_rolls_photo,
     tags: ['Snack', 'Vegetarian'],
-    ingredients: ['Spring Roll Wrapper', 'Cabbage', 'Carrots', 'Spices']
+    ingredients: ['Dough', 'Veggies']
   },
   {
     id: 'meal4',
@@ -1466,37 +1466,37 @@ export const MENU_ITEMS = [
     id: 'meal5',
     category: 'snacks',
     name: 'Waffle',
-    tagline: 'Freshly baked golden waffle',
+    tagline: 'Waffle Batter, Syrup & Chocolate Spread',
     price: 50.00,
     carbs: '55g',
     rating: 4.8,
     image: img_waffle_photo,
     tags: ['Snack', 'Breakfast Vibe'],
-    ingredients: ['Batter', 'Syrup', 'Butter']
+    ingredients: ['Waffle Batter', 'Syrup', 'Chocolate Spread']
   },
   {
     id: 'meal6',
     category: 'snacks',
     name: 'Mini Pancakes',
-    tagline: 'Fluffy bite-sized pancakes',
+    tagline: 'Pancake Batter, Syrup & Chocolate Spread',
     price: 50.00,
     carbs: '60g',
     rating: 4.9,
     image: img_mini_pancakes_photo,
     tags: ['Snack', 'Sweet'],
-    ingredients: ['Pancake Batter', 'Syrup']
+    ingredients: ['Pancake Batter', 'Syrup', 'Chocolate Spread']
   },
   {
     id: 'meal7',
     category: 'snacks',
     name: 'Crepe',
-    tagline: 'Thin and delicate French crepe',
+    tagline: 'Crepe Batter, Syrup & Chocolate Spread',
     price: 50.00,
     carbs: '48g',
     rating: 4.8,
     image: img_crepe_photo,
     tags: ['Snack', 'Gourmet'],
-    ingredients: ['Crepe Batter', 'Fillings']
+    ingredients: ['Crepe Batter', 'Syrup', 'Chocolate Spread']
   },
   {
     id: 'meal8',
