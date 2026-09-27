@@ -106,7 +106,8 @@ import img_broccolisalad_new from '../assets/new_broccolisalad.jpeg';
 import img_exotic_fruit_salad_new from '../assets/new_exotic_fruit_salad.jpeg';
 import img_pasta_salad_new from '../assets/new_pasta_salad.jpeg';
 import img_eggsalad_new from '../assets/new_eggsalad.jpeg';
-import img_potatosalad_new from '../assets/sweet_potato_salad_new.jpeg';
+import img_potatosalad_new from '../assets/new_potatosalad.jpeg';
+import img_sweetpotatosalad_new from '../assets/sweet_potato_salad_new.jpeg';
 import img_greeksalad_new from '../assets/new_greeksalad.jpeg';
 import img_mushroomsalad_new from '../assets/new_mushroomsalad.jpeg';
 import img_chickensalad_new from '../assets/new_chickensalad.jpeg';
@@ -260,13 +261,26 @@ export const MENU_ITEMS = [
   {
     id: 'sal4',
     category: 'salads',
+    name: 'Potato Salad',
+    tagline: 'Irish Potato, Carrot, Onion, Green Pepper, Spring Onion, Egg, Diced Chicken & Dressing',
+    price: 70.00,
+    carbs: '50g',
+    rating: 4.6,
+    size: '1000 cc',
+    image: img_potatosalad_new,
+    tags: ['Comfort Food'],
+    ingredients: ['Irish Potato', 'Carrot', 'Onion', 'Green Pepper', 'Spring Onion', 'Egg', 'Diced Chicken', 'Dressing']
+  },
+  {
+    id: 'sal4_b',
+    category: 'salads',
     name: 'Sweet Potato Salad',
     tagline: 'Sweet Potato, Carrot, Onion, Green Pepper, Spring Onion, Egg, Diced Chicken & Dressing',
     price: 70.00,
     carbs: '50g',
     rating: 4.6,
     size: '1000 cc',
-    image: img_potatosalad_new,
+    image: img_sweetpotatosalad_new,
     tags: ['Comfort Food'],
     ingredients: ['Sweet Potato', 'Carrot', 'Onion', 'Green Pepper', 'Spring Onion', 'Egg', 'Diced Chicken', 'Dressing']
   },
