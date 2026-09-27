@@ -15,13 +15,13 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-xs sm:text-sm text-gray-600 max-w-sm leading-relaxed">
-              Artisan organic wraps, gourmet sourdough sandwiches, and raw cold-pressed green juices handcrafted fresh daily.
+              Artisan fresh wraps, gourmet sourdough sandwiches, and raw cold-pressed green juices handcrafted fresh daily.
             </p>
 
             {/* Value Badges */}
             <div className="flex flex-wrap gap-2 pt-2 text-[10px] sm:text-xs text-gray-600 font-medium">
               <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white border border-gray-200">
-                <Leaf className="w-3.5 h-3.5 text-emerald-600" /> 100% Organic Sourcing
+                <Leaf className="w-3.5 h-3.5 text-emerald-600" /> Fresh Ingredient Sourcing
               </div>
               <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white border border-gray-200">
                 <Zap className="w-3.5 h-3.5 text-amber-500" /> Zero Added Sugar

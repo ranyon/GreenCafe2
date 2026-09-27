@@ -88,7 +88,7 @@ export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
             THE GREENCAFE <span className="text-gradient-lime italic font-serif">MENU</span>
           </h2>
           <p className="text-gray-600 text-sm sm:text-base mt-3">
-            Handcrafted daily using 100% organic produce, wild-caught proteins, and freshly cold-pressed fruit & veg.
+            Handcrafted daily using fresh ingredients, wild-caught proteins, and freshly cold-pressed fruit & veg.
           </p>
         </div>
 

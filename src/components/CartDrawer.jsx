@@ -108,7 +108,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
               <CheckCircle className="w-16 h-16 text-black mx-auto animate-bounce" />
               <h4 className="font-display font-bold text-2xl text-gray-900">Order Confirmed!</h4>
               <p className="text-xs text-gray-600 max-w-xs mx-auto">
-                Thank you for choosing GreenCafe. Your organic wraps and cold-pressed juices are being prepared fresh right now.
+                Thank you for choosing GreenCafe. Your fresh wraps and cold-pressed juices are being prepared fresh right now.
               </p>
               <div className="mt-6 bg-gray-50 p-4 rounded-2xl border border-gray-200">
                 <p className="text-xs text-gray-500 uppercase tracking-wider font-bold mb-1">Your Tracking Code</p>

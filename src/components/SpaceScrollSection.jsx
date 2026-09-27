@@ -25,7 +25,7 @@ export default function SpaceScrollSection() {
       step: '02',
       tag: 'Craft Service Bar',
       title: 'HANDCRAFTED WOODEN BAR',
-      subtitle: 'Frontal perspective of our warm timber counter, fresh juices, and organic pastry display.',
+      subtitle: 'Frontal perspective of our warm timber counter, fresh juices, and fresh pastry display.',
       icon: Sparkles,
       image: '/assets/space_bar_916.jpg'
     },

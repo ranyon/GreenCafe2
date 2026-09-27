@@ -39,12 +39,12 @@ export default function StorySection() {
   const steps = [
     {
       step: '01',
-      title: '100% Organic Local Sourcing',
-      description: 'We partner directly with certified organic local farmers to harvest crisp produce at peak nutritional density.',
+      title: 'Fresh Ingredient Local Sourcing',
+      description: 'We partner directly with local farmers to harvest crisp produce at peak nutritional density.',
       icon: Leaf,
       color: 'from-emerald-500 to-teal-600',
       image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
-      highlights: ['Non-GMO Certified', 'Zero Pesticides', 'Harvested Daily at 5am']
+      highlights: ['Freshly Sourced', 'Zero Pesticides', 'Harvested Daily at 5am']
     },
     {
       step: '02',
@@ -53,7 +53,7 @@ export default function StorySection() {
       icon: Droplets,
       color: 'from-lime-400 to-emerald-500',
       image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80',
-      highlights: ['Zero Added Water', '100% Pure Raw Juice', 'Unpasteurized & Fresh']
+      highlights: ['Zero Added Water', 'Fresh Pure Raw Juice', 'Unpasteurized & Fresh']
     },
     {
       step: '03',

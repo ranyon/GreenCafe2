@@ -5,9 +5,9 @@ export default function MetricsSection() {
   const metrics = [
     {
       icon: Award,
-      value: '100%',
-      label: 'Certified Organic Produce',
-      subtext: 'Directly sourced from trusted regional farms',
+      value: 'Fresh',
+      label: 'Fresh Produce',
+      subtext: 'Fresh ingredients directly sourced from trusted regional farms',
     },
     {
       icon: HeartPulse,

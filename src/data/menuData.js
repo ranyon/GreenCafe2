@@ -1543,7 +1543,7 @@ export const MENU_ITEMS = [
 export const INGREDIENTS_LIST = [
   // --- VEGGIES & BASES ---
   { id: 'ing-spinach', name: 'Baby Spinach', icon: Leaf, category: 'Veggies', protein: 2 },
-  { id: 'ing-kale', name: 'Organic Kale', icon: Leaf, category: 'Veggies', protein: 2 },
+  { id: 'ing-kale', name: 'Fresh Kale', icon: Leaf, category: 'Veggies', protein: 2 },
   { id: 'ing-mixed-greens', name: 'Mixed Greens', icon: Leaf, category: 'Veggies', protein: 2 },
   { id: 'ing-cucumber', name: 'English Cucumber', icon: Droplets, category: 'Veggies', protein: 1 },
   { id: 'ing-tomatoes', name: 'Cherry Tomatoes', icon: Circle, category: 'Veggies', protein: 1 },
