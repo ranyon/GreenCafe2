@@ -15,23 +15,30 @@ export default function HeroSection({ onExplore, onOpenLab }) {
 
   const slides = [
     {
-      title: 'Crispy Vegan Spicy Wrap',
-      description: 'Packed with fiery plant-based protein, fresh crunch, and our signature Green Cafe spicy aioli. Wrapped to perfection.',
-      badge: 'Bestseller',
+      title: 'Spicy Chicken Wrap',
+      description: 'Packed with fiery vegetables, pan seared chicken breast, tossed with our in-house dressing. Crispy on the outside, juicy on the inside. Wrapped to perfection.',
+      badge: 'Best Seller',
       badgeIcon: '🔥',
       image: heroVeganWrap,
     },
     {
-      title: 'Green Goddess Bowl',
-      description: 'A nutrient-dense powerhouse of quinoa, roasted sweet potatoes, avocado, and our house-made herb tahini dressing.',
+      title: 'Protein Bowl',
+      description: 'A nutrient dense powerhouse of steamed broccoli & cauliflower, sauté veggies, roasted chicken breast & beef fillet, boiled eggs, juicy avocados with our house made hot sauce.',
       badge: 'Nutrient Dense',
       badgeIcon: '🥑',
       image: heroGoddessBowl,
     },
     {
-      title: 'Golden Milk Iced Latte',
-      description: 'Anti-inflammatory turmeric, ginger, and oat milk shaken over ice. A refreshing, healing elixir.',
-      badge: 'Immunity Boost',
+      title: 'Detox Juice',
+      description: 'Anti-inflammatory ginger, lemon, cucumber, green apple, kale, celery & spinach for the perfect cleanse.',
+      badge: 'The Perfect Cleanse',
+      badgeIcon: '🌿',
+      image: heroGoldenLatte,
+    },
+    {
+      title: 'Raw & Natural Cold Pressed Juices',
+      description: 'Locally sourced ingredients, freshly prepped daily light meals for people on the go. Artisan fresh wraps, classic sandwiches & raw juices crafted with zero artificial additives.',
+      badge: 'Prepared Daily',
       badgeIcon: '✨',
       image: heroGoldenLatte,
     }
@@ -123,6 +130,24 @@ export default function HeroSection({ onExplore, onOpenLab }) {
               <Sparkles className="w-4 h-4 text-white" />
               <span>Custom Juice</span>
             </button>
+          </div>
+
+          {/* Trust Pillars */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mt-6 sm:mt-8 text-xs sm:text-sm text-gray-200 font-medium drop-shadow">
+            <div className="flex items-center gap-1.5">
+              <Leaf className="w-4 h-4 text-[#86EFAC]" />
+              <span>Fresh ingredients sourcing</span>
+            </div>
+            <span className="hidden sm:inline text-white/30">•</span>
+            <div className="flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-[#86EFAC]" />
+              <span>No artificial additives</span>
+            </div>
+            <span className="hidden sm:inline text-white/30">•</span>
+            <div className="flex items-center gap-1.5">
+              <Zap className="w-4 h-4 text-[#86EFAC]" />
+              <span>Made fresh daily</span>
+            </div>
           </div>
         </div>
       </div>

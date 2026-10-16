@@ -983,14 +983,14 @@ export const MENU_ITEMS = [
     id: 'j7',
     category: 'juices',
     name: 'Detox Juice',
-    tagline: 'Green Apple, Cucumber, Lemon, Celery, Kale & Ginger',
+    tagline: 'Anti-inflammatory ginger, lemon, cucumber, green apple, kale, celery & spinach for the perfect cleanse.',
     price: 40.00,
     carbs: '20g',
     rating: 4.8,
     size: '350 ml',
     image: img_j7,
     tags: ['Juice', 'Detox', 'Green'],
-    ingredients: ['Green Apple', 'Cucumber', 'Lemon', 'Celery', 'Kale', 'Ginger']
+    ingredients: ['Ginger', 'Lemon', 'Cucumber', 'Green Apple', 'Kale', 'Celery', 'Spinach']
   },
   {
     id: 'j8',
@@ -1541,37 +1541,35 @@ export const MENU_ITEMS = [
 ];
 
 export const INGREDIENTS_LIST = [
-  // --- VEGGIES & BASES ---
-  { id: 'ing-spinach', name: 'Baby Spinach', icon: Leaf, category: 'Veggies', protein: 2 },
-  { id: 'ing-kale', name: 'Fresh Kale', icon: Leaf, category: 'Veggies', protein: 2 },
-  { id: 'ing-mixed-greens', name: 'Mixed Greens', icon: Leaf, category: 'Veggies', protein: 2 },
-  { id: 'ing-cucumber', name: 'English Cucumber', icon: Droplets, category: 'Veggies', protein: 1 },
-  { id: 'ing-tomatoes', name: 'Cherry Tomatoes', icon: Circle, category: 'Veggies', protein: 1 },
-  { id: 'ing-carrots', name: 'Shredded Carrots', icon: Circle, category: 'Veggies', protein: 1 },
-  { id: 'ing-beetroot', name: 'Diced Beetroot', icon: Circle, category: 'Veggies', protein: 1 },
-  { id: 'ing-sweet-corn', name: 'Sweet Corn', icon: Circle, category: 'Veggies', protein: 2 },
-  { id: 'ing-green-pepper', name: 'Green Bell Pepper', icon: Circle, category: 'Veggies', protein: 1 },
-  { id: 'ing-onion', name: 'Red Onion', icon: Circle, category: 'Veggies', protein: 1 },
-  { id: 'ing-broccoli', name: 'Steamed Broccoli', icon: Leaf, category: 'Veggies', protein: 3 },
-  { id: 'ing-cauliflower', name: 'Cauliflower', icon: Leaf, category: 'Veggies', protein: 2 },
+  // --- VEGGIES & GREENS ---
+  { id: 'ing-lettuce', name: 'Lettuce', icon: Leaf, category: 'Veggies' },
+  { id: 'ing-spinach', name: 'Spinach', icon: Leaf, category: 'Veggies' },
+  { id: 'ing-kale', name: 'Kale', icon: Leaf, category: 'Veggies' },
+  { id: 'ing-parsley', name: 'Parsley', icon: Leaf, category: 'Veggies' },
+  { id: 'ing-cucumber', name: 'Cucumber', icon: Droplets, category: 'Veggies' },
+  { id: 'ing-tomato', name: 'Tomato', icon: Circle, category: 'Veggies' },
+  { id: 'ing-carrot', name: 'Carrot', icon: Circle, category: 'Veggies' },
+  { id: 'ing-onion', name: 'Onion', icon: Circle, category: 'Veggies' },
+  { id: 'ing-beetroot', name: 'Beetroot', icon: Circle, category: 'Veggies' },
+  { id: 'ing-cauliflower', name: 'Cauli Flower', icon: Leaf, category: 'Veggies' },
+  { id: 'ing-broccoli', name: 'Broccoli', icon: Leaf, category: 'Veggies' },
+  { id: 'ing-potato', name: 'Potato', icon: Circle, category: 'Veggies' },
+  { id: 'ing-corn', name: 'Corn', icon: Circle, category: 'Veggies' },
 
   // --- PROTEINS ---
-  { id: 'ing-chicken', name: 'Chargrilled Chicken', icon: Flame, category: 'Protein', protein: 28 },
-  { id: 'ing-shredded-chicken', name: 'Shredded Chicken', icon: Flame, category: 'Protein', protein: 26 },
-  { id: 'ing-diced-chicken', name: 'Diced Chicken', icon: Flame, category: 'Protein', protein: 25 },
-  { id: 'ing-tuna', name: 'Tuna Chunks', icon: Box, category: 'Protein', protein: 24 },
-  { id: 'ing-egg', name: 'Boiled Egg', icon: Circle, category: 'Protein', protein: 6 },
-  { id: 'ing-tofu', name: 'Smoked Tofu', icon: Box, category: 'Protein', protein: 15 },
-  { id: 'ing-beef', name: 'Beef Strips', icon: Flame, category: 'Protein', protein: 27 },
+  { id: 'ing-chicken', name: 'Chicken Breast', icon: Flame, category: 'Protein' },
+  { id: 'ing-tuna', name: 'Tuna', icon: Box, category: 'Protein' },
+  { id: 'ing-bacon', name: 'Bacon', icon: Flame, category: 'Protein' },
+  { id: 'ing-egg', name: 'Egg', icon: Circle, category: 'Protein' },
 
   // --- TOPPINGS & EXTRAS ---
-  { id: 'ing-avocado', name: 'Smashed Avocado', icon: Circle, category: 'Toppings & Extras', protein: 2 },
-  { id: 'ing-feta', name: 'Feta Cheese', icon: Box, category: 'Toppings & Extras', protein: 4 },
-  { id: 'ing-croutons', name: 'Crispy Croutons', icon: Box, category: 'Toppings & Extras', protein: 2 },
-  { id: 'ing-olives', name: 'Black Olives', icon: Circle, category: 'Toppings & Extras', protein: 1 },
-  { id: 'ing-cranberries', name: 'Dried Cranberries', icon: Circle, category: 'Toppings & Extras', protein: 1 },
-  { id: 'ing-granola', name: 'Crunchy Granola', icon: Box, category: 'Toppings & Extras', protein: 3 },
-  { id: 'ing-pesto', name: 'Basil Pesto', icon: Droplets, category: 'Toppings & Extras', protein: 2 },
-  { id: 'ing-dressing', name: 'Signature House Dressing', icon: Droplets, category: 'Toppings & Extras', protein: 1 },
-  { id: 'ing-hot-sauce', name: 'Special Hot Sauce', icon: Droplets, category: 'Toppings & Extras', protein: 0 },
+  { id: 'ing-avocado', name: 'Avocado', icon: Circle, category: 'Toppings & Extras' },
+  { id: 'ing-croutons', name: 'Croutons', icon: Box, category: 'Toppings & Extras' },
+  { id: 'ing-olives', name: 'Olives', icon: Circle, category: 'Toppings & Extras' },
+
+  // --- DRESSINGS & SAUCES ---
+  { id: 'ing-vinaigrette', name: 'Vinaigrette', icon: Droplets, category: 'Dressings' },
+  { id: 'ing-mayonnaise', name: 'Mayonnaise', icon: Droplets, category: 'Dressings' },
+  { id: 'ing-salad-cream', name: 'Salad Cream', icon: Droplets, category: 'Dressings' },
+  { id: 'ing-hot-sauce', name: 'Hot Sauce', icon: Flame, category: 'Dressings' },
 ];

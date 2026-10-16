@@ -5,15 +5,15 @@ import { Sparkles, Plus, Trash2, Check, Activity, Box, Filter } from 'lucide-rea
 export default function RecipeBuilder({ onAddCustomToCart }) {
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedIngredients, setSelectedIngredients] = useState([
-    INGREDIENTS_LIST[0], // Baby Spinach
-    INGREDIENTS_LIST[3], // English Cucumber
-    INGREDIENTS_LIST[12], // Chargrilled Chicken
-    INGREDIENTS_LIST[19], // Smashed Avocado
-    INGREDIENTS_LIST[20], // Feta Cheese
+    INGREDIENTS_LIST[0], // Lettuce
+    INGREDIENTS_LIST[4], // Cucumber
+    INGREDIENTS_LIST[13], // Chicken Breast
+    INGREDIENTS_LIST[17], // Avocado
+    INGREDIENTS_LIST[20], // Vinaigrette
   ]);
   const [customName, setCustomName] = useState('My Custom 1000 cc Bowl');
 
-  const categories = ['All', 'Veggies', 'Protein', 'Toppings & Extras'];
+  const categories = ['All', 'Veggies', 'Protein', 'Toppings & Extras', 'Dressings'];
 
   const filteredIngredients = activeCategory === 'All'
     ? INGREDIENTS_LIST
@@ -56,7 +56,7 @@ export default function RecipeBuilder({ onAddCustomToCart }) {
             CREATE YOUR <span className="text-gradient-lime italic font-serif">OWN BOWL</span>
           </h2>
           <p className="text-gray-600 text-sm sm:text-base mt-3">
-            Mix and match fresh veggies, premium proteins, and delicious toppings & extras for your custom 1000 cc bowl.
+            Mix and match fresh veggies, premium proteins, tasty toppings, and house dressings for your custom 1000 cc bowl.
           </p>
         </div>
 
