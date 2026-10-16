@@ -1,17 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { INGREDIENTS_LIST } from '../data/menuData';
-import { Sparkles, Plus, Trash2, Check, Activity, Box, Filter } from 'lucide-react';
+import { Sparkles, Plus, Trash2, Check, Box } from 'lucide-react';
 
 export default function RecipeBuilder({ onAddCustomToCart }) {
   const [activeCategory, setActiveCategory] = useState('All');
-  const [selectedIngredients, setSelectedIngredients] = useState([
-    INGREDIENTS_LIST[0], // Lettuce
-    INGREDIENTS_LIST[4], // Cucumber
-    INGREDIENTS_LIST[13], // Chicken Breast
-    INGREDIENTS_LIST[17], // Avocado
-    INGREDIENTS_LIST[20], // Vinaigrette
-  ]);
+  const [selectedIngredients, setSelectedIngredients] = useState(() => {
+    try {
+      const saved = sessionStorage.getItem('greencafe_custom_bowl');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
   const [customName, setCustomName] = useState('My Custom 1000 cc Bowl');
+
+  // Save selection across page refreshes so it stays consistent
+  useEffect(() => {
+    try {
+      sessionStorage.setItem('greencafe_custom_bowl', JSON.stringify(selectedIngredients));
+    } catch (e) {
+      console.error(e);
+    }
+  }, [selectedIngredients]);
 
   const categories = ['All', 'Veggies', 'Protein', 'Toppings & Extras', 'Dressings'];
 
@@ -28,20 +38,25 @@ export default function RecipeBuilder({ onAddCustomToCart }) {
     }
   };
 
-  const totalPrice = 50.00 + selectedIngredients.length * 5.00;
+  // Base price of 50.00 only applies once at least 1 ingredient is added
+  const totalPrice = selectedIngredients.length === 0 ? 0 : 50.00 + selectedIngredients.length * 5.00;
 
   const handleAddCustom = () => {
+    if (selectedIngredients.length === 0) return;
     const customItem = {
       id: `custom-${Date.now()}`,
       category: 'salads',
       name: customName || 'Custom 1000 cc Bowl',
       tagline: `Handcrafted 1000 cc bowl with ${selectedIngredients.map((i) => i.name).join(', ')}`,
+      ingredients: selectedIngredients.map((i) => i.name),
       price: totalPrice,
       size: '1000 cc',
       image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
       tags: ['Custom Bowl', '1000 cc', 'Made Fresh'],
     };
     onAddCustomToCart(customItem);
+    setSelectedIngredients([]);
+    sessionStorage.removeItem('greencafe_custom_bowl');
   };
 
   return (
@@ -145,23 +160,31 @@ export default function RecipeBuilder({ onAddCustomToCart }) {
               <span className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
                 Assembled Veggies, Proteins & Extras
               </span>
-              <div className="flex flex-wrap gap-2 min-h-[80px] p-3 rounded-xl bg-white border border-gray-200">
-                {selectedIngredients.map((ing) => (
-                  <span
-                    key={ing.id}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gray-100 text-black text-xs font-semibold border border-gray-300 animate-scale-in"
-                  >
-                    <ing.icon className="w-3.5 h-3.5 text-black" />
-                    <span>{ing.name}</span>
-                    <button
-                      onClick={() => toggleIngredient(ing)}
-                      className="hover:text-red-500 transition-colors ml-1"
-                      title="Remove"
+              <div className="flex flex-wrap items-center gap-2 min-h-[80px] p-3 rounded-xl bg-white border border-gray-200">
+                {selectedIngredients.length === 0 ? (
+                  <div className="w-full text-center py-4">
+                    <p className="text-xs text-gray-400 font-medium">
+                      Your bowl is empty. Select ingredients on the left to begin building!
+                    </p>
+                  </div>
+                ) : (
+                  selectedIngredients.map((ing) => (
+                    <span
+                      key={ing.id}
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gray-100 text-black text-xs font-semibold border border-gray-300 animate-scale-in"
                     >
-                      <Trash2 className="w-3 h-3" />
-                    </button>
-                  </span>
-                ))}
+                      <ing.icon className="w-3.5 h-3.5 text-black" />
+                      <span>{ing.name}</span>
+                      <button
+                        onClick={() => toggleIngredient(ing)}
+                        className="hover:text-red-500 transition-colors ml-1"
+                        title="Remove"
+                      >
+                        <Trash2 className="w-3 h-3" />
+                      </button>
+                    </span>
+                  ))
+                )}
               </div>
             </div>
 
@@ -205,11 +228,16 @@ export default function RecipeBuilder({ onAddCustomToCart }) {
               </div>
 
               <button
+                disabled={selectedIngredients.length === 0}
                 onClick={handleAddCustom}
-                className="px-6 py-3.5 text-xs font-bold text-white bg-gradient-to-r from-gray-800 to-black hover:opacity-90 rounded-full shadow-lg shadow-black/10 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+                className={`px-6 py-3.5 text-xs font-bold rounded-full shadow-lg transition-all flex items-center gap-2 ${
+                  selectedIngredients.length === 0
+                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed shadow-none'
+                    : 'text-white bg-gradient-to-r from-gray-800 to-black hover:opacity-90 shadow-black/10 hover:scale-105 active:scale-95 cursor-pointer'
+                }`}
               >
                 <Plus className="w-4 h-4" />
-                Add Bowl to Order
+                {selectedIngredients.length === 0 ? 'Select Ingredients' : 'Add Bowl to Order'}
               </button>
             </div>
           </div>

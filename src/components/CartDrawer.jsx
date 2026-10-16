@@ -32,24 +32,36 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
     try {
       const shortId = Math.random().toString(36).substring(2, 7).toUpperCase();
       const orderId = `ORD-${shortId}`;
+      const now = new Date();
+      const formattedTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
       const orderData = { 
         id: orderId, 
-        items: cartItems, 
+        items: cartItems.map(item => ({
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          quantity: item.quantity,
+          size: item.size || null,
+          category: item.category || null,
+          tagline: item.tagline || null,
+          ingredients: item.ingredients || null
+        })), 
         total, 
         status: 'Pending', 
         customerName: customerInfo.name,
         customerPhone: customerInfo.phone,
         customerLocation: customerInfo.location,
-        timestamp: new Date().toISOString() 
+        time: formattedTime,
+        timestamp: now.toISOString() 
       };
       
-      // Save order to mock database (1:1 with Firestore/Supabase)
+      // Save order to database (Firestore real-time)
       await db.addDocument('orders', orderData);
       
       // Update Live Feed for admin
       await db.addDocument('feed', {
         user: customerInfo.name,
-        action: `initiated checkout for GHS ${total.toFixed(2)}.`,
+        action: `placed order #${orderId} (${cartItems.length} item${cartItems.length > 1 ? 's' : ''}) for GHS ${total.toFixed(2)}.`,
         time: "Just now"
       });
 

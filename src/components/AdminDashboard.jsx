@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { LayoutDashboard, Activity, Users, Star, Search, Menu, X, ArrowUp, MessageSquare, Send, Lock, LogOut } from 'lucide-react';
+import { LayoutDashboard, Activity, Users, Star, Search, Menu, X, ArrowUp, MessageSquare, Send, Lock, LogOut, Phone, MapPin } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { db } from '../services/db';
 
@@ -479,22 +479,67 @@ export default function AdminDashboard() {
                     
                     <div className="flex-1 space-y-4 overflow-y-auto pr-2 pb-2">
                       {orders.filter(o => o.status === status).map(order => (
-                        <div key={order.id} className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm hover:shadow-md transition-all group">
-                          <div className="flex justify-between items-start mb-2">
-                            <span className="font-bold text-gray-900 text-sm truncate">{order.customerName}</span>
-                            <span className="text-[10px] text-gray-400 font-medium bg-gray-50 px-2 py-1 rounded-md">{order.time}</span>
+                        <div key={order.id} className="bg-white border border-gray-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-all group">
+                          {/* Customer Name & Order ID */}
+                          <div className="flex justify-between items-start mb-1.5">
+                            <div>
+                              <span className="font-bold text-gray-900 text-sm block leading-tight">{order.customerName}</span>
+                              <span className="text-[10px] font-mono text-gray-400 font-semibold">{order.id}</span>
+                            </div>
+                            <span className="text-[10px] text-gray-500 font-medium bg-gray-100 px-2 py-0.5 rounded-md">
+                              {order.time || (order.createdAt ? new Date(order.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '')}
+                            </span>
                           </div>
-                          <div className="text-xs text-gray-500 mb-4 space-y-1">
+
+                          {/* Customer Phone & Location */}
+                          {(order.customerPhone || order.customerLocation) && (
+                            <div className="my-2 p-2.5 rounded-lg bg-gray-50 border border-gray-100 text-[11px] space-y-1.5">
+                              {order.customerPhone && (
+                                <div className="flex items-center gap-1.5 text-gray-700">
+                                  <Phone size={12} className="text-emerald-600 shrink-0" />
+                                  <a href={`tel:${order.customerPhone}`} className="hover:underline font-medium">{order.customerPhone}</a>
+                                  <a 
+                                    href={`https://wa.me/${order.customerPhone.replace(/[^0-9]/g, '')}`} 
+                                    target="_blank" 
+                                    rel="noreferrer"
+                                    className="ml-auto text-[10px] font-bold text-emerald-700 hover:underline bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200"
+                                  >
+                                    WhatsApp
+                                  </a>
+                                </div>
+                              )}
+                              {order.customerLocation && (
+                                <div className="flex items-start gap-1.5 text-gray-600">
+                                  <MapPin size={12} className="text-amber-600 shrink-0 mt-0.5" />
+                                  <span className="leading-tight">{order.customerLocation}</span>
+                                </div>
+                              )}
+                            </div>
+                          )}
+
+                          {/* Order Items with Custom Ingredients */}
+                          <div className="text-xs text-gray-700 my-3 space-y-2">
                             {order.items?.map((item, idx) => {
-                              const itemText = typeof item === 'string' ? item : `${item.quantity}x ${item.name}`;
-                              return <div key={idx} className="truncate">• {itemText}</div>;
+                              const isObj = typeof item === 'object';
+                              const itemName = isObj ? `${item.quantity || 1}x ${item.name}` : item;
+                              const tagline = isObj ? item.tagline : null;
+                              return (
+                                <div key={idx} className="bg-white/80 pb-1">
+                                  <div className="font-semibold text-gray-900">• {itemName}</div>
+                                  {tagline && (
+                                    <div className="text-[10px] text-emerald-800 bg-emerald-50/70 rounded p-1.5 mt-0.5 border border-emerald-100 leading-relaxed font-medium">
+                                      {tagline}
+                                    </div>
+                                  )}
+                                </div>
+                              );
                             })}
                           </div>
                           
-                          <div className="flex justify-between items-center border-t border-gray-50 pt-3">
-                            <span className="font-bold text-gray-900 text-sm">GHS {order.total.toFixed(2)}</span>
+                          {/* Price & Status Actions */}
+                          <div className="flex justify-between items-center border-t border-gray-100 pt-3">
+                            <span className="font-extrabold text-gray-900 text-sm">GHS {Number(order.total || 0).toFixed(2)}</span>
                             
-                            {/* Status Actions */}
                             <select 
                               className="text-xs bg-gray-50 border border-gray-200 rounded-lg px-2 py-1 focus:outline-none focus:ring-1 focus:ring-gray-300 text-gray-700 font-medium cursor-pointer"
                               value={order.status}
