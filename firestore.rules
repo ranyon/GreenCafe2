@@ -1,8 +1,46 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+
+    // Orders: Anyone can create an order; anyone with tracking ID can read; only staff/admin can modify or delete
+    match /orders/{orderId} {
+      allow create: if request.resource.data.total is number && request.resource.data.customerName is string;
+      allow read: if true;
+      allow update, delete: if request.auth != null;
+    }
+
+    // Public Activity Feed: Customers post order notifications; anyone can read; only staff can edit/delete
+    match /feed/{feedId} {
+      allow read, create: if true;
+      allow update, delete: if request.auth != null;
+    }
+
+    // Customer Feedback: Anyone can submit a review/feedback
+    match /feedback/{feedbackId} {
+      allow read, create: if true;
+      allow update, delete: if request.auth != null;
+    }
+
+    // Sensitive Collections: Strictly restricted to authenticated managers & admin
+    match /stats/{statId} {
+      allow read, write: if request.auth != null;
+    }
+
+    match /customers/{customerId} {
+      allow read, write: if request.auth != null;
+    }
+
+    match /chats/{chatId} {
+      allow read, write: if request.auth != null;
+    }
+
+    match /loyalty/{loyaltyId} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Default lockdown fallback: Reject unauthenticated access
     match /{document=**} {
-      allow read, write: if true;
+      allow read, write: if request.auth != null;
     }
   }
 }
