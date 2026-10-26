@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Sparkles, Leaf, Zap, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Sparkles, Leaf } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -132,22 +132,10 @@ export default function HeroSection({ onExplore, onOpenLab }) {
             </button>
           </div>
 
-          {/* Trust Pillars */}
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mt-6 sm:mt-8 text-xs sm:text-sm text-gray-200 font-medium drop-shadow">
-            <div className="flex items-center gap-1.5">
-              <Leaf className="w-4 h-4 text-[#86EFAC]" />
-              <span>Fresh ingredients sourcing</span>
-            </div>
-            <span className="hidden sm:inline text-white/30">•</span>
-            <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#86EFAC]" />
-              <span>No artificial additives</span>
-            </div>
-            <span className="hidden sm:inline text-white/30">•</span>
-            <div className="flex items-center gap-1.5">
-              <Zap className="w-4 h-4 text-[#86EFAC]" />
-              <span>Made fresh daily</span>
-            </div>
+          {/* Trust Tagline */}
+          <div className="flex items-center justify-center gap-2 mt-6 sm:mt-8 text-xs sm:text-sm text-gray-200 font-medium drop-shadow text-center">
+            <Leaf className="w-4 h-4 text-[#86EFAC] shrink-0" />
+            <span>Freshly squeezed raw juices with zero artificial additives</span>
           </div>
         </div>
       </div>

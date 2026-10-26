@@ -1,7 +1,7 @@
 import { 
   Leaf, Coffee, ScrollText, Utensils, 
   CupSoda, PlusCircle, Droplets, UtensilsCrossed,
-  Flame, Box, Circle
+  Flame, Box, Circle, Gift
 } from 'lucide-react';
 
 import img_0 from '../assets/green_special_wrap.webp';
@@ -203,7 +203,17 @@ import img_pillow_willow_photo from '../assets/pillow_willow.jpeg';
 import img_protein_bowl_photo from '../assets/protein_bowl.jpeg';
 import img_tuna_wrap_photo from '../assets/tuna_wrap.jpeg';
 import img_wrap_combo_photo from '../assets/wrap_combo.jpeg';
+
+import img_package_self_love from '../assets/package_self_love.jpg';
+import img_package_my_sunshine from '../assets/package_my_sunshine.jpg';
+import img_package_love_of_my_life from '../assets/package_love_of_my_life.jpg';
+import img_package_my_heart_beat from '../assets/package_my_heart_beat.jpg';
+import img_package_burning_desire from '../assets/package_burning_desire.jpg';
+import img_package_you_mean_the_world from '../assets/package_you_mean_the_world.jpg';
+import img_package_my_all_in_all_bomber from '../assets/package_my_all_in_all_bomber.jpg';
+
 export const MENU_CATEGORIES = [
+  { id: 'packages', label: 'Breakfast Packages 2026', icon: Gift },
   { id: 'salads', label: 'Salads', icon: Leaf },
   { id: 'breakfast', label: 'Breakfast', icon: Coffee },
   { id: 'wraps', label: 'Wraps', icon: ScrollText },
@@ -218,6 +228,159 @@ export const MENU_CATEGORIES = [
 ];
 
 export const MENU_ITEMS = [
+  // --- BREAKFAST PACKAGES 2026 ---
+  {
+    id: 'pkg1',
+    category: 'packages',
+    name: 'Self Love',
+    tagline: 'Shredded Chicken Salad, Scrambled Eggs, Diced Sausages, Chicken Bun Sandwich, Fruit Salad & Cold Pressed Juice',
+    price: 250.00,
+    rating: 5.0,
+    size: 'Gift Bag Set',
+    image: img_package_self_love,
+    tags: ['Package 2026', 'Gift Set', 'Most Sold'],
+    ingredients: [
+      'Shredded Chicken Salad',
+      'Scrambled Eggs',
+      'Diced Sausages',
+      'Chicken Bun Sandwich',
+      'Fresh Fruit Salad (Watermelon, Mango, Pineapple)',
+      'Cold Pressed Juice (Pineapple)',
+      'Baked Beans'
+    ]
+  },
+  {
+    id: 'pkg2',
+    category: 'packages',
+    name: 'My SunShine',
+    tagline: 'Chicken Wrap, Tuna Club Sandwich, Breakfast Plate (Toast, Omelette, Sausages, Bacon, Sauté Veggies & Beans), Fruit Salad, Cold Pressed Juice & Beverage',
+    price: 300.00,
+    rating: 5.0,
+    size: 'Gift Bag Set',
+    image: img_package_my_sunshine,
+    tags: ['Package 2026', 'Gift Set', 'Sunlit Morning'],
+    ingredients: [
+      'Grilled Chicken Wrap',
+      'Tuna Club Sandwich',
+      'Breakfast Plate (Toast, Herb Omelette, Sausages, Bacon, Sauté Veggies & Baked Beans)',
+      'Fresh Fruit Salad',
+      'Cold Pressed Juice',
+      'Hot Beverage Packets (Milo & Carnation)'
+    ]
+  },
+  {
+    id: 'pkg3',
+    category: 'packages',
+    name: 'Love of My Life',
+    tagline: 'Shredded Chicken Salad, 2 Tuna Club Sandwiches, 2 Chicken Wraps, Breakfast Plate, 2 Cold Pressed Juices, 2 Fruit Salads, Fresh Apple & Grapes',
+    price: 450.00,
+    rating: 5.0,
+    size: 'Brunch Hamper',
+    image: img_package_love_of_my_life,
+    tags: ['Package 2026', 'Curated Hamper', 'For Two'],
+    ingredients: [
+      'Shredded Chicken Salad',
+      '2 Tuna Club Sandwiches',
+      '2 Grilled Chicken Wraps',
+      'Breakfast Plate (Toasted Bun, Herb Omelette, 2 Sausages & Baked Beans)',
+      '2 Cold Pressed Juices (Beetroot & Orange Carrot)',
+      '2 Fresh Fruit Salads',
+      'Whole Red Apple',
+      'Dark Grapes'
+    ]
+  },
+  {
+    id: 'pkg4',
+    category: 'packages',
+    name: 'My Heart Beat',
+    tagline: 'Shredded Chicken Salad, 2 Tuna Clubs, 2 Chicken Wraps, Scrambled Eggs & Diced Sausages, 2 Smoothies, 1 Mini Yoghurt Parfait, 1 Fruit Salad, Apple & Grapes',
+    price: 500.00,
+    rating: 5.0,
+    size: 'Brunch Hamper',
+    image: img_package_my_heart_beat,
+    tags: ['Package 2026', 'Gourmet Hamper', 'Best Seller'],
+    ingredients: [
+      'Shredded Chicken Salad',
+      '2 Tuna Club Sandwiches',
+      '2 Grilled Chicken Wraps',
+      'Scrambled Eggs & Diced Sausages',
+      '2 Smoothies (Strawberry & Vanilla)',
+      '1 Mini Yoghurt Parfait (Granola, Raisins, Coconut, Apple)',
+      '1 Fresh Fruit Salad',
+      'Fresh Apple',
+      'Fresh Grapes'
+    ]
+  },
+  {
+    id: 'pkg5',
+    category: 'packages',
+    name: 'Burning Desire',
+    tagline: 'Shredded Chicken Salad, Tuna Club, Chicken Wrap, Scrambled Eggs & Sausages, 4 Samosas & 4 Spring Rolls, Onion Rings, 2 Smoothies, Parfait, Fruit Salad, 2 Apples & Grapes',
+    price: 600.00,
+    rating: 5.0,
+    size: 'Deluxe Hamper',
+    image: img_package_burning_desire,
+    tags: ['Package 2026', 'Deluxe Hamper', 'Chef Special'],
+    ingredients: [
+      'Shredded Chicken Salad',
+      'Tuna Club Sandwich',
+      'Grilled Chicken Wrap',
+      'Scrambled Eggs & Diced Sausages',
+      '4 Golden Samosas & 4 Crispy Spring Rolls',
+      'Crispy Onion Rings with Dipping Sauce & Baked Beans',
+      '2 Smoothies',
+      '1 Mini Yoghurt Parfait',
+      '1 Fresh Fruit Salad',
+      '2 Fresh Apples & Grapes'
+    ]
+  },
+  {
+    id: 'pkg6',
+    category: 'packages',
+    name: 'You Mean The World',
+    tagline: 'Shredded Chicken Salad, 4 Tuna Clubs, 4 Chicken Wraps, Scrambled Eggs & Sausages, 4 Cold Pressed Juices, Fruit Salad, 4 Samosas & 4 Spring Rolls, 2 Apples, Grapes & Beverage',
+    price: 900.00,
+    rating: 5.0,
+    size: 'VIP Wooden Crate',
+    image: img_package_you_mean_the_world,
+    tags: ['Package 2026', 'VIP Wooden Crate', 'Feast For 4-6'],
+    ingredients: [
+      'Gourmet Pasta & Shredded Chicken Salad',
+      '4 Tuna Club Sandwiches',
+      '4 Grilled Chicken Wraps',
+      'Scrambled Eggs & Diced Sausages',
+      '4 Cold Pressed Juices',
+      'Fresh Fruit Salad Platter',
+      '4 Crispy Samosas & 4 Golden Spring Rolls',
+      '2 Fresh Apples, Orange, Pear & Grapes',
+      '1 Mini Yoghurt Parfait',
+      'Beverage Sachets (Milo, Carnation)'
+    ]
+  },
+  {
+    id: 'pkg7',
+    category: 'packages',
+    name: 'My All In All (Bomber)',
+    tagline: '1 Bottle Sparkling Wine, 6 Juices, 6 Sandwiches, 6 Wraps, Chicken Salad, Scrambled Eggs & Sausages, 6 Samosas & 6 Spring Rolls, Fruit Salad, 3 Apples, Grapes & Beverage',
+    price: 1200.00,
+    rating: 5.0,
+    size: 'Celebration Wooden Crate',
+    image: img_package_my_all_in_all_bomber,
+    tags: ['Package 2026', 'Celebration Crate', 'Includes Wine', 'Ultimate VIP'],
+    ingredients: [
+      '1 Bottle Sparkling Wine (Chilled Celebration Bubbly)',
+      '6 Cold Pressed Juices',
+      '6 Gourmet Sandwiches',
+      '6 Grilled Wraps',
+      'Large Shredded Chicken Salad',
+      'Scrambled Eggs & Diced Sausages',
+      '6 Crispy Samosas & 6 Golden Spring Rolls',
+      'Fresh Fruit Salad Platters',
+      '3 Fresh Apples, Ripe Orange & Grapes',
+      'Hot Beverage Packets'
+    ]
+  },
+
   // --- SALADS ---
   {
     id: 'sal1',

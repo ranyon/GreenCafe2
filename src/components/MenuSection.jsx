@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const initialCategory = searchParams.get('category') || 'wraps';
+  const initialCategory = searchParams.get('category') || 'packages';
   
   const [activeTab, setActiveTab] = useState(initialCategory);
 

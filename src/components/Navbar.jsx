@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingBag, Menu as MenuIcon, X, Sparkles } from 'lucide-react';
+import { ShoppingBag, Menu as MenuIcon, X, Sparkles, Gift } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar({ cartCount, onOpenCart }) {
@@ -19,6 +19,7 @@ export default function Navbar({ cartCount, onOpenCart }) {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Menu', path: '/menu' },
+    { name: 'Packages 2026', path: '/menu?category=packages', icon: Gift },
     { name: 'Create Your Bowl', path: '/lab', icon: Sparkles },
   ];
 
