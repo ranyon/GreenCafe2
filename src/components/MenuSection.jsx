@@ -10,14 +10,19 @@ gsap.registerPlugin(ScrollTrigger);
 export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const initialCategory = searchParams.get('category') || 'packages';
+  const resolveCategory = (cat) => {
+    if (!cat) return 'launch_packs';
+    if (cat === 'lunch_packs') return 'launch_packs';
+    return cat;
+  };
+  const initialCategory = resolveCategory(searchParams.get('category'));
   
   const [activeTab, setActiveTab] = useState(initialCategory);
 
   useEffect(() => {
     const category = new URLSearchParams(location.search).get('category');
     if (category) {
-      setActiveTab(category);
+      setActiveTab(resolveCategory(category));
     }
   }, [location.search]);
 
@@ -25,7 +30,12 @@ export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
   const sectionRef = useRef(null);
   const gridRef = useRef(null);
 
-  const filteredItems = MENU_ITEMS.filter((item) => item.category === activeTab);
+  const filteredItems = MENU_ITEMS.filter((item) => {
+    if (activeTab === 'launch_packs' || activeTab === 'lunch_packs') {
+      return item.category === 'launch_packs' || item.category === 'lunch_packs';
+    }
+    return item.category === activeTab;
+  });
 
   const handleAdd = (e, item) => {
     e.stopPropagation();

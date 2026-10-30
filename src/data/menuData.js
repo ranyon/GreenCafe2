@@ -217,8 +217,8 @@ import img_package_lunch_medium from '../assets/package_lunch_medium.jpg';
 import img_package_lunch_large from '../assets/package_lunch_large.jpg';
 
 export const MENU_CATEGORIES = [
+  { id: 'launch_packs', label: 'Launch Packs', icon: UtensilsCrossed },
   { id: 'packages', label: 'Breakfast Packages 2026', icon: Gift },
-  { id: 'lunch_packs', label: 'Lunch Packs', icon: UtensilsCrossed },
   { id: 'salads', label: 'Salads', icon: Leaf },
   { id: 'breakfast', label: 'Breakfast', icon: Coffee },
   { id: 'wraps', label: 'Wraps', icon: ScrollText },
@@ -385,17 +385,17 @@ export const MENU_ITEMS = [
     ]
   },
 
-  // --- LUNCH PACKS ---
+  // --- LAUNCH PACKS ---
   {
-    id: 'lunch_pack_small',
-    category: 'lunch_packs',
-    name: 'Small Lunch Pack',
+    id: 'launch_pack_small',
+    category: 'launch_packs',
+    name: 'Small Launch Pack',
     tagline: 'Assorted Jollof Rice, Assorted Fried Rice, Chicken Salad, Tuna Sandwich, Chicken Wings, Fruit Salad, Cold Pressed Juices, Apple & Grapes',
     price: 450.00,
     rating: 5.0,
     size: 'Feeds 2 Heads',
     image: img_package_lunch_small,
-    tags: ['Lunch Pack', 'Feeds 2 Heads', 'Catering Box', 'Artisan'],
+    tags: ['Launch Pack', 'Feeds 2 Heads', 'Catering Box', 'Artisan'],
     ingredients: [
       'Assorted Jollof Rice',
       'Assorted Fried Rice',
@@ -409,15 +409,15 @@ export const MENU_ITEMS = [
     ]
   },
   {
-    id: 'lunch_pack_medium',
-    category: 'lunch_packs',
-    name: 'Medium Lunch Pack',
+    id: 'launch_pack_medium',
+    category: 'launch_packs',
+    name: 'Medium Launch Pack',
     tagline: 'Assorted Jollof Rice, Assorted Fried Rice, Chicken Salad, Tuna Sandwich, Chicken Wraps, Chicken Wings, Fruit Salad, Meat Samosas, Spring Rolls, Cold Pressed Juices, Parfait, Apple & Grapes',
     price: 850.00,
     rating: 5.0,
     size: 'Feeds 4 Heads',
     image: img_package_lunch_medium,
-    tags: ['Lunch Pack', 'Feeds 4 Heads', 'Handcrafted Crate', 'Popular'],
+    tags: ['Launch Pack', 'Feeds 4 Heads', 'Handcrafted Crate', 'Popular'],
     ingredients: [
       'Assorted Jollof Rice',
       'Assorted Fried Rice',
@@ -435,15 +435,15 @@ export const MENU_ITEMS = [
     ]
   },
   {
-    id: 'lunch_pack_large',
-    category: 'lunch_packs',
-    name: 'Large Lunch Pack',
+    id: 'launch_pack_large',
+    category: 'launch_packs',
+    name: 'Large Launch Pack',
     tagline: 'Assorted Jollof Rice, Assorted Fried Rice, Assorted Spaghetti, Chicken Salad, Chicken Wings, Fruit Salad, Beef, Gizzard, Goat & Sausage Skewers, Cold Pressed Juices, Apples & Grapes',
     price: 1500.00,
     rating: 5.0,
     size: 'For 10 Heads',
     image: img_package_lunch_large,
-    tags: ['Lunch Pack', 'For 10 Heads', 'VIP Wooden Crate', 'Ultimate Feast'],
+    tags: ['Launch Pack', 'For 10 Heads', 'VIP Wooden Crate', 'Ultimate Feast'],
     ingredients: [
       'Assorted Jollof Rice',
       'Assorted Fried Rice',

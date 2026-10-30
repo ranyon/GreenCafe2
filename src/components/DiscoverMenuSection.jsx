@@ -10,14 +10,14 @@ import lunchPackCoverImg from '../assets/package_lunch_large.jpg';
 
 const categories = [
   {
+    id: 'launch_packs',
+    title: 'Launch Packs',
+    image: lunchPackCoverImg,
+  },
+  {
     id: 'packages',
     title: 'Breakfast Packages 2026',
     image: packageCoverImg,
-  },
-  {
-    id: 'lunch_packs',
-    title: 'Lunch Packs',
-    image: lunchPackCoverImg,
   },
   {
     id: 'salads',
