@@ -6,12 +6,18 @@ import categoryBreakfastImg from '../assets/category_breakfast.png';
 import sandwichImg from '../assets/gourmet_sandwich.webp';
 import categoryWrapsImg from '../assets/category_wraps.png';
 import packageCoverImg from '../assets/package_burning_desire.jpg';
+import lunchPackCoverImg from '../assets/package_lunch_large.jpg';
 
 const categories = [
   {
     id: 'packages',
     title: 'Breakfast Packages 2026',
     image: packageCoverImg,
+  },
+  {
+    id: 'lunch_packs',
+    title: 'Lunch Packs',
+    image: lunchPackCoverImg,
   },
   {
     id: 'salads',

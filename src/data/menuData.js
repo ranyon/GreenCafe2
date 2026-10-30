@@ -212,8 +212,13 @@ import img_package_burning_desire from '../assets/package_burning_desire.jpg';
 import img_package_you_mean_the_world from '../assets/package_you_mean_the_world.jpg';
 import img_package_my_all_in_all_bomber from '../assets/package_my_all_in_all_bomber.jpg';
 
+import img_package_lunch_small from '../assets/package_lunch_small.jpg';
+import img_package_lunch_medium from '../assets/package_lunch_medium.jpg';
+import img_package_lunch_large from '../assets/package_lunch_large.jpg';
+
 export const MENU_CATEGORIES = [
   { id: 'packages', label: 'Breakfast Packages 2026', icon: Gift },
+  { id: 'lunch_packs', label: 'Lunch Packs', icon: UtensilsCrossed },
   { id: 'salads', label: 'Salads', icon: Leaf },
   { id: 'breakfast', label: 'Breakfast', icon: Coffee },
   { id: 'wraps', label: 'Wraps', icon: ScrollText },
@@ -224,7 +229,6 @@ export const MENU_CATEGORIES = [
   { id: 'smoothies', label: 'Smoothies', icon: Droplets },
   { id: 'snacks', label: 'Snack Packs', icon: UtensilsCrossed },
   { id: 'fruit_salad', label: 'Fruit Salad', icon: Leaf },
-  { id: 'lunch_packs', label: 'Lunch Packs', icon: UtensilsCrossed },
 ];
 
 export const MENU_ITEMS = [
@@ -378,6 +382,79 @@ export const MENU_ITEMS = [
       'Fresh Fruit Salad Platters',
       '3 Fresh Apples, Ripe Orange & Grapes',
       'Hot Beverage Packets'
+    ]
+  },
+
+  // --- LUNCH PACKS ---
+  {
+    id: 'lunch_pack_small',
+    category: 'lunch_packs',
+    name: 'Small Lunch Pack',
+    tagline: 'Assorted Jollof Rice, Assorted Fried Rice, Chicken Salad, Tuna Sandwich, Chicken Wings, Fruit Salad, Cold Pressed Juices, Apple & Grapes',
+    price: 450.00,
+    rating: 5.0,
+    size: 'Feeds 2 Heads',
+    image: img_package_lunch_small,
+    tags: ['Lunch Pack', 'Feeds 2 Heads', 'Catering Box', 'Artisan'],
+    ingredients: [
+      'Assorted Jollof Rice',
+      'Assorted Fried Rice',
+      'Chicken Salad (Avocado, Boiled Egg, Corn, Greens)',
+      'Tuna Sandwich',
+      'Grilled Chicken Wings with Peppers & Onions',
+      'Fresh Fruit Salad (Watermelon, Mango, Pineapple)',
+      'Cold Pressed Juices',
+      'Fresh Whole Apple',
+      'Fresh Dark Grapes'
+    ]
+  },
+  {
+    id: 'lunch_pack_medium',
+    category: 'lunch_packs',
+    name: 'Medium Lunch Pack',
+    tagline: 'Assorted Jollof Rice, Assorted Fried Rice, Chicken Salad, Tuna Sandwich, Chicken Wraps, Chicken Wings, Fruit Salad, Meat Samosas, Spring Rolls, Cold Pressed Juices, Parfait, Apple & Grapes',
+    price: 850.00,
+    rating: 5.0,
+    size: 'Feeds 4 Heads',
+    image: img_package_lunch_medium,
+    tags: ['Lunch Pack', 'Feeds 4 Heads', 'Handcrafted Crate', 'Popular'],
+    ingredients: [
+      'Assorted Jollof Rice',
+      'Assorted Fried Rice',
+      'Chicken Salad',
+      'Tuna Sandwich',
+      'Grilled Chicken Wraps',
+      'Seasoned Chicken Wings',
+      'Fresh Fruit Salad Platter',
+      'Crispy Meat Samosas',
+      'Golden Veggie Spring Rolls',
+      'Cold Pressed Juices',
+      'Yoghurt Parfait',
+      'Fresh Apples (Red & Green)',
+      'Fresh Grapes'
+    ]
+  },
+  {
+    id: 'lunch_pack_large',
+    category: 'lunch_packs',
+    name: 'Large Lunch Pack',
+    tagline: 'Assorted Jollof Rice, Assorted Fried Rice, Assorted Spaghetti, Chicken Salad, Chicken Wings, Fruit Salad, Beef, Gizzard, Goat & Sausage Skewers, Cold Pressed Juices, Apples & Grapes',
+    price: 1500.00,
+    rating: 5.0,
+    size: 'For 10 Heads',
+    image: img_package_lunch_large,
+    tags: ['Lunch Pack', 'For 10 Heads', 'VIP Wooden Crate', 'Ultimate Feast'],
+    ingredients: [
+      'Assorted Jollof Rice',
+      'Assorted Fried Rice',
+      'Assorted Spaghetti Stir-Fry',
+      'Large Chicken Salad Platter',
+      'Grilled BBQ Chicken Wings',
+      'Fresh Tropical Fruit Salad Platter',
+      'Beef, Gizzard, Goat & Sausage Skewers with Suya Spice',
+      'Cold Pressed Juices',
+      'Fresh Whole Apples',
+      'Fresh Dark Grapes'
     ]
   },
 
