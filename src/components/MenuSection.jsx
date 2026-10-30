@@ -11,8 +11,8 @@ export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const resolveCategory = (cat) => {
-    if (!cat) return 'launch_packs';
-    if (cat === 'lunch_packs') return 'launch_packs';
+    if (!cat) return 'lunch_packs';
+    if (cat === 'launch_packs') return 'lunch_packs';
     return cat;
   };
   const initialCategory = resolveCategory(searchParams.get('category'));
