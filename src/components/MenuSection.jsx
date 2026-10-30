@@ -11,8 +11,8 @@ export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const resolveCategory = (cat) => {
-    if (!cat) return 'lunch_packs';
-    if (cat === 'launch_packs') return 'lunch_packs';
+    if (!cat) return 'lunch_packages';
+    if (cat === 'launch_packs') return 'lunch_packages';
     return cat;
   };
   const initialCategory = resolveCategory(searchParams.get('category'));
@@ -30,12 +30,7 @@ export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
   const sectionRef = useRef(null);
   const gridRef = useRef(null);
 
-  const filteredItems = MENU_ITEMS.filter((item) => {
-    if (activeTab === 'launch_packs' || activeTab === 'lunch_packs') {
-      return item.category === 'launch_packs' || item.category === 'lunch_packs';
-    }
-    return item.category === activeTab;
-  });
+  const filteredItems = MENU_ITEMS.filter((item) => item.category === activeTab);
 
   const handleAdd = (e, item) => {
     e.stopPropagation();
