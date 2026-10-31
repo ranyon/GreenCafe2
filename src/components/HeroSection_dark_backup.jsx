@@ -159,7 +159,7 @@ export default function HeroSection({ onExplore, onOpenLab }) {
               className="w-full lg:w-auto px-4 py-3 lg:px-8 lg:py-4 text-[12px] lg:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-xl lg:rounded-full border border-white/30 shadow-sm transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
             >
               <Sparkles className="w-4 h-4 shrink-0 text-white" />
-              <span className="truncate">Custom Juice</span>
+              <span className="truncate">Create Your Own Bowl</span>
             </button>
           </div>
         </div>
