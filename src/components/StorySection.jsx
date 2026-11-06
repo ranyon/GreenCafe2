@@ -58,7 +58,7 @@ export default function StorySection() {
     {
       step: '03',
       title: 'Artisan Hand-Rolled Craft',
-      description: 'Every wrap and sourdough sandwich is hand-assembled to order with house-crafted pestos and wild-caught proteins.',
+      description: 'Every wrap and sandwich is hand-assembled to order with house-crafted pestos and wild-caught proteins.',
       icon: Utensils,
       color: 'from-amber-400 to-yellow-500',
       image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',

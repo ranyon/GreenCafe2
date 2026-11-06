@@ -15,7 +15,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-xs sm:text-sm text-gray-600 max-w-sm leading-relaxed">
-              Artisan fresh wraps, gourmet sourdough sandwiches, and raw cold-pressed green juices handcrafted fresh daily.
+              Artisan fresh wraps, gourmet sandwiches, and raw cold-pressed green juices handcrafted fresh daily.
             </p>
 
             {/* Value Badges */}

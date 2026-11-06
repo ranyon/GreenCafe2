@@ -34,6 +34,10 @@ export default function MenuSection({ onAddToCart, onHoverItem, onItemClick }) {
 
   const handleAdd = (e, item) => {
     e.stopPropagation();
+    if (item.proteinOptions && item.proteinOptions.length > 0) {
+      onItemClick(item);
+      return;
+    }
     onAddToCart(item);
     setAddedIds((prev) => ({ ...prev, [item.id]: true }));
     setTimeout(() => {

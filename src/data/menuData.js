@@ -416,9 +416,9 @@ export const MENU_ITEMS = [
     tagline: 'Assorted Jollof Rice, Assorted Fried Rice, Chicken Salad, Tuna Sandwich, Chicken Wraps, Chicken Wings, Fruit Salad, Meat Samosas, Spring Rolls, Cold Pressed Juices, Parfait, Apple & Grapes',
     price: 1300.00,
     rating: 5.0,
-    size: 'Feeds 4 Heads',
+    size: 'Feeds 6 Heads',
     image: img_package_lunch_medium,
-    tags: ['Lunch Package', 'Feeds 4 Heads', 'Handcrafted Crate', 'Popular'],
+    tags: ['Lunch Package', 'Feeds 6 Heads', 'Handcrafted Crate', 'Popular'],
     ingredients: [
       'Assorted Jollof Rice',
       'Assorted Fried Rice',
@@ -504,7 +504,7 @@ export const MENU_ITEMS = [
     category: 'salads',
     name: 'Potato Salad',
     tagline: 'Irish Potato, Carrot, Onion, Green Pepper, Spring Onion, Egg, Diced Chicken & Dressing',
-    price: 70.00,
+    price: 80.00,
     carbs: '50g',
     rating: 4.6,
     size: '1000 cc',
@@ -892,7 +892,7 @@ export const MENU_ITEMS = [
     category: 'sandwiches',
     name: 'Chicken Club',
     tagline: 'Toast Slices, Chicken, Egg, Lettuce, Tomato & Signature Dressing',
-    price: 50.00,
+    price: 120.00,
     carbs: '55g',
     rating: 4.8,
     image: img_chicken_club_sandwich_photo,
@@ -1262,14 +1262,14 @@ export const MENU_ITEMS = [
   {
     id: 'j10',
     category: 'juices',
-    name: 'Ginger Shots',
-    tagline: 'Pure Concentrated Fresh Ginger & Lemon Shot',
-    price: 25.00,
+    name: 'Ginger Shot',
+    tagline: 'Turmeric, Ginger, Orange & Cayenne Pepper',
+    price: 15.00,
     rating: 4.9,
-    size: '350 ml',
+    size: '60 ml',
     image: img_j2,
     tags: ['Most Sold', 'Immunity Boost'],
-    ingredients: ['Fresh Ginger', 'Lemon', 'Honey']
+    ingredients: ['Turmeric', 'Ginger', 'Orange', 'Cayenne Pepper']
   },
 
   // --- EXTRAS ---
@@ -1686,7 +1686,7 @@ export const MENU_ITEMS = [
     category: 'snacks',
     name: 'Meat Samosa',
     tagline: 'Dough & Minced Meat',
-    price: 20.00,
+    price: 25.00,
     carbs: '22g',
     rating: 4.7,
     image: img_meat_samosa_photo,
@@ -1698,7 +1698,7 @@ export const MENU_ITEMS = [
     category: 'snacks',
     name: 'Veggie Spring Rolls',
     tagline: 'Dough & Veggies',
-    price: 20.00,
+    price: 25.00,
     carbs: '28g',
     rating: 4.6,
     image: img_veggie_spring_rolls_photo,
@@ -1770,14 +1770,15 @@ export const MENU_ITEMS = [
     id: 'meal9',
     category: 'lunch_packs',
     name: 'Burrito Bowl',
-    tagline: 'Jollof, Greek Salad, Salsa, Avocado, Kidney Beans, Sweet Corn, Choice of Protein & Hot Sauce',
+    tagline: 'Jollof, Greek Salad, Salsa, Avocado, Kidney Beans, Sweet Corn, Choice of Protein (Chicken or Beef) & Hot Sauce',
     price: 150.00,
     carbs: '95g',
     rating: 5.0,
     size: '1000 cc',
     image: img_burrito_bowl_photo,
     tags: ['Lunch Pack', 'Hearty'],
-    ingredients: ['Jollof', 'Greek Salad', 'Salsa', 'Avocado', 'Kidney Beans', 'Sweet Corn', 'Protein', 'Hot Sauce']
+    proteinOptions: ['Chicken', 'Beef', 'Chicken & Beef'],
+    ingredients: ['Jollof', 'Greek Salad', 'Salsa', 'Avocado', 'Kidney Beans', 'Sweet Corn', 'Choice of Protein (Chicken or Beef)', 'Hot Sauce']
   }
 ];
 
